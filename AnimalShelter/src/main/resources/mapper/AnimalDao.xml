@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".dao.AnimalDao">
+
+    <resultMap type=".entity.Animal" id="AnimalMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="kindid" column="kindid" jdbcType="INTEGER"/>
+        <result property="lsex" column="lsex" jdbcType="VARCHAR"/>
+        <result property="ltitle" column="ltitle" jdbcType="VARCHAR"/>
+        <result property="lyear" column="lyear" jdbcType="VARCHAR"/>
+        <result property="buserid" column="buserid" jdbcType="INTEGER"/>
+        <result property="lbirth" column="lbirth" jdbcType="VARCHAR"/>
+        <result property="lval" column="lval" jdbcType="VARCHAR"/>
+        <result property="lbug" column="lbug" jdbcType="VARCHAR"/>
+        <result property="lpicture" column="lpicture" jdbcType="VARCHAR"/>
+        <result property="linfo" column="linfo" jdbcType="VARCHAR"/>
+        <result property="ltime" column="ltime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="AnimalMap">
+        select
+          id, kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime
+        from animalshelter.animal
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="AnimalMap">
+        select
+          id, kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime
+        from animalshelter.animal
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="AnimalMap">
+        select
+          id, kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime
+        from animalshelter.animal
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="kindid != null">
+                and kindid = #{kindid}
+            </if>
+            <if test="lsex != null and lsex != ''">
+                and lsex = #{lsex}
+            </if>
+            <if test="ltitle != null and ltitle != ''">
+                and ltitle = #{ltitle}
+            </if>
+            <if test="lyear != null and lyear != ''">
+                and lyear = #{lyear}
+            </if>
+            <if test="buserid != null">
+                and buserid = #{buserid}
+            </if>
+            <if test="lbirth != null and lbirth != ''">
+                and lbirth = #{lbirth}
+            </if>
+            <if test="lval != null and lval != ''">
+                and lval = #{lval}
+            </if>
+            <if test="lbug != null and lbug != ''">
+                and lbug = #{lbug}
+            </if>
+            <if test="lpicture != null and lpicture != ''">
+                and lpicture = #{lpicture}
+            </if>
+            <if test="linfo != null and linfo != ''">
+                and linfo = #{linfo}
+            </if>
+            <if test="ltime != null">
+                and ltime = #{ltime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into animalshelter.animal(kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime)
+        values (#{kindid}, #{lsex}, #{ltitle}, #{lyear}, #{buserid}, #{lbirth}, #{lval}, #{lbug}, #{lpicture}, #{linfo}, #{ltime})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update animalshelter.animal
+        <set>
+            <if test="kindid != null">
+                kindid = #{kindid},
+            </if>
+            <if test="lsex != null and lsex != ''">
+                lsex = #{lsex},
+            </if>
+            <if test="ltitle != null and ltitle != ''">
+                ltitle = #{ltitle},
+            </if>
+            <if test="lyear != null and lyear != ''">
+                lyear = #{lyear},
+            </if>
+            <if test="buserid != null">
+                buserid = #{buserid},
+            </if>
+            <if test="lbirth != null and lbirth != ''">
+                lbirth = #{lbirth},
+            </if>
+            <if test="lval != null and lval != ''">
+                lval = #{lval},
+            </if>
+            <if test="lbug != null and lbug != ''">
+                lbug = #{lbug},
+            </if>
+            <if test="lpicture != null and lpicture != ''">
+                lpicture = #{lpicture},
+            </if>
+            <if test="linfo != null and linfo != ''">
+                linfo = #{linfo},
+            </if>
+            <if test="ltime != null">
+                ltime = #{ltime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from animalshelter.animal where id = #{id}
+    </delete>
+
+</mapper>

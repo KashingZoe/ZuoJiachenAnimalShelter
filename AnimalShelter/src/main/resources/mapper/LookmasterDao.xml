@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".dao.LookmasterDao">
+
+    <resultMap type=".entity.Lookmaster" id="LookmasterMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="kindid" column="kindid" jdbcType="INTEGER"/>
+        <result property="msex" column="msex" jdbcType="VARCHAR"/>
+        <result property="mtitle" column="mtitle" jdbcType="VARCHAR"/>
+        <result property="buserid" column="buserid" jdbcType="INTEGER"/>
+        <result property="mtime" column="mtime" jdbcType="TIMESTAMP"/>
+        <result property="mpicture" column="mpicture" jdbcType="VARCHAR"/>
+        <result property="minfo" column="minfo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="LookmasterMap">
+        select
+          id, kindid, msex, mtitle, buserid, mtime, mpicture, minfo
+        from animalshelter.lookmaster
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="LookmasterMap">
+        select
+          id, kindid, msex, mtitle, buserid, mtime, mpicture, minfo
+        from animalshelter.lookmaster
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="LookmasterMap">
+        select
+          id, kindid, msex, mtitle, buserid, mtime, mpicture, minfo
+        from animalshelter.lookmaster
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="kindid != null">
+                and kindid = #{kindid}
+            </if>
+            <if test="msex != null and msex != ''">
+                and msex = #{msex}
+            </if>
+            <if test="mtitle != null and mtitle != ''">
+                and mtitle = #{mtitle}
+            </if>
+            <if test="buserid != null">
+                and buserid = #{buserid}
+            </if>
+            <if test="mtime != null">
+                and mtime = #{mtime}
+            </if>
+            <if test="mpicture != null and mpicture != ''">
+                and mpicture = #{mpicture}
+            </if>
+            <if test="minfo != null and minfo != ''">
+                and minfo = #{minfo}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into animalshelter.lookmaster(kindid, msex, mtitle, buserid, mtime, mpicture, minfo)
+        values (#{kindid}, #{msex}, #{mtitle}, #{buserid}, #{mtime}, #{mpicture}, #{minfo})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update animalshelter.lookmaster
+        <set>
+            <if test="kindid != null">
+                kindid = #{kindid},
+            </if>
+            <if test="msex != null and msex != ''">
+                msex = #{msex},
+            </if>
+            <if test="mtitle != null and mtitle != ''">
+                mtitle = #{mtitle},
+            </if>
+            <if test="buserid != null">
+                buserid = #{buserid},
+            </if>
+            <if test="mtime != null">
+                mtime = #{mtime},
+            </if>
+            <if test="mpicture != null and mpicture != ''">
+                mpicture = #{mpicture},
+            </if>
+            <if test="minfo != null and minfo != ''">
+                minfo = #{minfo},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from animalshelter.lookmaster where id = #{id}
+    </delete>
+
+</mapper>

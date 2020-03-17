@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".dao.LookpetDao">
+
+    <resultMap type=".entity.Lookpet" id="LookpetMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="kindid" column="kindid" jdbcType="INTEGER"/>
+        <result property="psex" column="psex" jdbcType="VARCHAR"/>
+        <result property="pyear" column="pyear" jdbcType="VARCHAR"/>
+        <result property="ptitle" column="ptitle" jdbcType="VARCHAR"/>
+        <result property="buserid" column="buserid" jdbcType="INTEGER"/>
+        <result property="ptime" column="ptime" jdbcType="TIMESTAMP"/>
+        <result property="ppicture" column="ppicture" jdbcType="VARCHAR"/>
+        <result property="pinfo" column="pinfo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="LookpetMap">
+        select
+          id, kindid, psex, pyear, ptitle, buserid, ptime, ppicture, pinfo
+        from animalshelter.lookpet
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="LookpetMap">
+        select
+          id, kindid, psex, pyear, ptitle, buserid, ptime, ppicture, pinfo
+        from animalshelter.lookpet
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="LookpetMap">
+        select
+          id, kindid, psex, pyear, ptitle, buserid, ptime, ppicture, pinfo
+        from animalshelter.lookpet
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="kindid != null">
+                and kindid = #{kindid}
+            </if>
+            <if test="psex != null and psex != ''">
+                and psex = #{psex}
+            </if>
+            <if test="pyear != null and pyear != ''">
+                and pyear = #{pyear}
+            </if>
+            <if test="ptitle != null and ptitle != ''">
+                and ptitle = #{ptitle}
+            </if>
+            <if test="buserid != null">
+                and buserid = #{buserid}
+            </if>
+            <if test="ptime != null">
+                and ptime = #{ptime}
+            </if>
+            <if test="ppicture != null and ppicture != ''">
+                and ppicture = #{ppicture}
+            </if>
+            <if test="pinfo != null and pinfo != ''">
+                and pinfo = #{pinfo}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into animalshelter.lookpet(kindid, psex, pyear, ptitle, buserid, ptime, ppicture, pinfo)
+        values (#{kindid}, #{psex}, #{pyear}, #{ptitle}, #{buserid}, #{ptime}, #{ppicture}, #{pinfo})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update animalshelter.lookpet
+        <set>
+            <if test="kindid != null">
+                kindid = #{kindid},
+            </if>
+            <if test="psex != null and psex != ''">
+                psex = #{psex},
+            </if>
+            <if test="pyear != null and pyear != ''">
+                pyear = #{pyear},
+            </if>
+            <if test="ptitle != null and ptitle != ''">
+                ptitle = #{ptitle},
+            </if>
+            <if test="buserid != null">
+                buserid = #{buserid},
+            </if>
+            <if test="ptime != null">
+                ptime = #{ptime},
+            </if>
+            <if test="ppicture != null and ppicture != ''">
+                ppicture = #{ppicture},
+            </if>
+            <if test="pinfo != null and pinfo != ''">
+                pinfo = #{pinfo},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from animalshelter.lookpet where id = #{id}
+    </delete>
+
+</mapper>

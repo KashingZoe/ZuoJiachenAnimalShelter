@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace=".dao.GetanimalDao">
+
+    <resultMap type=".entity.Getanimal" id="GetanimalMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="buserid" column="buserid" jdbcType="INTEGER"/>
+        <result property="ghome" column="ghome" jdbcType="VARCHAR"/>
+        <result property="gchildren" column="gchildren" jdbcType="VARCHAR"/>
+        <result property="gmarried" column="gmarried" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="orderdate" column="orderdate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="GetanimalMap">
+        select
+          id, buserid, ghome, gchildren, gmarried, status, orderdate
+        from animalshelter.getanimal
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="GetanimalMap">
+        select
+          id, buserid, ghome, gchildren, gmarried, status, orderdate
+        from animalshelter.getanimal
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="GetanimalMap">
+        select
+          id, buserid, ghome, gchildren, gmarried, status, orderdate
+        from animalshelter.getanimal
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="buserid != null">
+                and buserid = #{buserid}
+            </if>
+            <if test="ghome != null and ghome != ''">
+                and ghome = #{ghome}
+            </if>
+            <if test="gchildren != null and gchildren != ''">
+                and gchildren = #{gchildren}
+            </if>
+            <if test="gmarried != null and gmarried != ''">
+                and gmarried = #{gmarried}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="orderdate != null">
+                and orderdate = #{orderdate}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into animalshelter.getanimal(buserid, ghome, gchildren, gmarried, status, orderdate)
+        values (#{buserid}, #{ghome}, #{gchildren}, #{gmarried}, #{status}, #{orderdate})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update animalshelter.getanimal
+        <set>
+            <if test="buserid != null">
+                buserid = #{buserid},
+            </if>
+            <if test="ghome != null and ghome != ''">
+                ghome = #{ghome},
+            </if>
+            <if test="gchildren != null and gchildren != ''">
+                gchildren = #{gchildren},
+            </if>
+            <if test="gmarried != null and gmarried != ''">
+                gmarried = #{gmarried},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="orderdate != null">
+                orderdate = #{orderdate},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from animalshelter.getanimal where id = #{id}
+    </delete>
+
+</mapper>
