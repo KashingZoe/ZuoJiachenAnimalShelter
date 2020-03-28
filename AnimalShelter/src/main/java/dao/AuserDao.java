@@ -1,6 +1,6 @@
-package .dao;
+package dao;
 
-import .entity.Auser;
+import entity.Auser;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

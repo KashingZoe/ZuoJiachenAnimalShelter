@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Animalkind;
-import .service.AnimalkindService;
+import entity.Animalkind;
+import service.AnimalkindService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

@@ -1,8 +1,8 @@
-package .service.impl;
+package service.impl;
 
-import .entity.Getanimal;
-import .dao.GetanimalDao;
-import .service.GetanimalService;
+import entity.Getanimal;
+import dao.GetanimalDao;
+import service.GetanimalService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.Animal;
+import entity.Animal;
 import java.util.List;
 
 /**

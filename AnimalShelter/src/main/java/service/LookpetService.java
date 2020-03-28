@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.Lookpet;
+import entity.Lookpet;
 import java.util.List;
 
 /**

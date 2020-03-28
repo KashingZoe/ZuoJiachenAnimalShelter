@@ -1,8 +1,8 @@
-package .service.impl;
+package service.impl;
 
-import .entity.Lookmaster;
-import .dao.LookmasterDao;
-import .service.LookmasterService;
+import entity.Lookmaster;
+import dao.LookmasterDao;
+import service.LookmasterService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

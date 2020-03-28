@@ -1,8 +1,8 @@
-package .service.impl;
+package service.impl;
 
-import .entity.News;
-import .dao.NewsDao;
-import .service.NewsService;
+import entity.News;
+import dao.NewsDao;
+import service.NewsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

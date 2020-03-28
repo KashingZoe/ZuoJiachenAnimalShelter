@@ -1,8 +1,8 @@
-package .service.impl;
+package service.impl;
 
-import .entity.Buser;
-import .dao.BuserDao;
-import .service.BuserService;
+import entity.Buser;
+import dao.BuserDao;
+import service.BuserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

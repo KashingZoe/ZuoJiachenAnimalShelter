@@ -1,8 +1,8 @@
-package .service.impl;
+package service.impl;
 
-import .entity.Auser;
-import .dao.AuserDao;
-import .service.AuserService;
+import entity.Auser;
+import dao.AuserDao;
+import service.AuserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

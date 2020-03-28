@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Getanimal;
-import .service.GetanimalService;
+import entity.Getanimal;
+import service.GetanimalService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

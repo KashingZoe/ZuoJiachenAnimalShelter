@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Buser;
-import .service.BuserService;
+import entity.Buser;
+import service.BuserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

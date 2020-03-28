@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.News;
-import .service.NewsService;
+import entity.News;
+import service.NewsService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Lookmaster;
-import .service.LookmasterService;
+import entity.Lookmaster;
+import service.LookmasterService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.Buser;
+import entity.Buser;
 import java.util.List;
 
 /**

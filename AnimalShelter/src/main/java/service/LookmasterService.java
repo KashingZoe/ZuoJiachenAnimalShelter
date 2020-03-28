@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.Lookmaster;
+import entity.Lookmaster;
 import java.util.List;
 
 /**

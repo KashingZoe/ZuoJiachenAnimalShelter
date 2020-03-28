@@ -1,6 +1,6 @@
-package .dao;
+package dao;
 
-import .entity.Lookmaster;
+import entity.Lookmaster;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

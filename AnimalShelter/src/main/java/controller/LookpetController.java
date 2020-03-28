@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Lookpet;
-import .service.LookpetService;
+import entity.Lookpet;
+import service.LookpetService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

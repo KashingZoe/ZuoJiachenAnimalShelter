@@ -1,6 +1,6 @@
-package .dao;
+package dao;
 
-import .entity.News;
+import entity.News;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

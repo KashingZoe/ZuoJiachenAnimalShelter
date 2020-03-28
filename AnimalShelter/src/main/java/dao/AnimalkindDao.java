@@ -1,6 +1,6 @@
-package .dao;
+package dao;
 
-import .entity.Animalkind;
+import entity.Animalkind;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 

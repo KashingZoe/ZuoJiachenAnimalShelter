@@ -1,7 +1,7 @@
-package .controller;
+package controller;
 
-import .entity.Auser;
-import .service.AuserService;
+import entity.Auser;
+import service.AuserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

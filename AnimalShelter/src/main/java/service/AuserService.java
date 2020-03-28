@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.Auser;
+import entity.Auser;
 import java.util.List;
 
 /**

@@ -1,6 +1,6 @@
-package .service;
+package service;
 
-import .entity.News;
+import entity.News;
 import java.util.List;
 
 /**
