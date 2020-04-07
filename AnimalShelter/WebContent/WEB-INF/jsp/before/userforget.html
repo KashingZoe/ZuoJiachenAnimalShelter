@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>发表问题 编辑问题 公用</title>
+  <title>找回密码/重置密码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="fly,layui,前端社区">
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
@@ -26,7 +26,7 @@
   	  .fly-column ul li.layui-this:after{
   		  bottom: 0px;
   		  height: 2px;
-  		  }
+  	  }
   </style>
   <script>
   //注意：导航 依赖 element 模块，否则无法进行功能性操作
@@ -106,7 +106,7 @@
 		           <cite class="layui-hide-xs">贤心</cite>
 		           <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
 		           <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
-		           <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
+		           <img src="../res/images/mycat.png">
 		         </a>
 		         <dl class="layui-nav-child">
 		           <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -128,122 +128,31 @@
   </div>
 </div>
 
-
-
-<div class="fly-panel fly-column">
-  <div class="layui-container">
-    <ul class="layui-clear layui-nav">
-      <li class="layui-hide-xs layui-nav-item"><a href="index.html">首页</a></li> 
-      <li class="layui-nav-item layui-this"><a href="add01.html">发布</a>
-	      <dl class="layui-nav-child"> <!-- 二级菜单 -->
-	        <dd><a href="add01.html">送养发布</a></dd>
-	        <dd><a href="add02.html">寻主发布</a></dd>
-	        <dd><a href="add03.html">寻宠发布</a></dd>
-	      </dl>
-	  
-	  </li> 
-      <li class="layui-nav-item"><a href="animalvisit.html">宠秀回访</span></a></li> 
-      <li class="layui-nav-item"><a href="sciarea.html">科普区</a></li> 
-      <li class="layui-nav-item"><a href="review.html">留言板</a></li> 
-      <!-- <li><a href="jie/index.html">公告</a></li> 
-      <li><a href="jie/index.html">动态</a></li> -->
-      <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
-      
-      <!-- 用户登入后显示 -->
-      <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li> 
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html#collection">我收藏的贴</a></li> -->
-    </ul> 
-    
-    <div class="fly-column-right layui-hide-xs"> 
-      <span class="fly-search"><i class="layui-icon"></i></span> 
-      <a href="jie/add.html" class="layui-btn">发表新帖</a> 
-    </div> 
-    <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;"> 
-      <a href="jie/add.html" class="layui-btn">发表新帖</a> 
-    </div> 
-  </div>
-</div>
-
-
 <div class="layui-container fly-marginTop">
-  <div class="fly-panel" pad20 style="padding-top: 5px;">
-    <!--<div class="fly-none">没有权限</div>-->
-    <div class="layui-form layui-form-pane">
-      <div class="layui-tab layui-tab-brief" lay-filter="user">
-        <ul class="layui-tab-title">
-          <li class="layui-this">送养发布<!-- 编辑帖子 --></li>
-        </ul>
-        <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
-          <div class="layui-tab-item layui-show">
-            <form action="" method="post">
-              <div class="layui-row layui-col-space15 layui-form-item">
-                <div class="layui-col-md3">
-                  <label class="layui-form-label">所在专栏</label>
-                  <div class="layui-input-block">
-                    <select lay-verify="required" name="class" lay-filter="column"> 
-                      <option></option> 
-                      <option value="0">提问</option> 
-                      <option value="99">分享</option> 
-                      <option value="100">讨论</option> 
-                      <option value="101">建议</option> 
-                      <option value="168">公告</option> 
-                      <option value="169">动态</option> 
-                    </select>
-                  </div>
+  <div class="fly-panel fly-panel-user" pad20>
+    <div class="layui-tab layui-tab-brief" lay-filter="user">
+      <ul class="layui-tab-title">
+        <li><a href="userlogin.html">登入</a></li>
+        <li class="layui-this">找回密码<!--重置密码--></li>
+      </ul>
+      <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+          <!-- 重置密码 -->
+          <!--
+          <div class="fly-msg">{{d.username}}，请重置您的密码</div>
+          <div class="layui-form layui-form-pane"  style="margin-top: 30px;">
+            <form action="/user/repass" method="post">
+              <div class="layui-form-item">
+                <label for="L_pass" class="layui-form-label">密码</label>
+                <div class="layui-input-inline">
+                  <input type="password" id="L_pass" name="pass" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-col-md9">
-                  <label for="L_title" class="layui-form-label">标题</label>
-                  <div class="layui-input-block">
-                    <input type="text" id="L_title" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
-                    <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
-                  </div>
-                </div>
-              </div>
-              <div class="layui-row layui-col-space15 layui-form-item layui-hide" id="LAY_quiz">
-                <div class="layui-col-md3">
-                  <label class="layui-form-label">所属产品</label>
-                  <div class="layui-input-block">
-                    <select name="project">
-                      <option></option>
-                      <option value="layui">layui</option>
-                      <option value="独立版layer">独立版layer</option>
-                      <option value="独立版layDate">独立版layDate</option>
-                      <option value="LayIM">LayIM</option>
-                      <option value="Fly社区模板">Fly社区模板</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="layui-col-md3">
-                  <label class="layui-form-label" for="L_version">版本号</label>
-                  <div class="layui-input-block">
-                    <input type="text" id="L_version" value="" name="version" autocomplete="off" class="layui-input">
-                  </div>
-                </div>
-                <div class="layui-col-md6">
-                  <label class="layui-form-label" for="L_browser">浏览器</label>
-                  <div class="layui-input-block">
-                    <input type="text" id="L_browser"  value="" name="browser" placeholder="浏览器名称及版本，如：IE 11" autocomplete="off" class="layui-input">
-                  </div>
-                </div>
-              </div>
-              <div class="layui-form-item layui-form-text">
-                <div class="layui-input-block">
-                  <textarea id="L_content" name="content" required lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></textarea>
-                </div>
+                <div class="layui-form-mid layui-word-aux">6到16个字符</div>
               </div>
               <div class="layui-form-item">
-                <div class="layui-inline">
-                  <label class="layui-form-label">悬赏飞吻</label>
-                  <div class="layui-input-inline" style="width: 190px;">
-                    <select name="experience">
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="50">50</option>
-                      <option value="60">60</option>
-                      <option value="80">80</option>
-                    </select>
-                  </div>
-                  <div class="layui-form-mid layui-word-aux">发表后无法更改飞吻</div>
+                <label for="L_repass" class="layui-form-label">确认密码</label>
+                <div class="layui-input-inline">
+                  <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
               </div>
               <div class="layui-form-item">
@@ -252,18 +161,51 @@
                   <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid">
-                  <span style="color: #c00;">1+1=?</span>
+                  <span style="color: #c00;">{{d.vercode}}</span>
                 </div>
               </div>
               <div class="layui-form-item">
-                <button class="layui-btn" lay-filter="*" lay-submit>立即发布</button>
+                <input type="hidden" name="username" value="{{d.username}}">
+                <input type="hidden" name="email" value="{{d.email}}">
+                <button class="layui-btn" alert="1" lay-filter="*" lay-submit>提交</button>
               </div>
             </form>
           </div>
+
+
+          <div class="fly-error">该重置密码链接已失效，请重新校验您的信息</div>
+          <div class="fly-error">非法链接，请重新校验您的信息</div>
+          -->
+          
+          <div class="layui-form layui-form-pane">
+            <form method="post">
+              <div class="layui-form-item">
+                <label for="L_email" class="layui-form-label">邮箱</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_email" name="email" required lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label for="L_vercode" class="layui-form-label">人类验证</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid">
+                  <span style="color: #c00;">{{d.vercode}}</span>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <button class="layui-btn" alert="1" lay-filter="*" lay-submit>提交</button>
+              </div>
+            </form>
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
+
+  
 </div>
 
 <div class="fly-footer">
@@ -277,7 +219,7 @@
 
 <script src="../res/layui/layui.js"></script>
 <script>
-layui.cache.page = 'jie';
+layui.cache.page = 'user';
 layui.cache.user = {
   username: '游客'
   ,uid: -1

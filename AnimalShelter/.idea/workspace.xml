@@ -6,182 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="069a015d-4d78-485f-9bff-fe8a52b3fdad" name="Default" comment="create datebase">
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/full.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/css/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/avatar/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/case.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/cat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/fly.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/logo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/mycat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/other/1437100018023.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/other/study-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/images/weixin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/layui.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/layui.mobile.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/mods/case.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/mods/face.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/mods/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/mods/jie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebContent/res/mods/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/before/Test.java" afterDir="false" />
+    <list default="true" id="069a015d-4d78-485f-9bff-fe8a52b3fdad" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/useractivate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userforget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userhome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userlogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/usermessage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userreg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userset.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LookpetDefault.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AnimalkindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AnimalkindController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AuserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AuserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BuserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BuserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GetanimalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GetanimalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LookmasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LookmasterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LookpetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LookpetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AnimalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AnimalDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AnimalkindDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AnimalkindDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AuserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AuserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BuserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BuserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/GetanimalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/GetanimalDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LookmasterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LookmasterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LookpetDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LookpetDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/NewsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AnimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AnimalkindService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AnimalkindService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AuserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AuserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BuserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BuserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/GetanimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/GetanimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LookmasterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LookmasterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LookpetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LookpetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/AnimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/AnimalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/AnimalkindServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/AnimalkindServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/AuserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/AuserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/BuserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/BuserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/GetanimalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GetanimalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LookmasterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LookmasterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LookpetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LookpetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add01.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add02.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add03.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add03.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/animaldetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/animaldetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/animalvisit.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/animalvisit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/indexmore.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/indexmore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/sciarea.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/sciarea.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -211,6 +54,24 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="animalshelter@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="animalshelter@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="animalshelter@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="animalshelter: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="animalshelter@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="animalshelter: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="animalkind: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -219,87 +80,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LookmasterServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/LookmasterServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LookpetServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/LookpetServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/NewsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LookmasterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/LookmasterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LookpetController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/LookpetController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/NewsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/before/Test.java">
+      <file leaf-file-name="AnimalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnimalController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#94#95#0" expanded="true" />
-                <element signature="e#136#137#0" expanded="true" />
-              </folding>
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimalkindController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnimalkindController.java">
+      <file leaf-file-name="AnimalkindService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/AnimalkindService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="304">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimalkindServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/AnimalkindServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -307,13 +110,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="full.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/res/css/full.css">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="springmvc-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BuserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/user/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="userindex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userindex.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="add01.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add01.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -410,8 +250,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="535" />
-    <option name="y" value="6" />
+    <option name="x" value="1719" />
+    <option name="y" value="59" />
     <option name="width" value="1309" />
     <option name="height" value="1000" />
   </component>
@@ -423,8 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -443,6 +281,53 @@
               <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="before" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnimalShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
@@ -470,10 +355,16 @@
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
               <item name="before" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AnimalShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,27 +373,27 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebContent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JavaWeb网站模板/视频类/dilidili" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF\jsp" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF\jsp\before" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF\jsp\before" />
+      <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF\jsp" />
       <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent" />
       <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF" />
       <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\07大四课程\GraProject\ZuoJiachenAnimalShelter\AnimalShelter\WebContent\WEB-INF\jsp\before" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -714,7 +605,14 @@
       <workItem from="1583975007516" duration="10886000" />
       <workItem from="1584240037232" duration="9113000" />
       <workItem from="1585374137157" duration="1193000" />
-      <workItem from="1585375381081" duration="2546000" />
+      <workItem from="1585375381081" duration="2898000" />
+      <workItem from="1585441487196" duration="1306000" />
+      <workItem from="1585483324648" duration="3470000" />
+      <workItem from="1585703767756" duration="308000" />
+      <workItem from="1585704130176" duration="3941000" />
+      <workItem from="1585836192794" duration="1215000" />
+      <workItem from="1585966742924" duration="946000" />
+      <workItem from="1586268956837" duration="1554000" />
     </task>
     <task id="LOCAL-00001" summary="create maven">
       <created>1583851274821</created>
@@ -730,61 +628,103 @@
       <option name="project" value="LOCAL" />
       <updated>1584436973839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add before">
+      <created>1585403078409</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585403078409</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60449000" />
+    <option name="totallyTimeSpent" value="73541000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" x="0" y="382" width="1920" height="276" id="Event Log" order="7" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.3278867" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="JRebel Console" order="8" sideWeight="0.5015625" side_tool="true" weight="0.32943678" />
+      <window_info anchor="bottom" x="0" y="382" width="1920" height="276" id="Event Log" order="7" sideWeight="0.5025707" side_tool="true" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4989339" weight="0.32897604" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="JRebel Executor" order="8" sideWeight="0.5130208" weight="0.32943678" />
-      <window_info anchor="right" id="Word Book" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32969153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="JRebel Setup Guide" order="4" weight="0.2217484" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4978678" weight="0.1949891" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32897604" />
       <window_info anchor="right" id="aiXcoder" order="3" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.3278867" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" weight="0.32352942" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49920762" visible="true" weight="0.19189766" />
-      <window_info anchor="bottom" id="Problems" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.3278867" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4974293" weight="0.3283582" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49946696" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49733475" weight="0.32352942" />
+      <window_info anchor="bottom" id="Problems" order="8" sideWeight="0.49946696" weight="0.32897604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49920762" visible="true" weight="0.1285347" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32995737" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="JRebel" order="2" sideWeight="0.5007924" side_tool="true" weight="0.175" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="9" sideWeight="0.4989339" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="9" sideWeight="0.49807197" visible="true" weight="0.3283582" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="4" visible="true" weight="0.1773779" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="JRebel" order="2" sideWeight="0.5007924" side_tool="true" weight="0.175" />
+      <window_info anchor="right" id="Word Book" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4978678" weight="0.1949891" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Executor" order="8" sideWeight="0.5130208" weight="0.32943678" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="JRebel Console" order="8" sideWeight="0.5015625" side_tool="true" weight="0.32943678" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -792,7 +732,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create maven" />
     <MESSAGE value="create datebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="create datebase" />
+    <MESSAGE value="add before" />
+    <option name="LAST_COMMIT_MESSAGE" value="add before" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -800,169 +741,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/90f215b7-1974-4255-9086-5a1958e9813d/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f46fd705-671a-4995-a488-2242d9c5f61b/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="uml://MAVEN/com.zuojiachen:AnimalShelter:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.zuojiachen:AnimalShelter:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="" y="">com.zuojiachen:AnimalShelter:1.0-SNAPSHOT</node>
-            <node x="" y="">org.springframework:spring-context:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.springframework:spring-core:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.springframework:spring-beans:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.springframework:spring-expression:jar:4.3.6.RELEASE</node>
-            <node x="" y="">commons-logging:commons-logging:jar:1.2</node>
-            <node x="" y="">org.springframework:spring-aop:jar:4.3.6.RELEASE</node>
-            <node x="" y="">aopalliance:aopalliance:jar:1.0</node>
-            <node x="" y="">org.springframework:spring-aspects:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.aspectj:aspectjweaver:jar:1.8.13</node>
-            <node x="" y="">org.springframework:spring-jdbc:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.springframework:spring-tx:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.mybatis:mybatis-spring:jar:1.3.1</node>
-            <node x="" y="">org.apache.commons:commons-dbcp2:jar:2.2.0</node>
-            <node x="" y="">org.apache.commons:commons-dbcp2:jar:2.2.0/org.apache.commons:commons-pool2:jar:2.5.0</node>
-            <node x="" y="">org.mybatis:mybatis:jar:3.4.5</node>
-            <node x="" y="">log4j:log4j:jar:1.2.17</node>
-            <node x="" y="">mysql:mysql-connector-java:jar:5.1.5</node>
-            <node x="" y="">org.springframework:spring-webmvc:jar:4.3.6.RELEASE</node>
-            <node x="" y="">org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE</node>
-            <node x="" y="">javax.servlet:javax.servlet-api:jar:3.1.0</node>
-            <node x="" y="">javax.servlet:jstl:jar:1.2</node>
-            <node x="" y="">com.fasterxml.jackson.core:jackson-core:jar:2.9.4</node>
-            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.9.4</node>
-            <node x="" y="">com.fasterxml.jackson.core:jackson-annotations:jar:2.9.4</node>
-            <node x="" y="">org.hibernate:hibernate-validator:jar:5.4.0.Final</node>
-            <node x="" y="">org.hibernate:hibernate-validator:jar:5.4.0.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
-            <node x="" y="">org.hibernate:hibernate-validator:jar:5.4.0.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final</node>
-            <node x="" y="">org.hibernate:hibernate-validator:jar:5.4.0.Final/com.fasterxml:classmate:jar:1.3.1</node>
-            <node x="" y="">commons-fileupload:commons-fileupload:jar:1.3.1</node>
-            <node x="" y="">commons-io:commons-io:jar:2.4</node>
-            <node x="" y="">junit:junit:jar:4.11</node>
-            <node x="" y="">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.947550432276657" x="782.0" y="268.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="228" column="16" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AuserDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/before/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Animalkind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Auser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Buser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnimalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AuserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BuserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/GetanimalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/AnimalkindService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/AnimalService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/AuserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1059,16 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/AnimalkindServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1125,9 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1135,51 +900,585 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/NewsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="171">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/before/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#94#95#0" expanded="true" />
-            <element signature="e#136#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/res/css/full.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/res/css/full.css" />
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnimalkindController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="209">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/res/css/full.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add01.html">
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/user/reg.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://MAVEN/com.zuojiachen:AnimalShelter:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.zuojiachen:AnimalShelter:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="1272.7462516827904" y="650.0">com.zuojiachen:AnimalShelter:1.0-SNAPSHOT</node>
+            <node x="197.25" y="460.0">org.springframework:spring-context:jar:4.3.6.RELEASE</node>
+            <node x="523.2774202827079" y="80.0">org.springframework:spring-core:jar:4.3.6.RELEASE</node>
+            <node x="621.7786489151873" y="190.0">org.springframework:spring-beans:jar:4.3.6.RELEASE</node>
+            <node x="277.87742028270804" y="370.0">org.springframework:spring-expression:jar:4.3.6.RELEASE</node>
+            <node x="89.62742028270804" y="0.0">commons-logging:commons-logging:jar:1.2</node>
+            <node x="321.37002305031103" y="280.0">org.springframework:spring-aop:jar:4.3.6.RELEASE</node>
+            <node x="929.6286489151873" y="460.0">aopalliance:aopalliance:jar:1.0</node>
+            <node x="614.6286489151873" y="460.0">org.springframework:spring-aspects:jar:4.3.6.RELEASE</node>
+            <node x="1047.6286489151873" y="460.0">org.aspectj:aspectjweaver:jar:1.8.13</node>
+            <node x="1262.6286489151871" y="370.0">org.springframework:spring-jdbc:jar:4.3.6.RELEASE</node>
+            <node x="1682.1286489151871" y="280.0">org.springframework:spring-tx:jar:4.3.6.RELEASE</node>
+            <node x="1182.6286489151871" y="460.0">org.mybatis:mybatis-spring:jar:1.3.1</node>
+            <node x="46.25" y="460.0">org.apache.commons:commons-dbcp2:jar:2.2.0</node>
+            <node x="10.5" y="370.0">org.apache.commons:commons-dbcp2:jar:2.2.0/org.apache.commons:commons-pool2:jar:2.5.0</node>
+            <node x="2072.628648915187" y="460.0">org.mybatis:mybatis:jar:3.4.5</node>
+            <node x="2323.628648915187" y="460.0">log4j:log4j:jar:1.2.17</node>
+            <node x="752.6286489151873" y="460.0">mysql:mysql-connector-java:jar:5.1.5</node>
+            <node x="473.62864891518734" y="460.0">org.springframework:spring-webmvc:jar:4.3.6.RELEASE</node>
+            <node x="451.8125" y="370.0">org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE</node>
+            <node x="1755.6286489151871" y="460.0">javax.servlet:javax.servlet-api:jar:3.1.0</node>
+            <node x="1322.6286489151871" y="460.0">javax.servlet:jstl:jar:1.2</node>
+            <node x="2209.378648915187" y="370.0">com.fasterxml.jackson.core:jackson-core:jar:2.9.4</node>
+            <node x="2169.628648915187" y="460.0">com.fasterxml.jackson.core:jackson-databind:jar:2.9.4</node>
+            <node x="2405.628648915187" y="460.0">com.fasterxml.jackson.core:jackson-annotations:jar:2.9.4</node>
+            <node x="1455.4619822485206" y="460.0">org.hibernate:hibernate-validator:jar:5.4.0.Final</node>
+            <node x="1381.6286489151871" y="370.0">org.hibernate:hibernate-validator:jar:5.4.0.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
+            <node x="1512.6286489151871" y="370.0">org.hibernate:hibernate-validator:jar:5.4.0.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final</node>
+            <node x="1645.6286489151871" y="370.0">org.hibernate:hibernate-validator:jar:5.4.0.Final/com.fasterxml:classmate:jar:1.3.1</node>
+            <node x="1900.6286489151871" y="460.0">commons-fileupload:commons-fileupload:jar:1.3.1</node>
+            <node x="2650.628648915187" y="460.0">commons-io:commons-io:jar:2.4</node>
+            <node x="2574.628648915187" y="460.0">junit:junit:jar:4.11</node>
+            <node x="2544.628648915187" y="370.0">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-tx:jar:4.3.6.RELEASE">
+              <point x="10.673076923076906" y="-15.0" />
+              <point x="1338.9193286058671" y="530.0" />
+              <point x="1745.1286489151871" y="530.0" />
+              <point x="21.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+              <point x="2.1346153846153584" y="-15.0" />
+              <point x="1330.3808670674057" y="510.0" />
+              <point x="1346.6286489151871" y="510.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="-10.673076923076906" y="-15.0" />
+              <point x="1317.5731747597133" y="530.0" />
+              <point x="1172.1286489151871" y="530.0" />
+              <point x="1172.1286489151871" y="260.0" />
+              <point x="691.8500774866159" y="260.0" />
+              <point x="15.571428571428555" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="0.0" y="-15.0" />
+              <point x="500.8125" y="350.0" />
+              <point x="511.6458333333333" y="350.0" />
+              <point x="511.6458333333333" y="170.0" />
+              <point x="562.1663091715968" y="170.0" />
+              <point x="-11.111111111111086" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="-43.5" y="-15.0" />
+              <point x="211.75" y="440.0" />
+              <point x="208.65277777777783" y="440.0" />
+              <point x="208.65277777777783" y="140.0" />
+              <point x="528.8329758382636" y="140.0" />
+              <point x="-44.44444444444446" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-aop:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="24.25" y="-15.0" />
+              <point x="394.12002305031103" y="250.0" />
+              <point x="645.1357917723302" y="250.0" />
+              <point x="-31.14285714285711" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="40.55769230769238" y="-15.0" />
+              <point x="1368.8039439904828" y="600.0" />
+              <point x="2395.128648915187" y="600.0" />
+              <point x="2395.128648915187" y="130.0" />
+              <point x="617.7218647271523" y="130.0" />
+              <point x="44.44444444444434" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="commons-fileupload:commons-fileupload:jar:1.3.1">
+              <point x="19.211538461538566" y="-15.0" />
+              <point x="1347.457790144329" y="550.0" />
+              <point x="1976.6286489151871" y="550.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="commons-logging:commons-logging:jar:1.2">
+              <point x="-53.36538461538464" y="-15.0" />
+              <point x="1274.8808670674057" y="630.0" />
+              <point x="0.0" y="630.0" />
+              <point x="0.0" y="55.0" />
+              <point x="112.79408694937467" y="55.0" />
+              <point x="-46.33333333333337" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
+              <point x="49.09615384615381" y="-15.0" />
+              <point x="1377.3424055289443" y="620.0" />
+              <point x="2602.628648915187" y="620.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.apache.commons:commons-dbcp2:jar:2.2.0" target="commons-logging:commons-logging:jar:1.2">
+              <point x="32.75" y="-15.0" />
+              <point x="144.5" y="440.0" />
+              <point x="149.0" y="440.0" />
+              <point x="149.0" y="55.0" />
+              <point x="159.12742028270804" y="55.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.mybatis:mybatis-spring:jar:1.3.1">
+              <point x="-6.403846153846189" y="-15.0" />
+              <point x="1321.8424055289443" y="520.0" />
+              <point x="1242.1286489151871" y="520.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="21.0" y="-15.0" />
+              <point x="1745.1286489151871" y="140.0" />
+              <point x="606.6107536160412" y="140.0" />
+              <point x="33.33333333333326" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-aop:jar:4.3.6.RELEASE">
+              <point x="-36.28846153846155" y="-15.0" />
+              <point x="1291.9577901443288" y="590.0" />
+              <point x="425.37742028270804" y="590.0" />
+              <point x="425.37742028270804" y="350.0" />
+              <point x="357.74502305031103" y="350.0" />
+              <point x="-12.125" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE" target="org.springframework:spring-aop:jar:4.3.6.RELEASE">
+              <point x="-24.200000000000045" y="-15.0" />
+              <point x="509.9286489151873" y="430.0" />
+              <point x="441.0625" y="430.0" />
+              <point x="441.0625" y="340.0" />
+              <point x="381.99502305031103" y="340.0" />
+              <point x="12.125" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE" target="org.springframework:spring-expression:jar:4.3.6.RELEASE">
+              <point x="-48.40000000000009" y="-15.0" />
+              <point x="485.72864891518725" y="440.0" />
+              <point x="392.0440869493748" y="440.0" />
+              <point x="45.66666666666674" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-aspects:jar:4.3.6.RELEASE">
+              <point x="-27.75" y="-15.0" />
+              <point x="1300.4962516827904" y="570.0" />
+              <point x="673.6286489151873" y="570.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.aspectj:aspectjweaver:jar:1.8.13">
+              <point x="-14.942307692307622" y="-15.0" />
+              <point x="1313.3039439904828" y="540.0" />
+              <point x="1104.6286489151873" y="540.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-aop:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="-24.25" y="-15.0" />
+              <point x="345.62002305031103" y="160.0" />
+              <point x="551.0551980604857" y="160.0" />
+              <point x="-22.22222222222217" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-context:jar:4.3.6.RELEASE">
+              <point x="-44.826923076923094" y="-15.0" />
+              <point x="1283.4193286058671" y="610.0" />
+              <point x="255.25" y="610.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:4.3.6.RELEASE" target="org.springframework:spring-tx:jar:4.3.6.RELEASE">
+              <point x="33.0" y="-15.0" />
+              <point x="1345.1286489151871" y="350.0" />
+              <point x="1703.1286489151871" y="350.0" />
+              <point x="-21.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="48.40000000000009" y="-15.0" />
+              <point x="582.5286489151874" y="440.0" />
+              <point x="676.2786489151873" y="440.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="-33.0" y="-15.0" />
+              <point x="1279.1286489151871" y="350.0" />
+              <point x="1231.1286489151871" y="350.0" />
+              <point x="1231.1286489151871" y="250.0" />
+              <point x="707.4215060580444" y="250.0" />
+              <point x="31.14285714285711" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-beans:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="0.0" y="-15.0" />
+              <point x="676.2786489151873" y="160.0" />
+              <point x="584.388531393819" y="160.0" />
+              <point x="11.111111111111086" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:4.3.6.RELEASE" target="org.springframework:spring-aop:jar:4.3.6.RELEASE">
+              <point x="14.5" y="-15.0" />
+              <point x="269.75" y="440.0" />
+              <point x="261.87742028270804" y="440.0" />
+              <point x="261.87742028270804" y="350.0" />
+              <point x="333.49502305031103" y="350.0" />
+              <point x="-36.375" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="-14.5" y="-15.0" />
+              <point x="240.75" y="440.0" />
+              <point x="249.75" y="440.0" />
+              <point x="249.75" y="240.0" />
+              <point x="629.5643632009017" y="240.0" />
+              <point x="-46.714285714285666" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
+              <point x="14.942307692307622" y="-15.0" />
+              <point x="1343.188559375098" y="540.0" />
+              <point x="1818.1286489151871" y="540.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="aopalliance:aopalliance:jar:1.0">
+              <point x="-19.211538461538453" y="-15.0" />
+              <point x="1309.0347132212519" y="550.0" />
+              <point x="978.6286489151873" y="550.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-webmvc:jar:4.3.6.RELEASE">
+              <point x="-32.01923076923072" y="-15.0" />
+              <point x="1296.2270209135595" y="580.0" />
+              <point x="534.1286489151873" y="580.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.mybatis:mybatis:jar:3.4.5">
+              <point x="23.480769230769283" y="-15.0" />
+              <point x="1351.7270209135595" y="560.0" />
+              <point x="2111.128648915187" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.fasterxml.jackson.core:jackson-databind:jar:2.9.4" target="com.fasterxml.jackson.core:jackson-core:jar:2.9.4">
+              <point x="0.0" y="-15.0" />
+              <point x="-26.75" y="15.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-validator:jar:5.4.0.Final" target="org.hibernate:hibernate-validator:jar:5.4.0.Final/com.fasterxml:classmate:jar:1.3.1">
+              <point x="47.66666666666674" y="-15.0" />
+              <point x="1574.6286489151873" y="440.0" />
+              <point x="1690.1286489151871" y="440.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.apache.commons:commons-dbcp2:jar:2.2.0">
+              <point x="-49.09615384615381" y="-15.0" />
+              <point x="1279.1500978366366" y="620.0" />
+              <point x="111.75" y="620.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:4.3.6.RELEASE" target="org.springframework:spring-expression:jar:4.3.6.RELEASE">
+              <point x="43.5" y="-15.0" />
+              <point x="298.75" y="440.0" />
+              <point x="300.7107536160413" y="440.0" />
+              <point x="-45.66666666666674" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.5">
+              <point x="-23.480769230769283" y="-15.0" />
+              <point x="1304.765482452021" y="560.0" />
+              <point x="831.1286489151873" y="560.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-databind:jar:2.9.4">
+              <point x="27.75" y="-15.0" />
+              <point x="1355.9962516827904" y="570.0" />
+              <point x="2236.128648915187" y="570.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="log4j:log4j:jar:1.2.17">
+              <point x="36.28846153846143" y="-15.0" />
+              <point x="1364.5347132212519" y="590.0" />
+              <point x="2354.128648915187" y="590.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-expression:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="0.0" y="-15.0" />
+              <point x="346.37742028270804" y="340.0" />
+              <point x="300.25" y="340.0" />
+              <point x="300.25" y="150.0" />
+              <point x="539.9440869493747" y="150.0" />
+              <point x="-33.33333333333337" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="24.200000000000045" y="-15.0" />
+              <point x="558.3286489151874" y="430.0" />
+              <point x="611.2786489151873" y="430.0" />
+              <point x="611.2786489151873" y="170.0" />
+              <point x="573.2774202827079" y="170.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.hibernate:hibernate-validator:jar:5.4.0.Final">
+              <point x="6.403846153846189" y="-15.0" />
+              <point x="1334.6500978366366" y="520.0" />
+              <point x="1526.9619822485206" y="520.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-core:jar:2.9.4">
+              <point x="32.01923076923072" y="-15.0" />
+              <point x="1360.265482452021" y="580.0" />
+              <point x="2313.128648915187" y="580.0" />
+              <point x="2313.128648915187" y="440.0" />
+              <point x="2289.628648915187" y="440.0" />
+              <point x="26.75" y="15.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-validator:jar:5.4.0.Final" target="org.hibernate:hibernate-validator:jar:5.4.0.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final">
+              <point x="0.0" y="-15.0" />
+              <point x="1526.9619822485206" y="440.0" />
+              <point x="1569.1286489151871" y="440.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-expression:jar:4.3.6.RELEASE">
+              <point x="-40.55769230769238" y="-15.0" />
+              <point x="1287.688559375098" y="600.0" />
+              <point x="346.37742028270804" y="600.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE" target="org.springframework:spring-aop:jar:4.3.6.RELEASE">
+              <point x="-32.66666666666674" y="-15.0" />
+              <point x="468.14583333333326" y="330.0" />
+              <point x="406.24502305031103" y="330.0" />
+              <point x="36.375" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="32.66666666666674" y="-15.0" />
+              <point x="533.4791666666667" y="350.0" />
+              <point x="562.7786489151873" y="350.0" />
+              <point x="562.7786489151873" y="260.0" />
+              <point x="660.7072203437588" y="260.0" />
+              <point x="-15.571428571428555" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-tx:jar:4.3.6.RELEASE" target="org.springframework:spring-beans:jar:4.3.6.RELEASE">
+              <point x="-21.0" y="-15.0" />
+              <point x="1703.1286489151871" y="240.0" />
+              <point x="722.9929346294731" y="240.0" />
+              <point x="46.71428571428578" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="org.springframework:spring-jdbc:jar:4.3.6.RELEASE">
+              <point x="-2.1346153846153584" y="-15.0" />
+              <point x="1326.111636298175" y="510.0" />
+              <point x="1312.1286489151871" y="510.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.hibernate:hibernate-validator:jar:5.4.0.Final" target="org.hibernate:hibernate-validator:jar:5.4.0.Final/javax.validation:validation-api:jar:1.1.0.Final">
+              <point x="-47.66666666666674" y="-15.0" />
+              <point x="1479.2953155818539" y="440.0" />
+              <point x="1437.1286489151871" y="440.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:4.3.6.RELEASE" target="org.springframework:spring-core:jar:4.3.6.RELEASE">
+              <point x="0.0" y="-15.0" />
+              <point x="1312.1286489151871" y="350.0" />
+              <point x="1301.1286489151871" y="350.0" />
+              <point x="1301.1286489151871" y="150.0" />
+              <point x="595.4996425049301" y="150.0" />
+              <point x="22.22222222222217" y="15.0" />
+            </edge>
+            <edge source="org.apache.commons:commons-dbcp2:jar:2.2.0" target="org.apache.commons:commons-dbcp2:jar:2.2.0/org.apache.commons:commons-pool2:jar:2.5.0">
+              <point x="-32.75" y="-15.0" />
+              <point x="79.0" y="440.0" />
+              <point x="74.5" y="440.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:4.3.6.RELEASE" target="org.springframework:spring-webmvc:jar:4.3.6.RELEASE/org.springframework:spring-web:jar:4.3.6.RELEASE">
+              <point x="0.0" y="-15.0" />
+              <point x="534.1286489151873" y="420.0" />
+              <point x="500.8125" y="420.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="com.fasterxml.jackson.core:jackson-annotations:jar:2.9.4">
+              <point x="44.826923076923094" y="-15.0" />
+              <point x="1373.0731747597133" y="610.0" />
+              <point x="2480.128648915187" y="610.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="org.springframework:spring-core:jar:4.3.6.RELEASE" target="commons-logging:commons-logging:jar:1.2">
+              <point x="0.0" y="-15.0" />
+              <point x="573.2774202827079" y="55.0" />
+              <point x="205.4607536160413" y="55.0" />
+              <point x="46.33333333333326" y="15.0" />
+            </edge>
+            <edge source="com.zuojiachen:AnimalShelter:1.0-SNAPSHOT" target="commons-io:commons-io:jar:2.4">
+              <point x="53.36538461538453" y="-15.0" />
+              <point x="1381.6116362981747" y="630.0" />
+              <point x="2703.128648915187" y="630.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.1729106628242075" x="1378.0" y="340.0" />
+          <SelectedNodes>
+            <node>com.zuojiachen:AnimalShelter:1.0-SNAPSHOT</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/90f215b7-1974-4255-9086-5a1958e9813d.TABLE:animalshelter.animal">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>90f215b7-1974-4255-9086-5a1958e9813d.TABLE:animalshelter.animal</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">90f215b7-1974-4255-9086-5a1958e9813d.TABLE:animalshelter.animal</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="84.0" y="154.0" />
+          <SelectedNodes>
+            <node>90f215b7-1974-4255-9086-5a1958e9813d.TABLE:animalshelter.animal</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://90f215b7-1974-4255-9086-5a1958e9813d/schema/animalshelter/table/animal">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://90f215b7-1974-4255-9086-5a1958e9813d/schema/animalshelter/table/animalkind">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/before/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/before/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/AnimalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/AnimalkindService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/AnimalkindServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BuserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/user/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/userindex.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/before/add01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -1235,11 +1534,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Web|AnimalShelter</last-edited>
+          <last-edited>AnimalShelter</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1247,7 +1547,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: junit:junit:4.11</last-edited>
+          <last-edited>Maven: com.fasterxml.jackson.core:jackson-databind:2.9.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
