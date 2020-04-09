@@ -9,6 +9,11 @@
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
   <link rel="stylesheet" href="../res/layui/css/layui.css">
   <link rel="stylesheet" href="../res/css/global.css">
+  <script type="text/javascript" src="../res/js/Popt.js"></script>
+  <script type="text/javascript" src="../res/js/city.json.js"></script>
+  <script type="text/javascript" src="../res/js/citySet.js"></script>
+  <script type="text/javascript" src="../res/js/jquery.min.js"></script>
+
   <style>
   	  .layui-bg-black {
   	      background-color: #009688!important;
@@ -27,6 +32,20 @@
   		  bottom: 0px;
   		  height: 2px;
   	  }
+	  /* * { -ms-word-wrap: break-word; word-wrap: break-word; } */
+	  /* html { -webkit-text-size-adjust: none; text-size-adjust: none; }
+	  html, body {height:100%;width:100%; } */
+	  /* .wrap{width:464px;height:34px;margin:200px auto;border:0;position:relative;} */
+	  /* .input{position:absolute;top:0;left:0;width:457px;margin:0;padding-left:5px;height:30px;line-height:30px;font-size:12px;border:1px solid #c9cacb;} */
+	  /* s{position:absolute;top:1px;right:0;width:32px;height:32px;background:url("../res/images/arrow.png") no-repeat;} */
+	  ._citys { width: 450px; display: inline-block; border: 2px solid #eee; padding: 5px; position: relative; background-color: #91B493;}
+	  ._citys span { color: #05920a; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 10px; top: 10px; border: 1px solid #05920a; cursor: pointer; }
+	  ._citys0 { width: 95%; height: 34px; line-height: 34px; display: inline-block; border-bottom: 2px solid #05920a; padding: 0px 5px; font-size:14px; font-weight:bold; margin-left:6px; }
+	  ._citys0 li { display: inline-block; line-height: 34px; font-size: 15px; color: #888; width: 80px; text-align: center; cursor: pointer; }
+	  ._citys1 { width: 100%; display: inline-block; padding: 10px 0; }
+	  ._citys1 a { width: 83px; height: 35px; display: inline-block; background-color: #f5f5f5; color: #666; margin-left: 6px; margin-top: 3px; line-height: 35px; text-align: center; cursor: pointer; font-size: 12px; border-radius: 5px; overflow: hidden; }
+	  ._citys1 a:hover { color: #fff; background-color: #05920a; }
+	  .AreaS { background-color: #05920a !important; color: #fff !important; }
   </style>
   <script>
   //注意：导航 依赖 element 模块，否则无法进行功能性操作
@@ -147,10 +166,11 @@
                 <div class="layui-form-mid layui-word-aux">将会成为您唯一的登入名</div>
               </div>
               <div class="layui-form-item">
-                <label for="L_username" class="layui-form-label">昵称</label>
+                <label for="L_username" class="layui-form-label">名字</label>
                 <div class="layui-input-inline">
                   <input type="text" id="L_username" name="username" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
+				<div class="layui-form-mid layui-word-aux">*先生/*女士</div>
               </div>
               <div class="layui-form-item">
                 <label for="L_pass" class="layui-form-label">密码</label>
@@ -159,12 +179,44 @@
                 </div>
                 <div class="layui-form-mid layui-word-aux">6到16个字符</div>
               </div>
+			  <div class="layui-form-item">
+			    <label for="L_pass" class="layui-form-label">确认密码</label>
+			    <div class="layui-input-inline">
+			      <input type="password" id="L_pass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+			    </div>
+			  
+			  </div>
               <div class="layui-form-item">
-                <label for="L_repass" class="layui-form-label">确认密码</label>
+                <label for="L_qq" class="layui-form-label">QQ</label>
                 <div class="layui-input-inline">
                   <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
               </div>
+			  <div class="layui-form-item">
+			    <label for="L_wechat" class="layui-form-label">微信</label>
+			    <div class="layui-input-inline">
+			      <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <label for="L_tel" class="layui-form-label">电话</label>
+			    <div class="layui-input-inline">
+			      <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <label for="L_area" class="layui-form-label">地区</label>
+			    <div class="layui-input-inline">
+			      <div class="wrap"><input class="layui-input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"/><s></s></div>
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <label for="L_add" class="layui-form-label">详细地址</label>
+			    <div class="layui-input-inline">
+			      <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+			    </div>
+				<div class="layui-form-mid layui-word-aux">如街道、门牌号、小区、楼栋号、单元室等</div>
+			  </div>
               <div class="layui-form-item">
                 <label for="L_vercode" class="layui-form-label">人类验证</label>
                 <div class="layui-input-inline">
@@ -217,6 +269,13 @@ layui.config({
   fly: 'index'
 }).use('fly');
 </script>
-
+<script type="text/javascript">
+$("#city").click(function (e) {
+	SelCity(this,e);
+});
+$("s").click(function (e) {
+	SelCity(document.getElementById("city"),e);
+});
+</script>
 </body>
 </html>

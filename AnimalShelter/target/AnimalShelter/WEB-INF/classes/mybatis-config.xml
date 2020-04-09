@@ -12,11 +12,11 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <!--<typeAlias alias="Goods" type="com.po.Goods"/>-->
         <!--<typeAlias alias="GoodsType" type="com.po.GoodsType"/>-->
         <!--<typeAlias alias="Notice" type="com.po.Notice"/>-->
-        <!--<typeAlias alias="Buser" type="com.po.Buser"/>-->
+        <typeAlias alias="Buser" type="entity.Buser"/>
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
 	 <mappers>   
-        <!--<mapper resource="com/mybatis/admin/AdminMapper.xml"/>-->
+        <mapper resource="mapper/BuserDao.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminTypeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminGoodsMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
