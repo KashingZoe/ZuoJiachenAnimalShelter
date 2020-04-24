@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -62,13 +62,29 @@
         ._citys1 a:hover { color: #fff; background-color: #05920a; }
         .AreaS { background-color: #05920a !important; color: #fff !important; }
     </style>
-    <script>
+    <script type="text/javascript">
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
         layui.use('element', function(){
             var element = layui.element;
 
             //…
         });
+
+        //验证码
+        function refreshCode(){
+            document.getElementById("code").src = "validateCode?" + Math.random();
+        }
+        //表单验证
+        function checkForm(){
+            var bpwd = document.regForm.bpwd.value;
+            var repass = document.regForm.repass.value;
+            if(bpwd != repass){
+                alert("两次密码不一致！");
+                return false;
+            }
+            document.regForm.submit();
+            return true;
+        }
     </script>
 </head>
 <body>
@@ -172,84 +188,87 @@
             <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
-                        <form method="post">
+                        <form:form action="user/register" method="post" modelAttribute="buser" name="regForm">
                             <div class="layui-form-item">
                                 <label for="L_email" class="layui-form-label">邮箱</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" id="L_email" name="email" required lay-verify="email" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_email" name="bemail" value="${buser.bemail}" required lay-verify="email" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid layui-word-aux">将会成为您唯一的登入名</div>
+                                <div class="layui-form-mid layui-word-aux">${msg}</div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_username" class="layui-form-label">名字</label>
                                 <div class="layui-input-inline">
-                                    <input type="text" id="L_username" name="username" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_username" name="bname" value="${buser.bname}" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid layui-word-aux">*先生/*女士</div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_pass" class="layui-form-label">密码</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_pass" name="pass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="password" id="L_pass" name="bpwd" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid layui-word-aux">6到16个字符</div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_pass" class="layui-form-label">确认密码</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_pass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="password" id="repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
 
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_qq" class="layui-form-label">QQ</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_qq" name="bqq" value="${buser.bqq}" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_wechat" class="layui-form-label">微信</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_wechat" name="bwechat" value="${buser.bwechat}" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_tel" class="layui-form-label">电话</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_tel" name="btel" value="${buser.btel}" required lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-form-item">
-                                <label for="L_area" class="layui-form-label">地区</label>
+                                <label for="city" class="layui-form-label">地区</label>
                                 <div class="layui-input-inline">
-                                    <div class="wrap"><input class="layui-input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"/><s></s></div>
+                                    <div class="wrap"><input class="layui-input" name="barea"  value="${buser.barea}" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"/><s></s></div>
                                 </div>
                             </div>
                             <div class="layui-form-item">
                                 <label for="L_add" class="layui-form-label">详细地址</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" id="L_repass" name="repass" required lay-verify="required" autocomplete="off" class="layui-input">
+                                    <input type="text" id="L_add" name="badd" value="${buser.badd}" equired lay-verify="required" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid layui-word-aux">如街道、门牌号、小区、楼栋号、单元室等</div>
                             </div>
+                            <%--<div class="layui-form-item">--%>
+                                <%--<label for="L_vercode" class="layui-form-label">验证码</label>--%>
+                                <%--<div class="layui-input-inline">--%>
+                                    <%--<input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">--%>
+                                <%--</div>--%>
+                                <%--<div class="layui-form-mid">--%>
+                                    <%--<img id="code" src="validateCode" />--%>
+                                    <%--<a href="javascript:refreshCode();"><font color="blue">看不清，换一个！</font></a>--%>
+                                <%--</div>--%>
+                                <%--<div class="layui-form-mid layui-word-aux">${codeError}</div>--%>
+                            <%--</div>--%>
                             <div class="layui-form-item">
-                                <label for="L_vercode" class="layui-form-label">人类验证</label>
-                                <div class="layui-input-inline">
-                                    <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
-                                </div>
-                                <div class="layui-form-mid">
-                                    <span style="color: #c00;">{{d.vercode}}</span>
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <button class="layui-btn" lay-filter="*" lay-submit>立即注册</button>
+                                <button class="layui-btn" onclick="checkForm()" lay-filter="*" lay-submit>立即注册</button>
                             </div>
                             <div class="layui-form-item fly-form-app">
                                 <span>或者直接使用社交账号快捷注册</span>
                                 <a href="" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-qq" title="QQ登入"></a>
                                 <a href="" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" class="iconfont icon-weibo" title="微博登入"></a>
                             </div>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
             </div>

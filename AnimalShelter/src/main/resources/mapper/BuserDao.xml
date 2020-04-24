@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dao.BuserDao">
+<mapper namespace="dao.BuserDao">
 
-    <!--<resultMap type="entity.Buser" id="BuserMap">-->
-        <!--<result property="id" column="id" jdbcType="INTEGER"/>-->
-        <!--<result property="bemail" column="bemail" jdbcType="VARCHAR"/>-->
-        <!--<result property="bpwd" column="bpwd" jdbcType="VARCHAR"/>-->
-        <!--<result property="bname" column="bname" jdbcType="VARCHAR"/>-->
-        <!--<result property="bqq" column="bqq" jdbcType="VARCHAR"/>-->
-        <!--<result property="bwechat" column="bwechat" jdbcType="VARCHAR"/>-->
-        <!--<result property="btel" column="btel" jdbcType="VARCHAR"/>-->
-        <!--<result property="barea" column="barea" jdbcType="VARCHAR"/>-->
-        <!--<result property="badd" column="badd" jdbcType="VARCHAR"/>-->
-    <!--</resultMap>-->
+    <resultMap type="entity.Buser" id="BuserMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="bemail" column="bemail" jdbcType="VARCHAR"/>
+        <result property="bpwd" column="bpwd" jdbcType="VARCHAR"/>
+        <result property="bname" column="bname" jdbcType="VARCHAR"/>
+        <result property="bqq" column="bqq" jdbcType="VARCHAR"/>
+        <result property="bwechat" column="bwechat" jdbcType="VARCHAR"/>
+        <result property="btel" column="btel" jdbcType="VARCHAR"/>
+        <result property="barea" column="barea" jdbcType="VARCHAR"/>
+        <result property="badd" column="badd" jdbcType="VARCHAR"/>
+    </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="Buser">
+    <select id="queryById" resultMap="BuserMap">
         select
           id, bemail, bpwd, bname, bqq, bwechat, btel, barea, badd
         from animalshelter.buser
@@ -23,7 +23,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="Buser">
+    <select id="queryAllByLimit" resultMap="BuserMap">
         select
           id, bemail, bpwd, bname, bqq, bwechat, btel, barea, badd
         from animalshelter.buser
@@ -31,7 +31,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="Buser">
+    <select id="queryAll" resultMap="BuserMap">
         select
           id, bemail, bpwd, bname, bqq, bwechat, btel, barea, badd
         from animalshelter.buser

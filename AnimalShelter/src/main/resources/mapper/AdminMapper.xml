@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- dao.AdminDao对应Dao接口 -->
+<mapper namespace="dao.AdminDao">
+    <!-- 查询用户信息 -->
+    <!--id是AdminDao接口的方法名，resultType返回类型Auser，parameterType传入参数类型Auser-->
+    <select id="login"  resultType="Auser" parameterType="Auser">
+		select * from auser where aname=#{aname} AND apwd=#{apwd}
+	</select>
+</mapper>

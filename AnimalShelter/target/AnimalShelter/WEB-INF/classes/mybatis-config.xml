@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<setting name="logImpl" value="log4j" />
 	</settings>
     <typeAliases><!-- 取别名 -->
-        <!--<typeAlias alias="Auser" type="com.po.Auser"/>-->
+        <typeAlias alias="Auser" type="entity.Auser"/>
         <!--<typeAlias alias="Goods" type="com.po.Goods"/>-->
         <!--<typeAlias alias="GoodsType" type="com.po.GoodsType"/>-->
         <!--<typeAlias alias="Notice" type="com.po.Notice"/>-->
@@ -16,7 +16,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
 	 <mappers>   
-        <mapper resource="mapper/BuserDao.xml"/>
+         <mapper resource="mapper/BuserDao.xml"/>
+         <mapper resource="mapper/AdminMapper.xml"/>
+         <mapper resource="mapper/AdminUserMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminTypeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminGoodsMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->

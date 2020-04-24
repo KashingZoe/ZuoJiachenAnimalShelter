@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdminUserDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="userInfo"  resultType="Buser" >
+		select * from buser
+	</select>
+	<!--根据用户账号查询-->
+    <select id="selectAUser" resultType="Buser" parameterType="Buser">
+		select * from buser where bemail = #{bemail}
+	</select>
+
+	<!--根据用户id查询-->
+	<select id="toEditUser" resultType="Buser" parameterType="Integer">
+		select * from buser where id = #{id}
+	</select>
+
+	<!-- 修改一个商品 -->
+	<update id="editUser" parameterType="Buser">
+		update buser
+		<set>
+			<if test="bemail != null">
+				bemail = #{bemail},
+			</if>
+			<if test="bpwd != null">
+				bpwd = #{bpwd},
+			</if>
+			<if test="bname != null">
+				bname = #{bname},
+			</if>
+			<if test="bqq != null">
+				bqq = #{bqq},
+			</if>
+			<if test="bwechat != null">
+				bwechat = #{bwechat},
+			</if>
+			<if test="btel != null">
+				btel = #{btel},
+			</if>
+			<if test="barea != null">
+				barea = #{barea},
+			</if>
+			<if test="badd != null">
+				badd = #{badd},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+    <delete id="deleteuserManager"  parameterType="Integer" >
+		delete from buser where id = #{id}
+	</delete>
+</mapper>

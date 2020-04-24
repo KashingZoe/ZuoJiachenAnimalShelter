@@ -3,7 +3,6 @@ package dao;
 import entity.Buser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-03-17 16:32:54
  */
-@Repository("buserDao")
+//@Repository("buserDao")
 @Mapper
 public interface BuserDao {
 

@@ -17,19 +17,21 @@
 						http://www.springframework.org/schema/mvc
 						http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	 <!--指定IOC容器扫描的包  -->			
-	<context:component-scan base-package="com.controller.admin"/>	
+	<context:component-scan base-package="controller.admin"/>
 	<context:component-scan base-package="com.controller.before"/>	
 	<context:component-scan base-package="com.controller.alipay"/>			
-	<context:component-scan base-package="com.service.admin"/>
-	<context:component-scan base-package="com.service.before"/>	
-	<context:component-scan base-package="com.service.alipay"/>		
-	<context:component-scan base-package="com.dao"/>
-	<context:component-scan base-package="dao"/>
+	<context:component-scan base-package="service.admin"/>
+	<context:component-scan base-package="com.service.before"/>
+	<context:component-scan base-package="service.alipay"/>
+	<!--<context:component-scan base-package="com.dao"/>-->
+	<!--<context:component-scan base-package="dao"/>-->
 
 	
 	<mvc:annotation-driven />
     <!-- 静态资源需要单独处理，不需要dispatcher servlet -->  
     <mvc:resources location="/res/" mapping="/res/**"></mvc:resources>
+	<mvc:resources location="/static/" mapping="/static/**"></mvc:resources>
+	<mvc:resources location="/lib/" mapping="/lib/**"></mvc:resources>
     <!--<mvc:resources location="res/images/" mapping="/images/**"></mvc:resources>-->
     <!-- 查看图片时，logos文件夹不需要dispatcher servlet --> 
     <!--<mvc:resources location="res/logos/" mapping="/logos/**"></mvc:resources>-->
