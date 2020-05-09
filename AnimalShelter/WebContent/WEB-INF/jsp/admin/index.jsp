@@ -17,7 +17,7 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
-    <title>后台管理-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <title>动物之家后台管理系统-WeAdmin 1.0</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -33,7 +33,7 @@
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="index.html">WeAdmin v1.0</a>
+        <a href="index.html">动物之家</a>
     </div>
     <div class="left_open">
         <!-- <i title="展开左侧栏" class="iconfont">&#xe699;</i> -->
@@ -100,45 +100,66 @@
                         </a>
                     </li>
                     <li>
-                        <a _href="userdel.html">
+                        <a _href="adminUser/toDeleteUser" target="center">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>用户删除</cite>
 
                         </a>
                     </li>
+                    <%--<li>--%>
+                        <%--<a href="javascript:;">--%>
+                            <%--<i class="iconfont">&#xe70b;</i>--%>
+                            <%--<cite>会员管理</cite>--%>
+                            <%--<i class="iconfont nav_right">&#xe697;</i>--%>
+                        <%--</a>--%>
+                        <%--<ul class="sub-menu">--%>
+                            <%--<li>--%>
+                                <%--<a _href="pages/member/addInput.html">--%>
+                                    <%--<i class="iconfont">&#xe6a7;</i>--%>
+                                    <%--<cite>输入框操作</cite>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a _href="pages/404.html">--%>
+                                    <%--<i class="iconfont">&#xe6a7;</i>--%>
+                                    <%--<cite>三级菜单演示</cite>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a _href="pages/404.html">--%>
+                                    <%--<i class="iconfont">&#xe6a7;</i>--%>
+                                    <%--<cite>导航菜单演示</cite>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</li>--%>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-note"></i>
+                    <cite>种类管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
                     <li>
-                        <a href="javascript:;">
-                            <i class="iconfont">&#xe70b;</i>
-                            <cite>会员管理</cite>
-                            <i class="iconfont nav_right">&#xe697;</i>
+                        <a _href="adminKind/kindInfo">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>种类列表</cite>
                         </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a _href="pages/member/addInput.html">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>输入框操作</cite>
-                                </a>
-                            </li>
-                            <li>
-                                <a _href="pages/404.html">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>三级菜单演示</cite>
-                                </a>
-                            </li>
-                            <li>
-                                <a _href="pages/404.html">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>导航菜单演示</cite>
-                                </a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li>
+                        <a _href="adminKind/toDeleteKind">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>种类删除</cite>
+                        </a>
                     </li>
                 </ul>
             </li>
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe705;</i>
-                    <cite>文章管理</cite>
+                    <cite>宠物管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -173,8 +194,8 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
-                    <cite>管理员管理</cite>
+                    <i class="layui-icon layui-icon-website"></i>
+                    <cite>新闻管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -200,6 +221,27 @@
                         <a _href="pages/admin/rule.html">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>权限管理</cite>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe63a;</i>
+                    <cite>留言板管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="pages/article/list.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>文章列表</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="pages/article/category.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>分类管理</cite>
                         </a>
                     </li>
                 </ul>
@@ -290,22 +332,22 @@
 <!-- 中部结束 -->
 <!-- 底部开始 -->
 <div class="footer">
-    <div class="copyright">Copyright ©2018 WeAdmin v1.0 All Rights Reserved</div>
+    <div class="copyright">Copyright ©2020 动物之家 All Rights Reserved</div>
 </div>
 <!-- 底部结束 -->
 <script type="text/javascript">
     //			layui扩展模块的两种加载方式-示例
-    //		    layui.extend({
-    //			  admin: '{/}.../.../static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
-    //			});
-    //			//使用拓展模块
-    //			layui.use('admin', function(){
-    //			  var admin = layui.admin;
-    //			});
-    layui.config({
-        base: 'static/js/'
-        ,version: '101100'
-    }).use('admin');
+    		    layui.extend({
+    			  admin: '{/}static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
+    			});
+    			//使用拓展模块
+    			layui.use('admin', function(){
+    			  var admin = layui.admin;
+    			});
+    // layui.config({
+    //     base: 'static/js/'
+    //     ,version: '101100'
+    // }).use('admin');
     // layui.use(['jquery','admin'], function(){
     //     var $ = layui.jquery;
     //     $(function(){

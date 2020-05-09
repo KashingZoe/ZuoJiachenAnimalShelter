@@ -30,12 +30,13 @@
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        function submit(){
-            var pageCur = 1;
-            window.location.href = "/adminGoods/deleteAGoods?pageCur="+pageCur;
-
+        function checkDel(id){
+            if(window.confirm("是否删除该用户"+id+"？")){
+                window.location.href = "/adminUser/deleteAUser?id="+id;
+            }
         }
     </script>
+
 </head>
 
 <body>
@@ -45,10 +46,10 @@
 				<span lay-separator="">/</span>
 				<a href="javascript:;">用户管理</a>
 				<span lay-separator="">/</span>
-				<a href="javascript:;"> <cite>用户列表</cite></a>
+				<a href="javascript:;"> <cite>用户删除</cite></a>
 			</span>
     <%--javascript:location.replace(location.href);--%>
-    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="/adminUser/userInfo"
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="/adminUser/toDeleteUser"
        title="刷新">
         <i class="layui-icon layui-icon-refresh"></i>
         <!-- <i class="layui-icon" style="line-height:30px">&#x1002;</i> -->
@@ -57,7 +58,7 @@
 
 <div class="weadmin-body">
     <div class="layui-row">
-        <form:form action="adminUser/selectAUser" modelAttribute="buser" method="post" class="layui-form layui-col-md12 we-search">
+        <form:form action="adminUser/delSelectAUser" modelAttribute="buser" method="post" class="layui-form layui-col-md12 we-search">
             用户搜索：
             <!-- <div class="layui-inline">
                 <input class="layui-input" placeholder="开始日" name="start" id="start" />
@@ -68,7 +69,7 @@
             <div class="layui-inline">
                 <input type="text" path="bemail" name="bemail" placeholder="请输入账号" autocomplete="off" class="layui-input" />
             </div>
-            <button type="submit" id="show" class="layui-btn" lay-submit="" lay-filter="sreach">
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="sreach">
                 <i class="layui-icon layui-icon-search"></i>
             </button>
         </form:form>
@@ -77,9 +78,9 @@
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
-        <button class="layui-btn" onclick="WeAdminShow('添加用户','adminUser/toAddUser',600,400)">
-            <i class="layui-icon layui-icon-add-circle-fine"></i>添加
-        </button>
+        <%--<button class="layui-btn" onclick="WeAdminShow('添加用户','adminUser/toAddUser',600,400)">--%>
+            <%--<i class="layui-icon layui-icon-add-circle-fine"></i>添加--%>
+        <%--</button>--%>
         <span class="fr" style="line-height:40px">共有数据：${totalRecord} 条</span>
     </div>
     <!-- 表 -->
@@ -105,7 +106,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="n" items="${userList}">
+        <c:forEach var="n" items="${delUserList}">
         <tr data-id="1">
             <td>
                 <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="1">
@@ -127,8 +128,9 @@
                 <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span>
             </td>-->
             <td class="td-manage">
-                <button class="layui-btn" onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)">
-                    <i class="layui-icon layui-icon-edit"></i>修改
+                <button class="layui-btn" onclick="checkDel('${n.id}')" >
+                    <%--onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)"--%>
+                    <i class="layui-icon layui-icon-delete"></i>删除
                 </button>
                 <%--<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">--%>
                     <%--<i class="layui-icon layui-icon-download-circle"></i>--%>
@@ -145,6 +147,9 @@
             </td>
         </tr>
         </c:forEach>
+        <tr>
+            <tb>${msg }</tb>
+        </tr>
         <!-- <tr data-id="2">
             <td>
                 <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="2">
@@ -180,12 +185,12 @@
     </table>
     <!-- </div> -->
     <!-- 表 -->
-    <div class="page" id="hide">
+    <div class="page">
         <div>
-            <c:url var="url_pre" value="/adminUser/userInfo">
+            <c:url var="url_pre" value="/adminUser/toDeleteUser">
                 <c:param name="pageCur" value="${pageCur - 1 }"/>
             </c:url>
-            <c:url var="url_next" value="/adminUser/userInfo">
+            <c:url var="url_next" value="/adminUser/toDeleteUser">
                 <c:param name="pageCur" value="${pageCur + 1 }"/>
             </c:url>
             <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>

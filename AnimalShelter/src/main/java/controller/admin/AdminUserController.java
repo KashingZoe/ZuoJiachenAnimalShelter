@@ -19,13 +19,13 @@ public class AdminUserController {
     private UserService userService;
     //查找所有的信息
     @RequestMapping("/userInfo")
-    public String userInfo(@ModelAttribute Buser buser, Model model) {
-        return adminUserService.userInfo(model);
+    public String userInfo(@ModelAttribute Buser buser, Model model, Integer pageCur) {
+        return adminUserService.userInfo(model,pageCur);
     }
     //userlist查找用户
     @RequestMapping("/selectAUser")
-    public String userAUser(@ModelAttribute Buser buser, Model model){
-        return  adminUserService.selectAUser(buser, model);
+    public String userAUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
+        return  adminUserService.selectAUser(buser, model, pageCur);
     }
     //打来useradd.jsp
     @RequestMapping("/toAddUser")
@@ -51,7 +51,20 @@ public class AdminUserController {
         return adminUserService.editUser(buser, model);
     }
 
+    @RequestMapping("/toDeleteUser")
+    public String toDeleteUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
+        return adminUserService.toDeleteUser(model, pageCur);
+    }
 
+    @RequestMapping("/deleteAUser")
+    public String deleteAUser(Integer id, Model model){
+        return adminUserService.deleteAUser(id, model);
+    }
+
+    @RequestMapping("/delSelectAUser")
+    public String delSelectAUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
+        return adminUserService.delSelectAUser(buser, model, pageCur);
+    }
 
 
 

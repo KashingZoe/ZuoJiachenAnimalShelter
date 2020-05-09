@@ -321,7 +321,13 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 			shadeClose: true,
 			shade: 0.4,
 			title: title,
-			content: url
+			content: url,
+            cancel: function(){
+
+                //("你点击了右上角的X");
+                window.location.reload();
+
+            }
 		});
 	}
 	/*弹出层+传递ID参数*/
@@ -346,7 +352,7 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 			shadeClose: true,
 			shade: 0.4,
 			title: title,
-			content: url
+			content: url,
 			// success: function(layero, index) {
 			// 	//向iframe页的id=house的元素传值  // 参考 https://yq.aliyun.com/ziliao/133150
 			// 	var body = layer.getChildFrame('body', index);
@@ -356,8 +362,17 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 			// error: function(layero, index) {
 			// 	alert("aaa");
 			// }
+            cancel: function(){
+
+                //("你点击了右上角的X");
+                window.location.reload();
+
+            }
+
 		});
-	}
+
+
+    }
 
 	/**
 	 *@todo tab监听：点击tab项对应的关闭按钮事件
@@ -468,15 +483,15 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 	window.reloadTab = function(which){
 		var len = $('.layui-tab-title').children('li').length;
 		var layId = $(which).attr('lay-id');
-		var i=1;	   
+		var i=1;
 		if($(which).attr('data-bit')){
 			return false; //判断页面打开后第一次点击，执行刷新
 		}else{
-			$(which).attr('data-bit',i);  	
+			$(which).attr('data-bit',i);
 			var frame = $('.weIframe[tab-id='+layId+']');
 			frame.attr('src', frame.attr('src'));
 			console.log("reload:"+$(which).attr('data-bit'));
-		} 
+		}
     }
 	/**
 	 *@todo Frame内部的按钮点击打开其他frame的tab

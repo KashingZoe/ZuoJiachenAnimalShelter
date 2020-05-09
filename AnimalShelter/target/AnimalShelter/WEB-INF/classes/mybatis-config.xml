@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     <typeAliases><!-- 取别名 -->
         <typeAlias alias="Auser" type="entity.Auser"/>
         <!--<typeAlias alias="Goods" type="com.po.Goods"/>-->
-        <!--<typeAlias alias="GoodsType" type="com.po.GoodsType"/>-->
+        <typeAlias alias="Animalkind" type="entity.Animalkind"/>
         <!--<typeAlias alias="Notice" type="com.po.Notice"/>-->
         <typeAlias alias="Buser" type="entity.Buser"/>
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <mapper resource="mapper/BuserDao.xml"/>
          <mapper resource="mapper/AdminMapper.xml"/>
          <mapper resource="mapper/AdminUserMapper.xml"/>
-        <!--<mapper resource="com/mybatis/admin/AdminTypeMapper.xml"/>-->
+         <mapper resource="mapper/AdminKindMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminGoodsMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminUserMapper.xml"/>-->
