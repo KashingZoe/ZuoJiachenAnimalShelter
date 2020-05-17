@@ -1,6 +1,7 @@
 package entity;
 
-import java.util.Date;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.Serializable;
 
 /**
@@ -29,12 +30,14 @@ public class Animal implements Serializable {
     private String lval;
     
     private String lbug;
+
+    private MultipartFile logoImage;
     
     private String lpicture;
     
     private String linfo;
     
-    private Date ltime;
+    private String ltime;
 
 
     public Integer getId() {
@@ -109,6 +112,14 @@ public class Animal implements Serializable {
         this.lbug = lbug;
     }
 
+    public MultipartFile getLogoImage() {
+        return logoImage;
+    }
+
+    public void setLogoImage(MultipartFile logoImage) {
+        this.logoImage = logoImage;
+    }
+
     public String getLpicture() {
         return lpicture;
     }
@@ -125,11 +136,11 @@ public class Animal implements Serializable {
         this.linfo = linfo;
     }
 
-    public Date getLtime() {
+    public String getLtime() {
         return ltime;
     }
 
-    public void setLtime(Date ltime) {
+    public void setLtime(String ltime) {
         this.ltime = ltime;
     }
 

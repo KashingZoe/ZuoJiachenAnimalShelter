@@ -30,7 +30,7 @@ public class AdminUserController {
     //打来useradd.jsp
     @RequestMapping("/toAddUser")
     public String toAddUser(@ModelAttribute Buser buser){
-        return "admin/useradd";
+        return "admin/animaladd";
     }
 
     //添加用户

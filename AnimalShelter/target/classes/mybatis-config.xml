@@ -13,6 +13,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <typeAlias alias="Animalkind" type="entity.Animalkind"/>
         <!--<typeAlias alias="Notice" type="com.po.Notice"/>-->
         <typeAlias alias="Buser" type="entity.Buser"/>
+        <typeAlias alias="Animal" type="entity.Animal"/>
+
+
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
 	 <mappers>   
@@ -20,6 +23,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <mapper resource="mapper/AdminMapper.xml"/>
          <mapper resource="mapper/AdminUserMapper.xml"/>
          <mapper resource="mapper/AdminKindMapper.xml"/>
+         <mapper resource="mapper/AdminAnimalMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminGoodsMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminUserMapper.xml"/>-->
