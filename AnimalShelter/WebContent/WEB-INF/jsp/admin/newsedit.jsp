@@ -18,7 +18,7 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="UTF-8">
-    <title>添加宠物</title>
+    <title>修改新闻</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -36,115 +36,38 @@
 
 <body>
 <div class="weadmin-body">
-    <form:form class="layui-form" action="adminAnimal/addAnimal" method="post" modelAttribute="animal" name="regForm" enctype="multipart/form-data">
+    <form:form class="layui-form" action="adminNews/editNews" method="post" modelAttribute="news" name="regForm" enctype="multipart/form-data">
         <div class="layui-form-item">
-        <label for="L_kind" class="layui-form-label">种类ID</label>
+            <label for="L_ID" class="layui-form-label">ID</label>
         <div class="layui-input-inline">
             <%--<input type="text" id="L_email" path="kindid" name="kindid" required lay-verify="email" autocomplete="off" class="layui-input">--%>
-            <form:select path="kindid" id="L_kind">
-                <form:options items="${animalkinds}" itemLabel="kindname" itemValue="id"/>
-            </form:select>
-                <%--<select path="kindid" name="kindid" id="L_kind" lay-verify="required">--%>
-
-                    <%--<option value="1">狗狗</option>--%>
-                    <%--<option value="2">猫咪</option>--%>
-                    <%--<option value="3">兔子</option>--%>
-                    <%--<option value="4">其他</option>--%>
-
-                <%--</select>--%>
+                <form:input type="text" readonly="true" id="L_ID" path="id" name="id" lay-verify="required" autocomplete="off" class="layui-input"/>
         </div>
 
         <div class="layui-form-mid layui-word-aux">${msg}</div>
         </div>
         <div class="layui-form-item">
-            <label  class="layui-form-label">性别</label>
+            <label for="L_ntitle" class="layui-form-label">标题</label>
             <div class="layui-input-inline">
-                <form:radiobutton path="lsex" value="男" title="男" checked="checked"/>
-                <form:radiobutton path="lsex" value="女" title="女" />
-                <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                <form:input type="text" id="L_ntitle" path="ntitle" name="ntitle" lay-verify="required" autocomplete="off" class="layui-input"/>
+
             </div>
 
         </div>
         <div class="layui-form-item">
-            <label for="L_ltitle" class="layui-form-label">标题</label>
+            <label for="L_ncontent" class="layui-form-label">内容</label>
             <div class="layui-input-inline">
-                <input type="text" id="L_ltitle" path="ltitle" name="ltitle" required lay-verify="required" autocomplete="off" class="layui-input">
+                <form:textarea path="ncontent" placeholder="请输入内容" class="layui-textarea"  id="L_ncontent" name="ncontent" lay-verify="required" autocomplete="off"/>
+
             </div>
 
         </div>
-        <div class="layui-form-item">
-            <label for="lyear" class="layui-form-label">年龄</label>
-            <div class="layui-input-inline">
-                <input type="text" id="lyear" path="lyear" name="lyear" required lay-verify="required" autocomplete="off" class="layui-input">
-            </div>
 
-        </div>
-        <div class="layui-form-item">
-            <label for="buserid" class="layui-form-label">用户ID</label>
-            <div class="layui-input-inline">
-                <input type="text" id="buserid" path="buserid" name="buserid" required lay-verify="required" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label  class="layui-form-label">是否绝育</label>
-            <div class="layui-input-inline">
-                <form:radiobutton path="lbirth" value="是" title="是" checked="checked"/>
-                <form:radiobutton path="lbirth" value="否" title="否" />
-                <%--<input type="text" id="lbirth" path="lbirth" name="lbirth" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label  class="layui-form-label">是否接种疫苗</label>
-            <div class="layui-input-inline">
-                <form:radiobutton path="lval" value="是" title="是" checked="checked"/>
-                <form:radiobutton path="lval" value="否" title="否" />
-                <%--<input type="text" id="lval" path="lval" name="lval" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label  class="layui-form-label">是否驱虫</label>
-            <div class="layui-input-inline">
-                <form:radiobutton path="lbug" value="是" title="是" checked="checked"/>
-                <form:radiobutton path="lbug" value="否" title="否" />
-                    <%--<input type="text" id="lbug" path="lbug" name="lbug" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label for="lpicture" class="layui-form-label">上传图片</label>
-            <div class="layui-input-inline">
-                <input type="file" id="lpicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label for="linfo" class="layui-form-label">宠物描述</label>
-            <div class="layui-input-inline">
-                <form:textarea path="linfo" placeholder="请输入内容" class="layui-textarea"  id="linfo" name="linfo" lay-verify="required" autocomplete="off"/>
-            </div>
-        </div>
-        <%--<div class="layui-form-item">--%>
-            <%--<label for="ltime" class="layui-form-label">时间</label>--%>
-            <%--<div class="layui-input-inline">--%>
-                <%--<input type="text" id="ltime" path="ltime" name="ltime" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-            <%--</div>--%>
-        <%--</div>--%>
 
-        <%--<div class="layui-form-item">--%>
-            <%--<label for="city" class="layui-form-label">地区</label>--%>
-            <%--<div class="layui-input-inline">--%>
-                <%--<div class="wrap"><input class="layui-input" path="barea" name="barea" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"/><s></s></div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="layui-form-item">--%>
-            <%--<label for="L_add" class="layui-form-label">详细地址</label>--%>
-            <%--<div class="layui-input-inline">--%>
-                <%--<input type="text" id="L_add" path="badd" name="badd"  equired lay-verify="required" autocomplete="off" class="layui-input">--%>
-            <%--</div>--%>
-            <%--<div class="layui-form-mid layui-word-aux">如街道、门牌号、小区、楼栋号、单元室等</div>--%>
-        <%--</div>--%>
         <div class="layui-form-item">
             <label class="layui-form-label"></label>
             <div class="layui-input-inline">
-                 <button class="layui-btn" type="submit" lay-filter="*" lay-submit>添加宠物</button>
+                 <button class="layui-btn" type="submit" lay-filter="*" lay-submit>修改新闻</button>
             </div>
         </div>
     </form:form>

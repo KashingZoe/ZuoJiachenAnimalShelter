@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdminOrderDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="orderInfo"  resultType="Getanimal">
+		select * from getanimal
+	</select>
+	<!--id 方法名  resultType返回类型 -->
+	<select id="orderInfoPage"  resultType="Getanimal" parameterType="map">
+		select * from getanimal order by id limit #{startIndex}, #{perPageSize}
+	</select>
+
+	<!--根据订单账号查询-->
+    <select id="selectAOrder" resultType="Getanimal" parameterType="Getanimal">
+		select * from getanimal where id = #{id}
+	</select>
+
+	<!--根据订单id查询-->
+	<select id="toEditOrder" resultType="Getanimal" parameterType="Integer">
+		select * from getanimal where id = #{id}
+	</select>
+
+	<!-- 修改一个宠物 -->
+	<update id="editOrder" parameterType="Getanimal">
+		update animalshelter.getanimal
+		<set>
+			<if test="buserid != null">
+				buserid = #{buserid},
+			</if>
+			<if test="ghome != null and ghome != ''">
+				ghome = #{ghome},
+			</if>
+			<if test="gchildren != null and gchildren != ''">
+				gchildren = #{gchildren},
+			</if>
+			<if test="gmarried != null and gmarried != ''">
+				gmarried = #{gmarried},
+			</if>
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="orderdate != null">
+				orderdate = #{orderdate},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+    <delete id="deleteAOrder"  parameterType="Integer" >
+		delete from getanimal where id = #{id}
+	</delete>
+</mapper>

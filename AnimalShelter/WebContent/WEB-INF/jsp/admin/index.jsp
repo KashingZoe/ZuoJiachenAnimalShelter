@@ -170,9 +170,9 @@
                         </a>
                     </li>
                     <li>
-                        <a _href="pages/article/category.html">
+                        <a _href="adminAnimal/toDeleteAnimal">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>分类管理</cite>
+                            <cite>宠物删除</cite>
                         </a>
                     </li>
                 </ul>
@@ -185,9 +185,15 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="pages/order/list.html">
+                        <a _href="adminOrder/orderInfo">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>订单列表</cite>
+                        </a>
+                    </li>
+                    <li>
+                        <a _href="adminOrder/toDeleteOrder">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>订单删除</cite>
                         </a>
                     </li>
                 </ul>
@@ -200,29 +206,18 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="pages/admin/list.html">
+                        <a _href="adminNews/newsInfo">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>管理员列表</cite>
+                            <cite>新闻列表</cite>
                         </a>
                     </li>
                     <li>
-                        <a _href="pages/admin/role.html">
+                        <a _href="adminNews/toDeleteNews">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>角色管理</cite>
+                            <cite>新闻删除</cite>
                         </a>
                     </li>
-                    <li>
-                        <a _href="pages/admin/cate.html">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限分类</cite>
-                        </a>
-                    </li>
-                    <li>
-                        <a _href="pages/admin/rule.html">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限管理</cite>
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li>

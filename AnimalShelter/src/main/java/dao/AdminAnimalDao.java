@@ -15,8 +15,9 @@ public interface AdminAnimalDao {
 
     public List<Animal> animalInfo();
     public List<Animal> animalInfoPage(Map<String, Object> map);
+    public List<Animal> selectAAnimal(Animal animal);
     int animalInsert(Animal animal);
     public Animal toEditAnimal(Integer id);
     public int editAnimal(Animal animal);
-    
+    public int deleteAAnimal(Integer id);
 }

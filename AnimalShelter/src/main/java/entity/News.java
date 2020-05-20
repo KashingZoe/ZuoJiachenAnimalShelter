@@ -1,6 +1,5 @@
 package entity;
 
-import java.util.Date;
 import java.io.Serializable;
 
 /**
@@ -18,7 +17,7 @@ public class News implements Serializable {
     
     private String ncontent;
     
-    private Date ntime;
+    private String ntime;
 
 
     public Integer getId() {
@@ -45,11 +44,11 @@ public class News implements Serializable {
         this.ncontent = ncontent;
     }
 
-    public Date getNtime() {
+    public String getNtime() {
         return ntime;
     }
 
-    public void setNtime(Date ntime) {
+    public void setNtime(String ntime) {
         this.ntime = ntime;
     }
 

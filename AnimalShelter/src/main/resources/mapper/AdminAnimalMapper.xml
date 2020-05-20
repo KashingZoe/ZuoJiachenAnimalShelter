@@ -19,8 +19,8 @@
     </insert>
 
 	<!--根据用户账号查询-->
-    <select id="selectAUser" resultType="Buser" parameterType="Buser">
-		select * from buser where bemail = #{bemail}
+    <select id="selectAAnimal" resultType="Animal" parameterType="Animal">
+		select * from animal where ltitle = #{ltitle}
 	</select>
 
 	<!--根据用户id查询-->
@@ -28,7 +28,7 @@
 		select * from animal where id = #{id}
 	</select>
 
-	<!-- 修改一个商品 -->
+	<!-- 修改一个宠物 -->
 	<update id="editAnimal" parameterType="Animal">
 		update animalshelter.animal
 		<set>
@@ -68,12 +68,8 @@
 		</set>
 		where id = #{id}
 	</update>
-	<!--新增所有列-->
-	<insert id="userInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Buser">
-        insert into animalshelter.buser(bemail, bpwd, bname, bqq, bwechat, btel, barea, badd)
-        values (#{bemail}, #{bpwd}, #{bname}, #{bqq}, #{bwechat}, #{btel}, #{barea}, #{badd})
-    </insert>
-    <delete id="deleteAUser"  parameterType="Integer" >
-		delete from buser where id = #{id}
+
+    <delete id="deleteAAnimal"  parameterType="Integer" >
+		delete from animal where id = #{id}
 	</delete>
 </mapper>

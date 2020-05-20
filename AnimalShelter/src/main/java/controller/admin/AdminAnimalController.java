@@ -1,6 +1,5 @@
 package controller.admin;
 
-import com.service.before.UserService;
 import entity.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,18 +16,17 @@ public class AdminAnimalController {
 
     @Autowired
     private AdminAnimalService adminAnimalService;
-    @Autowired
-    private UserService userService;
+
     //查找所有的信息
     @RequestMapping("/animalInfo")
     public String animalInfo(@ModelAttribute Animal animal, Model model, Integer pageCur) {
         return adminAnimalService.animalInfo(model,pageCur);
     }
-//    //userlist查找用户
-//    @RequestMapping("/selectAUser")
-//    public String userAUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
-//        return  adminUserService.selectAUser(buser, model, pageCur);
-//    }
+    //userlist查找用户
+    @RequestMapping("/selectAAnimal")
+    public String userAAnimal(@ModelAttribute Animal animal, Model model, Integer pageCur){
+        return  adminAnimalService.selectAAnimal(animal, model, pageCur);
+    }
     //打来animaladd.jsp
     @RequestMapping("/toAddAnimal")
     public String toAddAnimal(@ModelAttribute Animal animal){
@@ -53,20 +51,20 @@ public class AdminAnimalController {
         return adminAnimalService.editAnimal(animal, model);
     }
 //
-//    @RequestMapping("/toDeleteUser")
-//    public String toDeleteUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
-//        return adminUserService.toDeleteUser(model, pageCur);
-//    }
+    @RequestMapping("/toDeleteAnimal")
+    public String toDeleteAnimal(@ModelAttribute Animal animal, Model model, Integer pageCur){
+        return adminAnimalService.toDeleteAnimal(model, pageCur);
+    }
+
+    @RequestMapping("/deleteAAnimal")
+    public String deleteAAnimal(Integer id, Model model){
+        return adminAnimalService.deleteAAnimal(id, model);
+    }
 //
-//    @RequestMapping("/deleteAUser")
-//    public String deleteAUser(Integer id, Model model){
-//        return adminUserService.deleteAUser(id, model);
-//    }
-//
-//    @RequestMapping("/delSelectAUser")
-//    public String delSelectAUser(@ModelAttribute Buser buser, Model model, Integer pageCur){
-//        return adminUserService.delSelectAUser(buser, model, pageCur);
-//    }
+    @RequestMapping("/delSelectAAnimal")
+    public String delSelectAAnimal(@ModelAttribute Animal animal, Model model, Integer pageCur){
+        return adminAnimalService.delSelectAAnimal(animal, model, pageCur);
+    }
 
 
 

@@ -36,6 +36,13 @@
 
         <%--}--%>
     <%--</script>--%>
+    <script type="text/javascript">
+        function checkDel(id){
+            if(window.confirm("是否删除该宠物"+id+"？")){
+                window.location.href = "/adminAnimal/deleteAAnimal?id="+id;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -45,7 +52,7 @@
 				<span lay-separator="">/</span>
 				<a href="javascript:;">宠物管理</a>
 				<span lay-separator="">/</span>
-				<a href="javascript:;"> <cite>宠物列表</cite></a>
+				<a href="javascript:;"> <cite>宠物删除</cite></a>
 			</span>
     <%--javascript:location.replace(location.href);--%>
     <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="/adminAnimal/animalInfo"
@@ -60,10 +67,10 @@
         <form:form action="adminAnimal/selectAAnimal" modelAttribute="animal" method="post" class="layui-form layui-col-md12 we-search">
             宠物搜索：
             <!-- <div class="layui-inline">
-                <input class="layui-input" placeholder="开始日" name="start" id="start" />
+            <input class="layui-input" placeholder="开始日" name="start" id="start" />
             </div>
             <div class="layui-inline">
-                <input class="layui-input" placeholder="截止日" name="end" id="end" />
+            <input class="layui-input" placeholder="截止日" name="end" id="end" />
             </div> -->
             <div class="layui-inline">
                 <input type="text" path="ltitle" name="ltitle" placeholder="请输入标题" autocomplete="off" class="layui-input" />
@@ -132,8 +139,9 @@
                 <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span>
             </td>-->
             <td class="td-manage">
-                <button class="layui-btn" onclick="WeAdminEdit('编辑','adminAnimal/toEditAnimal?id=${n.id}',600, 400)">
-                    <i class="layui-icon layui-icon-edit"></i>修改
+                <button class="layui-btn" onclick="checkDel('${n.id}')" >
+                        <%--onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)"--%>
+                    <i class="layui-icon layui-icon-delete"></i>删除
                 </button>
                 <%--<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">--%>
                     <%--<i class="layui-icon layui-icon-download-circle"></i>--%>

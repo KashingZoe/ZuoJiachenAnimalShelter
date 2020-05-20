@@ -1,6 +1,5 @@
 package entity;
 
-import java.util.Date;
 import java.io.Serializable;
 
 /**
@@ -24,7 +23,7 @@ public class Getanimal implements Serializable {
     
     private Integer status;
     
-    private Date orderdate;
+    private String orderdate;
 
 
     public Integer getId() {
@@ -75,11 +74,11 @@ public class Getanimal implements Serializable {
         this.status = status;
     }
 
-    public Date getOrderdate() {
+    public String getOrderdate() {
         return orderdate;
     }
 
-    public void setOrderdate(Date orderdate) {
+    public void setOrderdate(String orderdate) {
         this.orderdate = orderdate;
     }
 
