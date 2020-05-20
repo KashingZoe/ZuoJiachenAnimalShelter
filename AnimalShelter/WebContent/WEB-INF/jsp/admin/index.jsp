@@ -228,9 +228,9 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="pages/article/list.html">
+                        <a _href="adminFeedback/feedbackInfo">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>文章列表</cite>
+                            <cite>留言列表</cite>
                         </a>
                     </li>
                     <li>

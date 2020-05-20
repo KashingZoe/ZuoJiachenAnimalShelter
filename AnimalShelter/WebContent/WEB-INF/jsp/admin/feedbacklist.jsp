@@ -17,7 +17,7 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="UTF-8" />
-    <title>订单列表</title>
+    <title>留言列表</title>
     <meta name="renderer" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -29,13 +29,13 @@
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <%--<script type="text/javascript">--%>
-        <%--function submit(){--%>
-            <%--var pageCur = 1;--%>
-            <%--window.location.href = "/adminAniaml/deleteAGoods?pageCur="+pageCur;--%>
+    <script type="text/javascript">
+        function checkDel(id){
 
-        <%--}--%>
-    <%--</script>--%>
+                window.location.href = "/adminFeedback/editFeedback?id="+id;
+
+        }
+    </script>
 </head>
 
 <body>
@@ -43,12 +43,12 @@
 			<span class="layui-breadcrumb" style="visibility: visible;">
 				<a href="javascript:;">首页</a>
 				<span lay-separator="">/</span>
-				<a href="javascript:;">订单管理</a>
+				<a href="javascript:;">留言管理</a>
 				<span lay-separator="">/</span>
-				<a href="javascript:;"> <cite>订单列表</cite></a>
+				<a href="javascript:;"> <cite>留言列表</cite></a>
 			</span>
     <%--javascript:location.replace(location.href);--%>
-    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="/adminOrder/orderInfo"
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="/adminFeedback/feedbackInfo"
        title="刷新">
         <i class="layui-icon layui-icon-refresh"></i>
         <!-- <i class="layui-icon" style="line-height:30px">&#x1002;</i> -->
@@ -57,8 +57,8 @@
 
 <div class="weadmin-body">
     <div class="layui-row">
-        <form:form action="adminOrder/selectAOrder" modelAttribute="getanimal" method="post" class="layui-form layui-col-md12 we-search">
-            订单搜索：
+        <form:form action="adminFeedback/selectAFeedback" modelAttribute="feedback" method="post" class="layui-form layui-col-md12 we-search">
+            留言搜索：
             <!-- <div class="layui-inline">
                 <input class="layui-input" placeholder="开始日" name="start" id="start" />
             </div>
@@ -66,7 +66,7 @@
                 <input class="layui-input" placeholder="截止日" name="end" id="end" />
             </div> -->
             <div class="layui-inline">
-                <input type="text" path="id" name="id" placeholder="请输入订单号" autocomplete="off" class="layui-input" />
+                <input type="text" path="ftitle" name="ftitle" placeholder="请输入标题" autocomplete="off" class="layui-input" />
             </div>
             <button type="submit" id="show" class="layui-btn" lay-submit="" lay-filter="sreach">
                 <i class="layui-icon layui-icon-search"></i>
@@ -77,7 +77,7 @@
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
-        <button class="layui-btn" onclick="WeAdminShow('添加订单','adminAnimal/toAddAnimal',600,400)">
+        <button class="layui-btn" onclick="WeAdminShow('添加新闻','adminNews/toAddNews',600,400)">
             <i class="layui-icon layui-icon-add-circle-fine"></i>添加
         </button>
         <span class="fr" style="line-height:40px">共有数据：${totalRecord} 条</span>
@@ -93,17 +93,15 @@
                 </div>
             </th>
             <th>ID</th>
-            <th>用户ID</th>
-            <th>房子</th>
-            <th>孩子</th>
-            <th>已婚</th>
-            <th>审核状态</th>
-            <th>领养时间</th>
+            <th>标题</th>
+            <th>内容</th>
+            <th>时间</th>
+            <th>状态</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="n" items="${orderList}">
+        <c:forEach var="n" items="${feedbackList}">
         <tr data-id="1">
             <td>
                 <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="1">
@@ -111,32 +109,32 @@
                 </div>
             </td>
             <td>${n.id}</td>
-            <td>${n.buserid}</td>
-            <td>${n.ghome}</td>
-            <td>${n.gchildren}</td>
-            <td>${n.gmarried}</td>
+            <td>${n.ftitle}</td>
+            <td>${n.fcontent}</td>
+            <td>${n.ftime}</td>
             <td>
                 <c:choose>
-                    <c:when test="${n.status == 0}">
-                        <label class="layui-btn">未审核</label>
+                    <c:when test="${n.fstatus == 0}">
+                        <label class="layui-btn layui-btn-danger">未处理</label>
                     </c:when>
-                    <c:when test="${n.status == 1}">
-                        <label  class="layui-btn layui-btn-normal">审核通过</label>
+                    <c:when test="${n.fstatus == 1}">
+                        <label  class="layui-btn layui-btn-normal">已处理</label>
                     </c:when>
-                    <c:otherwise>
-                        <label class="layui-btn layui-btn-danger">拒绝领养</label>
-                    </c:otherwise>
+
                 </c:choose>
             </td>
-            <td>${n.orderdate}</td>
-
             <!-- <td class="td-status">
                 <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span>
             </td>-->
             <td class="td-manage">
-                <button class="layui-btn" onclick="WeAdminEdit('编辑','adminOrder/toEditOrder?id=${n.id}',600, 400)">
-                    <i class="layui-icon layui-icon-edit"></i>审核
+                <button class="layui-btn" onclick="checkDel('${n.id}')" >
+                        <%--onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)"--%>
+                    <i class="layui-icon layui-icon-delete"></i>处理
                 </button>
+                    ${msg}
+                    <%--<button class="layui-btn" onclick="WeAdminEdit('编辑','adminFeedback/toEditFeedback?id=${n.id}',600, 400)">--%>
+                    <%--<i class="layui-icon layui-icon-edit"></i>修改--%>
+                <%--</button>--%>
                 <%--<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">--%>
                     <%--<i class="layui-icon layui-icon-download-circle"></i>--%>
                 <%--</a>--%>
@@ -189,10 +187,10 @@
     <!-- 表 -->
     <div class="page" id="hide">
         <div>
-            <c:url var="url_pre" value="/adminOrder/orderInfo">
+            <c:url var="url_pre" value="/adminFeedback/feedbackInfo">
                 <c:param name="pageCur" value="${pageCur - 1 }"/>
             </c:url>
-            <c:url var="url_next" value="/adminOrder/orderInfo">
+            <c:url var="url_next" value="/adminFeedback/feedbackInfo">
                 <c:param name="pageCur" value="${pageCur + 1 }"/>
             </c:url>
             <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>
