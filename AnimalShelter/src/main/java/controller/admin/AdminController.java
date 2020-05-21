@@ -31,4 +31,10 @@ public class AdminController {
         return "admin/welcome";
     }
 
+    @RequestMapping("/exit")
+    public String exit(@ModelAttribute Auser auser,HttpSession session) {
+        session.invalidate();
+        return "admin/login";
+    }
+
 }

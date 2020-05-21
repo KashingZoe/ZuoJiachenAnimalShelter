@@ -29,13 +29,13 @@
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <%--<script type="text/javascript">--%>
-        <%--function submit(){--%>
-            <%--var pageCur = 1;--%>
-            <%--window.location.href = "/adminAniaml/deleteAGoods?pageCur="+pageCur;--%>
-
-        <%--}--%>
-    <%--</script>--%>
+    <script type="text/javascript">
+        function checkDel(id){
+            if(window.confirm("是否删除该留言"+id+"？")){
+                window.location.href = "/adminFeedback/deleteAFeedback?id="+id;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
 
 <div class="weadmin-body">
     <div class="layui-row">
-        <form:form action="adminFeedback/selectAFeedback" modelAttribute="feedback" method="post" class="layui-form layui-col-md12 we-search">
+        <form:form action="adminFeedback/delSelectAFeedback" modelAttribute="feedback" method="post" class="layui-form layui-col-md12 we-search">
             留言搜索：
             <!-- <div class="layui-inline">
                 <input class="layui-input" placeholder="开始日" name="start" id="start" />
@@ -73,7 +73,7 @@
             </button>
         </form:form>
     </div>
-    <div class="weadmin-block">
+    <div class="weadmin-block" style="height: 40px">
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
@@ -127,8 +127,9 @@
                 <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span>
             </td>-->
             <td class="td-manage">
-                <button class="layui-btn" onclick="WeAdminEdit('编辑','adminFeedback/toEditFeedback?id=${n.id}',600, 400)">
-                    <i class="layui-icon layui-icon-edit"></i>修改
+                <button class="layui-btn" onclick="checkDel('${n.id}')" >
+                        <%--onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)"--%>
+                    <i class="layui-icon layui-icon-delete"></i>删除
                 </button>
                 <%--<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">--%>
                     <%--<i class="layui-icon layui-icon-download-circle"></i>--%>

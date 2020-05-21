@@ -14,8 +14,8 @@
 
 
 	<!--根据用户账号查询-->
-    <select id="selectANews" resultType="News" parameterType="News">
-		select * from news where ntitle = #{ntitle}
+    <select id="selectAFeedback" resultType="Feedback" parameterType="Feedback">
+		select * from feedback where ftitle = #{ftitle}
 	</select>
 
 	<!--根据用户id查询-->
@@ -28,7 +28,7 @@
 		update animalshelter.feedback set fstatus = 1 where id = #{id}
 	</update>
 
-    <delete id="deleteANews"  parameterType="Integer" >
-		delete from news where id = #{id}
+    <delete id="deleteAFeedback"  parameterType="Integer" >
+		delete from feedback where id = #{id}
 	</delete>
 </mapper>

@@ -73,13 +73,13 @@
             </button>
         </form:form>
     </div>
-    <div class="weadmin-block">
+    <div class="weadmin-block" style="height: 40px">
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
-        <button class="layui-btn" onclick="WeAdminShow('添加新闻','adminNews/toAddNews',600,400)">
-            <i class="layui-icon layui-icon-add-circle-fine"></i>添加
-        </button>
+        <%--<button class="layui-btn" onclick="WeAdminShow('添加新闻','adminNews/toAddNews',600,400)">--%>
+            <%--<i class="layui-icon layui-icon-add-circle-fine"></i>添加--%>
+        <%--</button>--%>
         <span class="fr" style="line-height:40px">共有数据：${totalRecord} 条</span>
     </div>
     <!-- 表 -->
@@ -128,59 +128,14 @@
             </td>-->
             <td class="td-manage">
                 <button class="layui-btn" onclick="checkDel('${n.id}')" >
-                        <%--onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)"--%>
-                    <i class="layui-icon layui-icon-delete"></i>处理
+                    <i class="layui-icon layui-icon-edit"></i>处理
                 </button>
                     ${msg}
-                    <%--<button class="layui-btn" onclick="WeAdminEdit('编辑','adminFeedback/toEditFeedback?id=${n.id}',600, 400)">--%>
-                    <%--<i class="layui-icon layui-icon-edit"></i>修改--%>
-                <%--</button>--%>
-                <%--<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">--%>
-                    <%--<i class="layui-icon layui-icon-download-circle"></i>--%>
-                <%--</a>--%>
-                <%--<a title="编辑" onclick="WeAdminEdit('编辑','adminUser/toEditUser?id=${n.id}',600, 400)">--%>
-                    <%--<i class="layui-icon layui-icon-edit"></i>--%>
-                <%--</a>--%>
-                <%--<a onclick="WeAdminShow('修改密码','userpassword.html',600,400)" title="修改密码" href="javascript:;">--%>
-                    <%--<i class="layui-icon layui-icon-util"></i>--%>
-                <%--</a>--%>
-                <%--<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">--%>
-                    <%--<i class="layui-icon layui-icon-delete"></i>--%>
-                <%--</a>--%>
+
             </td>
         </tr>
         </c:forEach>
-        <!-- <tr data-id="2">
-            <td>
-                <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="2">
-                    <i class="layui-icon">&#xe605;</i>
-                </div>
-            </td>
-            <td>2</td>
-            <td>小明</td>
-            <td>女</td>
-            <td>13000000000</td>
-            <td>admin@mail.com</td>
-            <td>北京市 海淀区</td>
-            <td>2017-01-01 11:11:42</td>
-            <td class="td-status">
-                <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span>
-            </td>
-            <td class="td-manage">
-                <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
-                    <i class="layui-icon layui-icon-download-circle"></i>
-                </a>
-                <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
-                    <i class="layui-icon layui-icon-edit"></i>
-                </a>
-                <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
-                    <i class="layui-icon layui-icon-util"></i>
-                </a>
-                <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                    <i class="layui-icon layui-icon-delete"></i>
-                </a>
-            </td>
-        </tr> -->
+
         </tbody>
     </table>
     <!-- </div> -->

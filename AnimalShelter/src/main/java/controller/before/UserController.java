@@ -1,6 +1,6 @@
-package com.controller.before;
+package controller.before;
 
-import com.service.before.UserService;
+import service.before.UserService;
 import entity.Buser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

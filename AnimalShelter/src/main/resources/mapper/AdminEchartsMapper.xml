@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdminEchartsDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="kindCount"  resultType="KindEcharts">
+		select a.kindname as kindname,count(a.id) as kindcount from (select animalkind.kindname,animalkind.id from animal,animalkind where animal.kindid = animalkind.id) as a group by a.id
+	</select>
+	<!--id 方法名  resultType返回类型 -->
+	<select id="animalInfoPage"  resultType="Animal" parameterType="map">
+		select * from animal order by id limit #{startIndex}, #{perPageSize}
+	</select>
+
+	<!--新增所有列-->
+	<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">
+        insert into animalshelter.animal(kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime)
+        values (#{kindid}, #{lsex}, #{ltitle}, #{lyear}, #{buserid}, #{lbirth}, #{lval}, #{lbug}, #{lpicture}, #{linfo}, now())
+    </insert>
+
+	<!--根据用户账号查询-->
+    <select id="selectAAnimal" resultType="Animal" parameterType="Animal">
+		select * from animal where ltitle = #{ltitle}
+	</select>
+
+	<!--根据用户id查询-->
+	<select id="toEditAnimal" resultType="Animal" parameterType="Integer">
+		select * from animal where id = #{id}
+	</select>
+
+	<!-- 修改一个宠物 -->
+	<update id="editAnimal" parameterType="Animal">
+		update animalshelter.animal
+		<set>
+			<if test="kindid != null">
+				kindid = #{kindid},
+			</if>
+			<if test="lsex != null and lsex != ''">
+				lsex = #{lsex},
+			</if>
+			<if test="ltitle != null and ltitle != ''">
+				ltitle = #{ltitle},
+			</if>
+			<if test="lyear != null and lyear != ''">
+				lyear = #{lyear},
+			</if>
+			<if test="buserid != null">
+				buserid = #{buserid},
+			</if>
+			<if test="lbirth != null and lbirth != ''">
+				lbirth = #{lbirth},
+			</if>
+			<if test="lval != null and lval != ''">
+				lval = #{lval},
+			</if>
+			<if test="lbug != null and lbug != ''">
+				lbug = #{lbug},
+			</if>
+			<if test="lpicture != null and lpicture != ''">
+				lpicture = #{lpicture},
+			</if>
+			<if test="linfo != null and linfo != ''">
+				linfo = #{linfo},
+			</if>
+			<if test="ltime != null">
+				ltime = #{ltime},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+    <delete id="deleteAAnimal"  parameterType="Integer" >
+		delete from animal where id = #{id}
+	</delete>
+</mapper>

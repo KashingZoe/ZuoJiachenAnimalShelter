@@ -1,6 +1,6 @@
-package com.service.before;
+package service.before;
 
-import dao.BuserDao;
+import dao.BeforeUserDao;
 import entity.Buser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,9 +12,9 @@ import java.util.List;
 
 @Service("userService")
 @Transactional
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     @Autowired
-    private BuserDao buserDao;
+    private BeforeUserDao beforeUserDao;
     public String register() {
         return null;
 
@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService{
 //            model.addAttribute("codeError","codeError");
 //            return "before/userreg";
 //        }
-        int n= buserDao.insert(buser);
+        int n= beforeUserDao.register(buser);
         if(n>0) {
             return"before/userlogin";
         }else {
@@ -35,18 +35,18 @@ public class UserServiceImpl implements UserService{
     }
     //登录
     public String login(Buser buser, Model model, HttpSession session, String code) {
-        if(!code.equalsIgnoreCase(session.getAttribute("code").toString())) {
-            model.addAttribute("msg", "codeError");
-            return "before/login";
-        }
-        Buser ruser= null;
-        List<Buser> list=null;
-//                buserDao.login(buser);
+//        if(!code.equalsIgnoreCase(session.getAttribute("code").toString())) {
+//            model.addAttribute("msg", "codeError");
+//            return "before/login";
+//        }
+        Buser ruser = null;
+        List<Buser> list=beforeUserDao.login(buser);
         if(list.size()>0) {
             ruser=list.get(0);
         }
         if(ruser !=null) {
             session.setAttribute("bruser", ruser);
+            System.out.println(ruser);
             return"forward:/before";
         }else {
             model.addAttribute("msg", "ERROR Incorrect username or password");

@@ -1,4 +1,4 @@
-package com.controller.before;
+package controller.before;
 
 public class Test {
     public static void main(String[] args){

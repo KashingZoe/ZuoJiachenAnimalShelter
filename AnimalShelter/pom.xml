@@ -20,6 +20,12 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.58</version>
+    </dependency>
     <!--==========================spring ============================  -->
     <!--spring IOC 需要的5个核心包 context、core、beans、expression、commons-logging  -->
     <dependency>

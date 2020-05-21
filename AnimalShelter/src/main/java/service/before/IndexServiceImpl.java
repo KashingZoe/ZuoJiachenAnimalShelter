@@ -1,4 +1,4 @@
-package com.service.before;
+package service.before;
 
 
 import entity.Buser;

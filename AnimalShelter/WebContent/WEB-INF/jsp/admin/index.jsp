@@ -65,16 +65,16 @@
                 <dd>
                     <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
                 </dd>
+                <%--<dd>--%>
+                    <%--<a onclick="WeAdminShow('切换帐号','login.html')">切换帐号</a>--%>
+                <%--</dd>--%>
                 <dd>
-                    <a onclick="WeAdminShow('切换帐号','login.html')">切换帐号</a>
-                </dd>
-                <dd>
-                    <a class="loginout" href="login.html">退出</a>
+                    <a class="loginout" href="exit">退出</a>
                 </dd>
             </dl>
         </li>
         <li class="layui-nav-item to-index">
-            <a href="/">前台首页</a>
+            <a href="/before">前台首页</a>
         </li>
     </ul>
 
@@ -234,9 +234,9 @@
                         </a>
                     </li>
                     <li>
-                        <a _href="pages/article/category.html">
+                        <a _href="adminFeedback/toDeleteFeedback">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>分类管理</cite>
+                            <cite>留言删除</cite>
                         </a>
                     </li>
                 </ul>
@@ -249,13 +249,13 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="pages/echarts/echarts1.html">
+                        <a _href="adminEcharts/toEcharts01">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>拆线图</cite>
+                            <cite>饼图</cite>
                         </a>
                     </li>
                     <li>
-                        <a _href="pages/echarts/echarts2.html">
+                        <a _href="adminEcharts/toEcharts02">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>柱状图</cite>
                         </a>

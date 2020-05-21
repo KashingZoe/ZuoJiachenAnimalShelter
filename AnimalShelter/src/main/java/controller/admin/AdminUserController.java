@@ -1,6 +1,5 @@
 package controller.admin;
 
-import com.service.before.UserService;
 import entity.Buser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,14 +8,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import service.admin.AdminUserService;
 
+
+
 @Controller
 @RequestMapping("/adminUser")
 public class AdminUserController {
 
     @Autowired
     private AdminUserService adminUserService;
-    @Autowired
-    private UserService userService;
+    //@Autowired
+   // private UserService userService;
     //查找所有的信息
     @RequestMapping("/userInfo")
     public String userInfo(@ModelAttribute Buser buser, Model model, Integer pageCur) {

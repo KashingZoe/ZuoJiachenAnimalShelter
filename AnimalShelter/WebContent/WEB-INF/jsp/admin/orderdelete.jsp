@@ -73,13 +73,13 @@
             </button>
         </form:form>
     </div>
-    <div class="weadmin-block">
+    <div class="weadmin-block" style="height: 40px">
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
-        <button class="layui-btn" onclick="WeAdminShow('添加订单','adminAnimal/toAddAnimal',600,400)">
-            <i class="layui-icon layui-icon-add-circle-fine"></i>添加
-        </button>
+        <%--<button class="layui-btn" onclick="WeAdminShow('添加订单','adminAnimal/toAddAnimal',600,400)">--%>
+            <%--<i class="layui-icon layui-icon-add-circle-fine"></i>添加--%>
+        <%--</button>--%>
         <span class="fr" style="line-height:40px">共有数据：${totalRecord} 条</span>
     </div>
     <!-- 表 -->

@@ -1,7 +1,6 @@
-package com.controller.before;
+package controller.before;
 
-import com.service.before.IndexService;
-
+import service.before.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +22,6 @@ public class IndexController {
     @RequestMapping("/toRegister")
     public String toRegister(Model model) {
         return indexService.toRegister(model);
-
     }
     //login
     @RequestMapping("/toLogin")

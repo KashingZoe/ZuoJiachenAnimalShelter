@@ -1,4 +1,4 @@
-package com.controller.before;
+package controller.before;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

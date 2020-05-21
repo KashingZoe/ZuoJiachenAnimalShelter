@@ -24,11 +24,24 @@ public class AdminFeedbackController {
     public String editFeedback(@ModelAttribute Feedback feedback, Model model){
         return adminFeedbackService.editFeedback(feedback, model);
     }
-//    //newslist查找用户
-//    @RequestMapping("/selectANews")
-//    public String userANews(@ModelAttribute News news, Model model, Integer pageCur){
-//        return  adminNewsService.selectANews(news, model, pageCur);
-//    }
+    @RequestMapping("/toDeleteFeedback")
+    public String toDeleteNews(@ModelAttribute Feedback feedback, Model model, Integer pageCur){
+        return adminFeedbackService.toDeleteFeedback(model, pageCur);
+    }
+    @RequestMapping("/deleteAFeedback")
+    public String deleteANews(Integer id, Model model){
+        return adminFeedbackService.deleteAFeedback(id, model);
+    }
+    //查找一条记录
+    @RequestMapping("/selectAFeedback")
+    public String userAFeedback(@ModelAttribute Feedback feedback, Model model, Integer pageCur){
+        return  adminFeedbackService.selectAFeedback(feedback, model, pageCur);
+    }
+    @RequestMapping("/delSelectAFeedback")
+    public String delSelectAFeedback(@ModelAttribute Feedback feedback, Model model, Integer pageCur){
+        return adminFeedbackService.delSelectAFeedback(feedback, model, pageCur);
+    }
+
 //    //打来newsadd.jsp
 //    @RequestMapping("/toAddNews")
 //    public String toAddNews(@ModelAttribute News news){
@@ -53,15 +66,9 @@ public class AdminFeedbackController {
 //        return adminNewsService.editNews(news, model);
 //    }
 //////
-//    @RequestMapping("/toDeleteNews")
-//    public String toDeleteNews(@ModelAttribute News news, Model model, Integer pageCur){
-//        return adminNewsService.toDeleteNews(model, pageCur);
-//    }
+
 ////
-//    @RequestMapping("/deleteANews")
-//    public String deleteANews(Integer id, Model model){
-//        return adminNewsService.deleteANews(id, model);
-//    }
+
 //////
 //    @RequestMapping("/delSelectANews")
 //    public String delSelectANews(@ModelAttribute News news, Model model, Integer pageCur){

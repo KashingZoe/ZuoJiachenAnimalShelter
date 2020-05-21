@@ -1,12 +1,15 @@
 package util;
 
+import entity.Buser;
+
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MyUtil {
 
 	/**
-	 * ���ʱ���ַ���
+	 * 获得时间字符串
 	 */
 	public static String getStringID(){
 		String id=null;
@@ -16,10 +19,10 @@ public class MyUtil {
 		return id;
 	}
 	/**
-	 * ����û�ID
+	 * 获得用户ID
 	 */
-//	public static Integer getUserId(HttpSession session) {
-//		Buser ruser = (Buser)session.getAttribute("bruser");
-//		return ruser.getId();
-//	}
+	public static Integer getUserId(HttpSession session) {
+		Buser ruser = (Buser)session.getAttribute("bruser");
+		return ruser.getId();
+	}
 }

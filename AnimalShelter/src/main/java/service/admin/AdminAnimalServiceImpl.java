@@ -2,7 +2,6 @@ package service.admin;
 
 import dao.AdminAnimalDao;
 import entity.Animal;
-import entity.Buser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +27,7 @@ public class AdminAnimalServiceImpl implements AdminAnimalService {
     public String animalInfo(Model model, Integer pageCur) {
 
         List<Animal> allanimal = adminAnimalDao.animalInfo();
+        //System.out.println(allanimal);
         int totalcount = allanimal.size();//查询记录数
         model.addAttribute("totalRecord", totalcount);
         int totalPage = 0;

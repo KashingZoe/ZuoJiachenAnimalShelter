@@ -74,7 +74,7 @@
             <%--</button>--%>
         <%--</form:form>--%>
     </div>
-    <div class="weadmin-block">
+    <div class="weadmin-block" style="height: 40px">
         <!-- <button class="layui-btn layui-btn-danger" onclick="delAll()">
             <i class="layui-icon layui-icon-delete"></i>批量删除
         </button> -->
