@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BeforeAnimalDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="animalLimit"  resultType="Animal">
+		SELECT * FROM animal order by id desc LIMIT 10
+	</select>
+	<!--&lt;!&ndash;id 方法名  resultType返回类型 &ndash;&gt;-->
+	<!--<select id="animalPage"  resultType="Animal" parameterType="map">-->
+		<!--select * from animal order by id limit #{startIndex}, #{perPageSize}-->
+	<!--</select>-->
+
+	<!--&lt;!&ndash;新增所有列&ndash;&gt;-->
+	<!--<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">-->
+        <!--insert into animalshelter.animal(kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime)-->
+        <!--values (#{kindid}, #{lsex}, #{ltitle}, #{lyear}, #{buserid}, #{lbirth}, #{lval}, #{lbug}, #{lpicture}, #{linfo}, now())-->
+    <!--</insert>-->
+
+	<!--根据用户账号查询-->
+    <select id="selectAAnimal" resultType="Animal" parameterType="Integer">
+		select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}
+
+	</select>
+	<!--select * from animal where id = #{id}-->
+	<!--select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}-->
+	<!--&lt;!&ndash;根据用户id查询&ndash;&gt;-->
+	<!--<select id="toEditAnimal" resultType="Animal" parameterType="Integer">-->
+		<!--select * from animal where id = #{id}-->
+	<!--</select>-->
+
+	<!--&lt;!&ndash; 修改一个宠物 &ndash;&gt;-->
+	<!--<update id="editAnimal" parameterType="Animal">-->
+		<!--update animalshelter.animal-->
+		<!--<set>-->
+			<!--<if test="kindid != null">-->
+				<!--kindid = #{kindid},-->
+			<!--</if>-->
+			<!--<if test="lsex != null and lsex != ''">-->
+				<!--lsex = #{lsex},-->
+			<!--</if>-->
+			<!--<if test="ltitle != null and ltitle != ''">-->
+				<!--ltitle = #{ltitle},-->
+			<!--</if>-->
+			<!--<if test="lyear != null and lyear != ''">-->
+				<!--lyear = #{lyear},-->
+			<!--</if>-->
+			<!--<if test="buserid != null">-->
+				<!--buserid = #{buserid},-->
+			<!--</if>-->
+			<!--<if test="lbirth != null and lbirth != ''">-->
+				<!--lbirth = #{lbirth},-->
+			<!--</if>-->
+			<!--<if test="lval != null and lval != ''">-->
+				<!--lval = #{lval},-->
+			<!--</if>-->
+			<!--<if test="lbug != null and lbug != ''">-->
+				<!--lbug = #{lbug},-->
+			<!--</if>-->
+			<!--<if test="lpicture != null and lpicture != ''">-->
+				<!--lpicture = #{lpicture},-->
+			<!--</if>-->
+			<!--<if test="linfo != null and linfo != ''">-->
+				<!--linfo = #{linfo},-->
+			<!--</if>-->
+			<!--<if test="ltime != null">-->
+				<!--ltime = #{ltime},-->
+			<!--</if>-->
+		<!--</set>-->
+		<!--where id = #{id}-->
+	<!--</update>-->
+
+    <!--<delete id="deleteAAnimal"  parameterType="Integer" >-->
+		<!--delete from animal where id = #{id}-->
+	<!--</delete>-->
+</mapper>

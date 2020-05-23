@@ -22,7 +22,7 @@ public class AdminAnimalController {
     public String animalInfo(@ModelAttribute Animal animal, Model model, Integer pageCur) {
         return adminAnimalService.animalInfo(model,pageCur);
     }
-    //userlist查找用户
+    //查询一条记录
     @RequestMapping("/selectAAnimal")
     public String userAAnimal(@ModelAttribute Animal animal, Model model, Integer pageCur){
         return  adminAnimalService.selectAAnimal(animal, model, pageCur);

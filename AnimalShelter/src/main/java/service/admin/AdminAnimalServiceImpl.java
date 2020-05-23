@@ -71,21 +71,23 @@ public class AdminAnimalServiceImpl implements AdminAnimalService {
     @Override
     public String addAnimal(Animal animal, HttpServletRequest request, Model model) {
         String newFileName = "";
-        String fileName = animal.getLogoImage().getOriginalFilename();
+        String fileName = animal.getLogoImage().getOriginalFilename();//获取上传文件的名字
 
         if(fileName.length() > 0){
+            //返回路径是项目根路径
             String realpath = request.getServletContext().getRealPath("/logos");
             System.out.println(realpath);
             String fileType = fileName.substring(fileName.lastIndexOf('.'));
-            newFileName = MyUtil.getStringID() + fileType;
+            newFileName = MyUtil.getStringID() + fileType;//修改文件名
             animal.setLpicture(newFileName);
 
-            File targetFile = new File(realpath, newFileName);
+            File targetFile = new File(realpath, newFileName);//把路径封装到file里面，通过file判断是否存在
+            //判断文件夹是否存在,不存在则创建
             if(!targetFile.exists()){
                 targetFile.mkdirs();
             }
             try {
-                animal.getLogoImage().transferTo(targetFile);
+                animal.getLogoImage().transferTo(targetFile);//将传来的文件存入文件夹 //把内存图片写入磁盘中
             } catch (Exception e) {
                 e.printStackTrace();
             }

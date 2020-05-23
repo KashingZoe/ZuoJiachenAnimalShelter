@@ -16,6 +16,8 @@ public class Animal implements Serializable {
     private Integer id;
     
     private Integer kindid;
+
+    private String kindname;
     
     private String lsex;
     
@@ -142,6 +144,14 @@ public class Animal implements Serializable {
 
     public void setLtime(String ltime) {
         this.ltime = ltime;
+    }
+    //种类
+    public String getKindname() {
+        return kindname;
+    }
+
+    public void setKindname(String kindname) {
+        this.kindname = kindname;
     }
 
 }

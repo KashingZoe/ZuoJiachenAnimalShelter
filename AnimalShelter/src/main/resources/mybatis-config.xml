@@ -30,6 +30,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <mapper resource="mapper/AdminNewsMapper.xml"/>
          <mapper resource="mapper/AdminFeedbackMapper.xml"/>
          <mapper resource="mapper/AdminEchartsMapper.xml"/>
+
+         <mapper resource="mapper/BeforeAnimalMapper.xml"/>
+         <mapper resource="mapper/BeforeUserMapper.xml"/>
+         <mapper resource="mapper/BeforeNewsMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminUserMapper.xml"/>-->
        	<!--<mapper resource="com/mybatis/admin/AdminOrderMapper.xml"/>-->

@@ -331,37 +331,38 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 		});
 	}
 	/*弹出层+传递ID参数*/
-	window.WeAdminEdit = function(title, url, w, h) {
-		if(title == null || title == '') {
-			title = false;
-		};
-		if(url == null || url == '') {
-			url = "404.html";
-		};
-		if(w == null || w == '') {
-			w = ($(window).width() * 0.9);
-		};
-		if(h == null || h == '') {
-			h = ($(window).height() - 50);
-		};
-		layer.open({
-			type: 2,
-			area: [w + 'px', h + 'px'],
-			fix: false, //不固定
-			maxmin: true,
-			shadeClose: true,
-			shade: 0.4,
-			title: title,
-			content: url,
-			// success: function(layero, index) {
-			// 	//向iframe页的id=house的元素传值  // 参考 https://yq.aliyun.com/ziliao/133150
-			// 	var body = layer.getChildFrame('body', index);
-			// 	body.contents().find("#dataId").val(id);
-			// 	console.log(id);
-			// },
-			// error: function(layero, index) {
-			// 	alert("aaa");
-			// }
+    window.WeAdminEdit = function(title, url, w, h) {
+        if(title == null || title == '') {
+            title = false;
+        };
+        if(url == null || url == '') {
+            url = "404.html";
+        };
+        if(w == null || w == '') {
+            w = ($(window).width() * 0.9);
+        };
+        if(h == null || h == '') {
+            h = ($(window).height() - 50);
+        };
+        layer.open({
+            type: 2,
+            area: [w + 'px', h + 'px'],
+            fixed: true, //不固定
+            maxmin: true,
+            shadeClose: true,
+            shade: 0.4,
+            //offset: '100px',
+            title: title,
+            content: url,
+            // success: function(layero, index) {
+            // 	//向iframe页的id=house的元素传值  // 参考 https://yq.aliyun.com/ziliao/133150
+            // 	var body = layer.getChildFrame('body', index);
+            // 	body.contents().find("#dataId").val(id);
+            // 	console.log(id);
+            // },
+            // error: function(layero, index) {
+            // 	alert("aaa");
+            // }
             cancel: function(){
 
                 //("你点击了右上角的X");
@@ -369,12 +370,43 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 
             }
 
-		});
+        });
 
 
     }
+    //前台动物领养
+    /*弹出层+传递ID参数*/
+    window.WeAdminOrder = function(title, url, w, h) {
+        if(title == null || title == '') {
+            title = false;
+        };
+        if(url == null || url == '') {
+            url = "404.html";
+        };
+        if(w == null || w == '') {
+            w = ($(window).width() * 0.9);
+        };
+        if(h == null || h == '') {
+            h = ($(window).height() - 50);
+        };
+        layer.open({
+            type: 2,
+            area: [w + 'px', h + 'px'],
+            fixed: true, //不固定
+            maxmin: true,
+            shadeClose: true,
+            offset: '300px',
+            shade: 0.4,
+            title: title,
+            content: url,
+            cancel: function(){
+                //("你点击了右上角的X");
+                window.location.reload();
+            }
+        });
+    }
 
-	/**
+    /**
 	 *@todo tab监听：点击tab项对应的关闭按钮事件
 	 */
 	$('.layui-tab-close').click(function(event) {
