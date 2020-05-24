@@ -1,7 +1,12 @@
 package controller.before;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class Test {
-    public static void main(String[] args){
-        System.out.println("test");
+    @RequestMapping("test")
+    public String addOrder(){
+        return "before/addorderok";
     }
 }

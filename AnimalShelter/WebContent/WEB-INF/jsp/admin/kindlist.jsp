@@ -29,13 +29,13 @@
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-        function submit(){
-            var pageCur = 1;
-            window.location.href = "/adminGoods/deleteAGoods?pageCur="+pageCur;
+    <%--<script type="text/javascript">--%>
+        <%--function submit(){--%>
+            <%--var pageCur = 1;--%>
+            <%--window.location.href = "/adminGoods/deleteAGoods?pageCur="+pageCur;--%>
 
-        }
-    </script>
+        <%--}--%>
+    <%--</script>--%>
 </head>
 
 <body>

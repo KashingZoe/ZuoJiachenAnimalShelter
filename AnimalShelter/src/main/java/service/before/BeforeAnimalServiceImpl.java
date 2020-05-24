@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 
+import javax.servlet.http.HttpSession;
+
 
 @Service("beforeAnimalService")
 @Transactional
@@ -18,8 +20,9 @@ public class BeforeAnimalServiceImpl implements BeforeAnimalService {
 
 
     @Override
-    public String selectAAnimal(Model model, Integer id) {
+    public String selectAAnimal(Model model, HttpSession session, Integer id) {
         Animal aanimal = beforeAnimalDao.selectAAnimal(id);
+        session.setAttribute("animalid",id);
 
         model.addAttribute("animalList", aanimal);
 

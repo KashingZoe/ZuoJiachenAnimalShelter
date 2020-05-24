@@ -1,18 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: 左家臣
-  Date: 2020/5/22
-  Time: 17:21
+  Date: 2020/5/24
+  Time: 18:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
+<!DOCTYPE html>
 <html>
 <head>
     <base href="<%=basePath%>">
@@ -24,9 +23,6 @@
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         .layui-bg-black {
             background-color: #009688!important;
@@ -44,6 +40,7 @@
         .fly-column ul li.layui-this:after{
             bottom: 0px;
             height: 2px;
+            width: 60px;
         }
         .mylabel{
 
@@ -66,11 +63,7 @@
             color: #000000 !important;
         }
     </style>
-    <script type="text/javascript">
-        function submit(id){
-            window.location.href = "/beforeOrder/addOrder?id="+id;
-        }
-    </script>
+
 </head>
 <body>
 
@@ -84,7 +77,7 @@
                             <a class="fly-logo" href="index.html">
                                 <img src="res/images/dog.png" width="50px" height="40px">
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
-                                <!-- <img src="../res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
+                                <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
                                 <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
                             </a>
@@ -123,7 +116,7 @@
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
 
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
                                 <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -206,89 +199,24 @@
         <div class="layui-col-md8 content detail">
             <div class="fly-panel detail-box">
                 <div class="fly-panel-title fly-filter" style="padding-left: 0px;color: #b4a992;">
-                    <a>宠物展示</a>
+                    <a>宠物领养/详细信息</a>
 
                 </div>
-                <h1 style="text-align: center;">${animalList.ltitle}</h1>
-
                 <div class="detail-about">
-                    <!-- <a class="fly-avatar" href="../user/home.html">
-                      <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                    </a>
-                    <div class="fly-detail-user">
-                      <a href="../user/home.html" class="fly-link">
-                        <cite>贤心</cite>
-                        <i class="iconfont icon-renzheng" title="认证信息：{{ rows.user.approve }}"></i>
-                        <i class="layui-badge fly-badge-vip">VIP3</i>
-                      </a>
-                      <span>2017-11-30</span>
-                    </div>
-                    <div class="detail-hits" id="LAY_jieAdmin" data-id="123">
-                      <span style="padding-right: 10px; color: #FF7200">悬赏：60飞吻</span>
-                      <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
-                    </div> -->
-                    <img alt="" width="585px" height="350px" src="logos/${animalList.lpicture}"/>
+                    <h1 style="text-align: center;margin-top: 10px;">申请成功，请等待审核，可在用户中心查看状态</h1>
+                    <!-- <img src="res/images/fly.jpg" alt="Fly社区"> -->
                 </div>
-                <div class="detail-body photos">
-                    <p>
-                        ${animalList.linfo}
-                    </p>
-                    <%--<p>更新日志：</p>--%>
+
+
+
+                <div class="detail-body photos" style="margin-top: 0px;">
+                    <!-- <p style="margin-bottom: 0px;">内容：</p>
+                     <pre style="margin-top: 0px;font-size: large;">
+                       <p>   该模版由 layui官方社区（<a href="http://fly.layui.com/" target="_blank">fly.layui.com</a>）倾情提供，只为表明我们对 layui 执着的信念、以及对未来持续加强的承诺。该模版基于 layui 搭建而成，可作为极简通用型社区的页面支撑。</p>
+                     </pre> -->
+
                     <!-- <pre> -->
-                    <div class="detail-about" style="padding-left: 0px;color: #000000;">
-                        <form class="layui-form" action="" style="margin-left: 0px;">
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">种类</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.kindname}</div>
-                                </div>
-                            </div>
 
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">性别</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lsex}</div>
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">年龄</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lyear}</div>
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否绝育</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lbirth}</div>
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否接种疫苗</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lval}</div>
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否杀虫</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lbug}</div>
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">发布时间</label>
-                                <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.ltime}</div>
-                                </div>
-                            </div>
-
-                        </form>
-
-                    </div>
 
                     <!-- </pre> -->
 
@@ -300,56 +228,9 @@
                     </p>
                     封面<hr>
                     <p>
-                      <img src="../../res/images/fly.jpg" alt="Fly社区">
+                      <img src="res/images/fly.jpg" alt="Fly社区">
                     </p> -->
 
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" align="center">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion"
-                                       href="#collapseThree" class="layui-btn layui-btn-radius">
-                                        想要领养
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <form:form class="layui-form" action="beforeOrder/addOrder" method="post" modelAttribute="getanimal" name="regForm">
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否有房屋</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="ghome" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="ghome" value="否" title="否" />
-
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否有孩子</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="gchildren" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="gchildren" value="否" title="否" />
-
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否结婚</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="gmarried" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="gmarried" value="否" title="否" />
-
-                                            </div>
-                                        </div>
-                                        <div class="layui-form " align="center">
-                                           <%--onclick="WeAdminEdit('编辑','#?id=${animalList.id}',600, 400)"--%>
-                                            <button class="layui-btn layui-btn-lg layui-btn-radius" type="submit">领养宠物</button>
-                                               <%--onclick="submit('${animalList.id}')"--%>
-                                        </div>
-                                    </form:form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -467,14 +348,7 @@
         });
         */
     });
-    confirmTrans: function(){
-        //配置一个透明的询问框
-        layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
-            time: 20000, //20s后自动关闭
-            btn: ['明白了', '知道了', '哦']
-        });
-    }
 </script>
-<script src="static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 </html>

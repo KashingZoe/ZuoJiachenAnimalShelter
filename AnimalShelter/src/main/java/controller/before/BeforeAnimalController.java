@@ -1,10 +1,14 @@
 package controller.before;
 
+import entity.Getanimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import service.before.BeforeAnimalService;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/beforeAnimal")
@@ -20,8 +24,8 @@ public class BeforeAnimalController {
 //    }
     //查询一条记录
     @RequestMapping("/selectAAnimal")
-    public String userAAnimal(Model model, Integer id){
-        return  beforeAnimalService.selectAAnimal(model, id);
+    public String selectAAnimal(@ModelAttribute Getanimal getanimal, HttpSession session,Model model, Integer id){
+        return  beforeAnimalService.selectAAnimal(model,session,id);
     }
 //    //打来animaladd.jsp
 //    @RequestMapping("/toAddAnimal")
