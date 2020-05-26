@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BeforeVisitDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="visitInfo"  resultType="Visit">
+		select * from visit
+	</select>
+    <!--id 方法名  resultType返回类型 -->
+    <select id="visitInfoPage"  resultType="Visit" parameterType="map">
+		select * from visit order by id limit #{startIndex}, #{perPageSize}
+	</select>
+
+    <!--id 方法名  resultType返回类型 -->
+    <select id="visitMyInfo"  resultType="Visit" parameterType="Integer">
+		select * from visit where vuserid = #{vuserid}
+	</select>
+    <!--id 方法名  resultType返回类型 -->
+    <select id="visitMyInfoPage"  resultType="Visit" parameterType="map">
+		select * from visit where vuserid = #{vuserid} order by id limit #{startIndex}, #{perPageSize}
+	</select>
+
+    <!--插入-->
+	<insert id="visitInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Visit">
+        insert into animalshelter.visit(vtitle, vcontent, vpicture, vtime ,vuserid)
+        values (#{vtitle}, #{vcontent}, #{vpicture}, now(),#{vuserid})
+    </insert>
+	<!--&lt;!&ndash;id 方法名  resultType返回类型 &ndash;&gt;-->
+	<!--<select id="animalPage"  resultType="Animal" parameterType="map">-->
+		<!--select * from animal order by id limit #{startIndex}, #{perPageSize}-->
+	<!--</select>-->
+
+	<!--&lt;!&ndash;新增所有列&ndash;&gt;-->
+	<!--<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">-->
+        <!--insert into animalshelter.animal(kindid, lsex, ltitle, lyear, buserid, lbirth, lval, lbug, lpicture, linfo, ltime)-->
+        <!--values (#{kindid}, #{lsex}, #{ltitle}, #{lyear}, #{buserid}, #{lbirth}, #{lval}, #{lbug}, #{lpicture}, #{linfo}, now())-->
+    <!--</insert>-->
+
+	<!--根据用户账号查询-->
+    <select id="selectAAnimal" resultType="Animal" parameterType="Integer">
+		select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}
+
+	</select>
+	<!--select * from animal where id = #{id}-->
+	<!--select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}-->
+	<!--&lt;!&ndash;根据用户id查询&ndash;&gt;-->
+	<!--<select id="toEditAnimal" resultType="Animal" parameterType="Integer">-->
+		<!--select * from animal where id = #{id}-->
+	<!--</select>-->
+
+	<!--&lt;!&ndash; 修改一个宠物 &ndash;&gt;-->
+	<!--<update id="editAnimal" parameterType="Animal">-->
+		<!--update animalshelter.animal-->
+		<!--<set>-->
+			<!--<if test="kindid != null">-->
+				<!--kindid = #{kindid},-->
+			<!--</if>-->
+			<!--<if test="lsex != null and lsex != ''">-->
+				<!--lsex = #{lsex},-->
+			<!--</if>-->
+			<!--<if test="ltitle != null and ltitle != ''">-->
+				<!--ltitle = #{ltitle},-->
+			<!--</if>-->
+			<!--<if test="lyear != null and lyear != ''">-->
+				<!--lyear = #{lyear},-->
+			<!--</if>-->
+			<!--<if test="buserid != null">-->
+				<!--buserid = #{buserid},-->
+			<!--</if>-->
+			<!--<if test="lbirth != null and lbirth != ''">-->
+				<!--lbirth = #{lbirth},-->
+			<!--</if>-->
+			<!--<if test="lval != null and lval != ''">-->
+				<!--lval = #{lval},-->
+			<!--</if>-->
+			<!--<if test="lbug != null and lbug != ''">-->
+				<!--lbug = #{lbug},-->
+			<!--</if>-->
+			<!--<if test="lpicture != null and lpicture != ''">-->
+				<!--lpicture = #{lpicture},-->
+			<!--</if>-->
+			<!--<if test="linfo != null and linfo != ''">-->
+				<!--linfo = #{linfo},-->
+			<!--</if>-->
+			<!--<if test="ltime != null">-->
+				<!--ltime = #{ltime},-->
+			<!--</if>-->
+		<!--</set>-->
+		<!--where id = #{id}-->
+	<!--</update>-->
+
+    <delete id="deleteAVisit"  parameterType="Integer" >
+		delete from visit where id = #{id}
+	</delete>
+</mapper>

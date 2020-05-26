@@ -18,6 +18,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <typeAlias alias="News" type="entity.News"/>
         <typeAlias alias="Feedback" type="entity.Feedback"/>
         <typeAlias alias="KindEcharts" type="entity.KindEcharts"/>
+        <typeAlias alias="Visit" type="entity.Visit"/>
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
 	 <mappers>   
@@ -35,6 +36,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <mapper resource="mapper/BeforeUserMapper.xml"/>
          <mapper resource="mapper/BeforeNewsMapper.xml"/>
          <mapper resource="mapper/BeforeOrderMapper.xml"/>
+         <mapper resource="mapper/BeforeVisitMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminUserMapper.xml"/>-->
        	<!--<mapper resource="com/mybatis/admin/AdminOrderMapper.xml"/>-->

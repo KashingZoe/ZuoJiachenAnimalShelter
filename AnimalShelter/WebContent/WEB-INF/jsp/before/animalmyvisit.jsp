@@ -1,29 +1,39 @@
 <%--
   Created by IntelliJ IDEA.
   User: 左家臣
-  Date: 2020/5/24
-  Time: 18:19
+  Date: 2020/5/25
+  Time: 15:14
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<%--这段代码的意思是获取当前项目的路径，如：http://localhost:8080/项目名称。--%>
+
 <!DOCTYPE html>
-<html>
+<html style="background-color: #e2e2e2;">
 <head>
     <base href="<%=basePath%>">
+    <%--设置基础路径，href属性里的链接会以这个为基准，无需再写http://localhost:8080/项目名称--%>
     <meta charset="utf-8">
-    <title>动物之家</title>
+    <meta name="keywords" content="{{ lay.base.keywords }}">
+    <meta name="description" content="{{ lay.base.description }}">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+    <title>发现 Layui 2017 年度最佳案例</title>
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+        .header{border-bottom: 1px solid #404553; border-right: 1px solid #404553;}
         .layui-bg-black {
             background-color: #009688!important;
         }
@@ -32,54 +42,62 @@
 
         }
         .layui-nav .layui-nav-item a{
+            text-decoration: none;
             color: #009688;
         }
         .layui-nav .layui-nav-item a:hover{
+
             color: #2E2D3C!important;
         }
         .fly-column ul li.layui-this:after{
             bottom: 0px;
             height: 2px;
+            left: 16px;
             width: 60px;
         }
-        .mylabel{
-
-            float: left;
-            display: block;
-            padding: 9px 15px;
-            width: 90px;
-            font-weight: 400;
-            line-height: 20px;
-            text-align: center;
-
+        .fly-case-header{
+            height: 150px;
         }
-        .mytb{
-            margin-left: 120px;
-            min-height: 36px;
+        .aimg{
+            cursor: pointer;/*鼠标变成手指样式*/
+            transition: all 0.6s;/*所有属性变化在0.6秒内执行动画*/
         }
-        .mymid{
-            margin-left: 10px;
-            font-weight: 100;
-            color: #000000 !important;
+        .aimg:hover{
+            transform: scale(1.4);/*鼠标放上之后元素变成1.4倍大小*/
         }
     </style>
-
+    <script type="text/javascript">
+        function checkDel(id){
+            if(window.confirm("是否删除该宠秀"+id+"？")){
+                window.location.href = "/beforeVisit//deleteAVisit?id="+id;
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="fly-full">
 
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
         <div class="layui-row">
+
+
+
             <div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
                 <div class="layui-container">
                     <div class="layui-row">
                         <div class="layui-col-md6">
-                            <a class="fly-logo" href="index.html">
+                            <a class="fly-logo" href="before">
+
                                 <img src="res/images/dog.png" width="50px" height="40px">
+
+
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
+
                                 <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
                                 <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
+
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
+
                             </a>
                         </div>
                         <div class="layui-col-md6">
@@ -151,19 +169,19 @@
                             <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
                         </li>
 
-                    </c:if>
-
-                </ul>
+                   </c:if>
+             </ul>
             </div>
 
         </div>
     </div>
 </div>
 
+
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
-            <li class="layui-hide-xs layui-nav-item layui-this"><a href="/before">首页</a></li>
+            <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
             <li class="layui-nav-item"><a href="add01.html">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a href="add01.html">送养发布</a></dd>
@@ -172,7 +190,7 @@
                 </dl>
 
             </li>
-            <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
+            <li class="layui-nav-item layui-this"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
             <li class="layui-nav-item"><a href="sciarea.html">科普区</a></li>
             <li class="layui-nav-item"><a href="review.html">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
@@ -186,131 +204,108 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="jie/add.html" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="jie/add.html" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
 
-<div class="layui-container">
-    <div class="layui-row layui-col-space15">
-        <div class="layui-col-md8 content detail">
-            <div class="fly-panel detail-box">
-                <div class="fly-panel-title fly-filter" style="padding-left: 0px;color: #b4a992;">
-                    <a>宠物领养/详细信息</a>
 
-                </div>
-                <div class="detail-about">
-                    <h1 style="text-align: center;margin-top: 10px;">申请成功，请等待审核，可在用户中心查看状态</h1>
-                    <!-- <img src="res/images/fly.jpg" alt="Fly社区"> -->
-                </div>
+<div class="fly-case-header">
+    <!--  -->
+    <!-- <a href="/case/{{ year }}/">
+      <img class="fly-case-banner" src="res/images/case.png" alt="发现 Layui 年度最佳案例">
+    </a> -->
 
+    <div class="fly-case-btn">
+        <p style="font-size: xx-large; margin-bottom: 10px;color: #FFFFFF;">宠秀回访</p>
 
+        <button class="layui-btn layui-btn-big fly-case-active" onclick="WeAdminEdit('编辑','/beforeVisit/toAddVisit',600,400)">
+            上传宠秀
+        </button>
 
-                <div class="detail-body photos" style="margin-top: 0px;">
-                    <!-- <p style="margin-bottom: 0px;">内容：</p>
-                     <pre style="margin-top: 0px;font-size: large;">
-                       <p>   该模版由 layui官方社区（<a href="http://fly.layui.com/" target="_blank">fly.layui.com</a>）倾情提供，只为表明我们对 layui 执着的信念、以及对未来持续加强的承诺。该模版基于 layui 搭建而成，可作为极简通用型社区的页面支撑。</p>
-                     </pre> -->
+        <a href="/beforeVisit/toMyVisit" class="layui-btn layui-btn-primary layui-btn-big" style="text-decoration: none">我的宠秀</a>
+        <div class="layui-form-mid layui-word-aux">${msg}</div>
 
-                    <!-- <pre> -->
+    </div>
 
 
-                    <!-- </pre> -->
 
-                    <!-- 下载<hr>
-                    <p>
-                      官网：<a href="http://www.layui.com/template/fly/" target="_blank">http://www.layui.com/template/fly/</a><br>
-                      码云：<a href="https://gitee.com/sentsin/fly/" target="_blank">https://gitee.com/sentsin/fly/</a><br>
-                      GitHub：<a href="https://github.com/layui/fly" target="_blank">https://github.com/layui/fly</a>
-                    </p>
-                    封面<hr>
-                    <p>
-                      <img src="res/images/fly.jpg" alt="Fly社区">
-                    </p> -->
 
-                </div>
-            </div>
 
-            <!-- <div class="fly-panel detail-box" id="flyReply">
 
-              <ul class="jieda" id="jieda">
+</div>
 
-              </ul>
+<div class="fly-main" style="overflow: hidden;">
 
-              <div class="layui-form ">
-                <button class="layui-btn">领养宠物</button>
-              </div>
-            </div> -->
-        </div>
-        <div class="layui-col-md4">
-            <dl class="fly-panel fly-list-one">
-                <dt class="fly-panel-title">本周热议</dt>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
 
-                <!-- 无数据时 -->
-                <!--
-                <div class="fly-none">没有相关数据</div>
-                -->
-            </dl>
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this"><a href="">按提交时间</a></li>
+            <%--<li><a href="">按点赞排行</a></li>--%>
+        </ul>
+    </div>
 
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    这里可作为广告区域
-                </div>
-                <div class="fly-panel-main">
-                    <a href="http://layim.layui.com/?from=fly" target="_blank" class="fly-zanzhu" time-limit="2017.09.25-2099.01.01" style="background-color: #5FB878;">LayIM 3.0 - layui 旗舰之作</a>
-                </div>
-            </div>
+    <ul class="fly-case-list">
 
-            <div class="fly-panel" style="padding: 20px 0; text-align: center;">
-                <img src="res/images/weixin.jpg" style="max-width: 100%;" alt="layui">
-                <p style="position: relative; color: #666;">微信扫码关注 layui 公众号</p>
-            </div>
+        <c:forEach var="n" items="${visitList}">
+            <li data-id="123" style="width: 260px">
+                <a class="fly-case-img" href="#" target="_blank" class="aimg">
 
+                    <!-- 从数据库取出的文件名 -->
+                    <c:if test="${n.vpicture != ''}">
+                        <img alt="" src="logos/${n.vpicture}"/>
+                    </c:if>
+                    <%--<cite class="layui-btn layui-btn-primary layui-btn-small">去围观</cite>--%>
+                </a>
+                <h2><a href="#" target="_blank">${n.vtitle}</a></h2>
+                <p class="fly-case-desc">${n.vcontent}</p>
+                <%--<div class="fly-case-info">--%>
+                    <%--<a href="user/home.html" class="fly-case-user" target="_blank"><img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"></a>--%>
+                    <%--<p class="layui-elip" style="font-size: 12px;"><span style="color: #666;">贤心</span> 2017-11-30</p>--%>
+                    <%--<p>获得<a class="fly-case-nums fly-case-active" href="javascript:;" data-type="showPraise" style=" padding:0 5px; color: #01AAED;">666</a>个赞</p>--%>
+                    <%--<button class="layui-btn layui-btn-primary fly-case-active" data-type="praise">点赞</button>--%>
+                    <%--<!-- <button class="layui-btn  fly-case-active" data-type="praise">已赞</button> -->--%>
+                <%--</div>--%>
+                <a onclick="checkDel('${n.id}')"><i class="layui-icon">&#xe640;</i></a>
+            </li>
+
+
+        </c:forEach>
+
+
+
+
+
+    </ul>
+
+    <!-- <blockquote class="layui-elem-quote layui-quote-nm">暂无数据</blockquote> -->
+
+    <div style="text-align: center;">
+        <div>
+            <c:url var="url_pre" value="/beforeVisit/toMyVisit">
+                <c:param name="pageCur" value="${pageCur - 1 }"/>
+            </c:url>
+            <c:url var="url_next" value="/beforeVisit/toMyVisit">
+                <c:param name="pageCur" value="${pageCur + 1 }"/>
+            </c:url>
+            <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>
+            <%--<span class="current">2</span>--%>
+            <span class="current">第${pageCur}页</span>
+            <!-- 第一页没有上一页 -->
+            <c:if test="${pageCur != 1 }">
+                <a class="num" href="${url_pre}">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </c:if>
+            <!-- 最后一页，没有下一页 -->
+            <c:if test="${pageCur != totalPage && totalPage != 0}">
+                <a href="${url_next}">下一页</a>
+            </c:if>
+            <a class="next" href="javascript:;">&gt;&gt;</a>
         </div>
     </div>
+
 </div>
 
 <div class="fly-footer">
@@ -321,34 +316,19 @@
         <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
     </p>
 </div>
-
+<script src="static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 <script src="res/layui/layui.js"></script>
-<script>
-    // layui.cache.page = 'jie';
-    // layui.cache.user = {
-    //     username: '游客'
-    //     ,uid: -1
-    //     ,avatar: 'res/images/avatar/00.jpg'
-    //     ,experience: 83
-    //     ,sex: '男'
-    // };
-    layui.config({
-        version: "3.0.0"
-        ,base: 'res/mods/'
-    }).extend({
-        fly: 'index'
-    }).use(['fly', 'face'], function(){
-        var $ = layui.$
-            ,fly = layui.fly;
-        //如果你是采用模版自带的编辑器，你需要开启以下语句来解析。
-        /*
-        $('.detail-body').each(function(){
-          var othis = $(this), html = othis.html();
-          othis.html(fly.content(html));
-        });
-        */
+<script type="text/javascript">
+    //			layui扩展模块的两种加载方式-示例
+    layui.extend({
+        admin: '{/}static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
     });
-</script>
+    //使用拓展模块
+    layui.use('admin', function(){
+        var admin = layui.admin;
+    });
 
+
+</script>
 </body>
 </html>
