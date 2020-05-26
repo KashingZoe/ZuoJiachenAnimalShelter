@@ -14,7 +14,8 @@ public interface BeforeAnimalDao {
 
 
     public List<Animal> animalLimit();
-    public List<Animal> animalPage(Map<String, Object> map);
+    public List<Animal> animalInfo();
+    public List<Animal> animalInfoPage(Map<String, Object> map);
     public Animal selectAAnimal(Integer id);
 //    int animalInsert(Animal animal);
 //    public Animal toEditAnimal(Integer id);

@@ -184,7 +184,7 @@
 
             </li>
             <li class="layui-nav-item layui-this"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
-            <li class="layui-nav-item"><a href="sciarea.html">科普区</a></li>
+            <li class="layui-nav-item"><a href="/beforeNews/newsInfol">科普区</a></li>
             <li class="layui-nav-item"><a href="review.html">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
             <li><a href="jie/index.html">动态</a></li> -->

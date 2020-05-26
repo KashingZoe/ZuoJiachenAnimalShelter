@@ -1,5 +1,6 @@
 package controller.before;
 
+import entity.Animal;
 import entity.Getanimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,11 +18,11 @@ public class BeforeAnimalController {
     @Autowired
     private BeforeAnimalService beforeAnimalService;
 
-//    //查找所有的信息
-//    @RequestMapping("/animalInfo")
-//    public String animalInfo(@ModelAttribute Animal animal, Model model, Integer pageCur) {
-//        return adminAnimalService.animalInfo(model,pageCur);
-//    }
+    //查找所有的信息
+    @RequestMapping("/animalInfo")
+    public String animalInfo(@ModelAttribute Animal animal, Model model, Integer pageCur) {
+        return beforeAnimalService.animalInfo(model,pageCur);
+    }
     //查询一条记录
     @RequestMapping("/selectAAnimal")
     public String selectAAnimal(@ModelAttribute Getanimal getanimal, HttpSession session,Model model, Integer id){

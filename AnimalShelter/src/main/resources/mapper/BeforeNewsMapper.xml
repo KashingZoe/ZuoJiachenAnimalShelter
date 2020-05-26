@@ -3,14 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dao.BeforeNewsDao">
+	<!--id 方法名  resultType返回类型 -->
+	<select id="newsAll"  resultType="News">
+		SELECT * FROM news
+	</select>
+
     <!--id 方法名  resultType返回类型 -->
     <select id="newsLimit"  resultType="News">
 		SELECT * FROM news order by id desc LIMIT 5
 	</select>
 	<!--id 方法名  resultType返回类型 -->
 	<select id="newsInfoPage"  resultType="News" parameterType="map">
-		select * from news order by id limit #{startIndex}, #{perPageSize}
+		select * from news order by ntime desc limit #{startIndex}, #{perPageSize}
 	</select>
+
 
 	<!--新增所有列-->
 	<insert id="newsInsert" keyProperty="id" useGeneratedKeys="true" parameterType="News">
@@ -19,14 +25,14 @@
     </insert>
 
 	<!--根据用户账号查询-->
-    <select id="selectANews" resultType="News" parameterType="News">
-		select * from news where ntitle = #{ntitle}
-	</select>
-
-	<!--根据用户id查询-->
-	<select id="toEditNews" resultType="News" parameterType="Integer">
+    <select id="selectANews" resultType="News" parameterType="Integer">
 		select * from news where id = #{id}
 	</select>
+
+	<!--&lt;!&ndash;根据用户id查询&ndash;&gt;-->
+	<!--<select id="toEditNews" resultType="News" parameterType="Integer">-->
+		<!--select * from news where id = #{id}-->
+	<!--</select>-->
 
 	<!-- 修改一个宠物 -->
 	<update id="editNews" parameterType="News">

@@ -7,10 +7,13 @@
     <select id="animalLimit"  resultType="Animal">
 		SELECT * FROM animal order by id desc LIMIT 10
 	</select>
-	<!--&lt;!&ndash;id 方法名  resultType返回类型 &ndash;&gt;-->
-	<!--<select id="animalPage"  resultType="Animal" parameterType="map">-->
-		<!--select * from animal order by id limit #{startIndex}, #{perPageSize}-->
-	<!--</select>-->
+	<select id="animalInfo"  resultType="Animal">
+		SELECT * FROM animal
+	</select>
+	<!--id 方法名  resultType返回类型 -->
+	<select id="animalInfoPage"  resultType="Animal" parameterType="map">
+		select * from animal order by id desc limit #{startIndex}, #{perPageSize}
+	</select>
 
 	<!--&lt;!&ndash;新增所有列&ndash;&gt;-->
 	<!--<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">-->
@@ -21,7 +24,6 @@
 	<!--根据用户账号查询-->
     <select id="selectAAnimal" resultType="Animal" parameterType="Integer">
 		select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}
-
 	</select>
 	<!--select * from animal where id = #{id}-->
 	<!--select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}-->

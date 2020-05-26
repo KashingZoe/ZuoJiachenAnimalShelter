@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 左家臣
-  Date: 2020/5/24
-  Time: 18:21
+  Date: 2020/5/26
+  Time: 13:24
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -11,6 +11,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
     <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
-    <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
+    <link rel="shortcut icon" href="res/images/paw.png" type="image/png"/>
     <style>
         .layui-bg-black {
             background-color: #009688!important;
@@ -63,23 +64,39 @@
             color: #000000 !important;
         }
     </style>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+            var element = layui.element;
 
+            //…
+        });
+    </script>
 </head>
 <body>
 
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
         <div class="layui-row">
+
+
+
             <div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
                 <div class="layui-container">
                     <div class="layui-row">
                         <div class="layui-col-md6">
-                            <a class="fly-logo" href="index.html">
+                            <a class="fly-logo" href="before">
+
                                 <img src="res/images/dog.png" width="50px" height="40px">
+
+
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
-                                <!-- <img src="../res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
+
+                                <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
                                 <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
+
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
+
                             </a>
                         </div>
                         <div class="layui-col-md6">
@@ -116,7 +133,7 @@
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
 
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
                                 <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -152,7 +169,6 @@
                         </li>
 
                     </c:if>
-
                 </ul>
             </div>
 
@@ -160,10 +176,11 @@
     </div>
 </div>
 
+<!-- 导航栏 -->
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
-            <li class="layui-hide-xs layui-nav-item layui-this"><a href="/before">首页</a></li>
+            <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
             <li class="layui-nav-item"><a href="add01.html">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a href="add01.html">送养发布</a></dd>
@@ -173,7 +190,7 @@
 
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
-            <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
+            <li class="layui-nav-item layui-this"><a href="/beforeNews/newsInfo">科普区</a></li>
             <li class="layui-nav-item"><a href="review.html">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
             <li><a href="jie/index.html">动态</a></li> -->
@@ -186,10 +203,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="jie/add.html" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="jie/add.html" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -199,21 +216,21 @@
         <div class="layui-col-md8 content detail">
             <div class="fly-panel detail-box">
                 <div class="fly-panel-title fly-filter" style="padding-left: 0px;color: #b4a992;">
-                    <a>宠物领养/详细信息</a>
+                    <a>科普区/详细信息</a>
 
                 </div>
                 <div class="detail-about">
-                    <h1 style="text-align: center;margin-top: 10px;">申请失败，请重新申请...</h1>
-                    <!-- <img src="res/images/fly.jpg" alt="Fly社区"> -->
-                </div>
 
+                    <img src="res/images/dogcat.jpg" width="585px" height="350px" alt="新闻">
+                </div>
+                <h1 style="text-align: center;margin-top: 10px;">${newsList.ntitle}</h1>
 
 
                 <div class="detail-body photos" style="margin-top: 0px;">
-                    <!-- <p style="margin-bottom: 0px;">内容：</p>
-                     <pre style="margin-top: 0px;font-size: large;">
-                       <p>   该模版由 layui官方社区（<a href="http://fly.layui.com/" target="_blank">fly.layui.com</a>）倾情提供，只为表明我们对 layui 执着的信念、以及对未来持续加强的承诺。该模版基于 layui 搭建而成，可作为极简通用型社区的页面支撑。</p>
-                     </pre> -->
+                    <p style="margin-bottom: 0px;">内容：</p>
+                    <pre style="margin-top: 0px;font-size: large;">
+            <p>${newsList.ncontent}</p>
+          </pre>
 
                     <!-- <pre> -->
 
@@ -324,7 +341,6 @@
 
 <script src="res/layui/layui.js"></script>
 <script>
-
     layui.config({
         version: "3.0.0"
         ,base: 'res/mods/'

@@ -187,7 +187,7 @@
 
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
-            <li class="layui-nav-item"><a href="sciarea.html">科普区</a></li>
+            <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
             <li class="layui-nav-item"><a href="review.html">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
             <li><a href="jie/index.html">动态</a></li> -->
@@ -299,6 +299,7 @@
                                                 -->
                                             </a>
                                             <span>刚刚</span>
+                                        </div>
                                         </li>
                                     </c:forEach>
                                     <%--<a href="user/home.html" class="fly-avatar">--%>
@@ -335,7 +336,7 @@
 
                             <div style="text-align: center">
                                 <div class="laypage-main">
-                                    <a href="indexmore.html" class="laypage-next">查看更多</a>
+                                    <a href="beforeAnimal/animalInfo" class="laypage-next">查看更多</a>
                                 </div>
                             </div>
 
@@ -434,7 +435,7 @@
                 <ul class="fly-panel-main fly-list-static">
                     <c:forEach var="n" items="${newList}">
                         <li>
-                        <a href="beforeAnimal/selectAAnimal?id=${n.id}" target="_blank">${n.ntitle}</a>
+                        <a href="/beforeNews/selectANews?id=${n.id}" target="_blank">${n.ntitle}</a>
                         </li>
                     </c:forEach>
                     <%--<li>--%>

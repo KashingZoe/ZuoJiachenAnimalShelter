@@ -14,10 +14,11 @@ public interface BeforeNewsDao {
 
 
     public List<News> newsLimit();
+    public List<News> newsEight();
+    public List<News> newsAll();
+    public List<News> newsInfo(Map<String, Object> map);
     public List<News> newsInfoPage(Map<String, Object> map);
-    public List<News> selectANews(News news);
-    int newsInsert(News news);
-    public News toEditNews(Integer id);
-    public int editNews(News news);
-    public int deleteANews(Integer id);
+    public News selectANews(Integer id);
+
+
 }

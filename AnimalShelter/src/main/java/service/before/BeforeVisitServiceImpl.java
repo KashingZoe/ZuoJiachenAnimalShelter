@@ -42,7 +42,7 @@ public class BeforeVisitServiceImpl implements BeforeVistService {
         if (pageCur == null) {//开始时，pageCur为空默认为1，
             pageCur = 1;
         }
-        if ((pageCur - 1) * 5 > totalcount) {  //最后一页时，点下一页，防止发生错误
+        if ((pageCur - 1) * 8 > totalcount) {  //最后一页时，点下一页，防止发生错误
             pageCur = pageCur - 1;
         }
         Map<String, Object> map = new HashMap<String, Object>();
@@ -72,7 +72,7 @@ public class BeforeVisitServiceImpl implements BeforeVistService {
         if (pageCur == null) {//开始时，pageCur为空默认为1，
             pageCur = 1;
         }
-        if ((pageCur - 1) * 5 > totalcount) {  //最后一页时，点下一页，防止发生错误
+        if ((pageCur - 1) * 8 > totalcount) {  //最后一页时，点下一页，防止发生错误
             pageCur = pageCur - 1;
         }
         Map<String, Object> map = new HashMap<String, Object>();
