@@ -1,6 +1,7 @@
 package entity;
 
-import java.util.Date;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.Serializable;
 
 /**
@@ -22,12 +23,21 @@ public class Lookmaster implements Serializable {
     
     private Integer buserid;
     
-    private Date mtime;
+    private String mtime;
     
     private String mpicture;
     
     private String minfo;
 
+    private MultipartFile logoImage;
+
+    public MultipartFile getLogoImage() {
+        return logoImage;
+    }
+
+    public void setLogoImage(MultipartFile logoImage) {
+        this.logoImage = logoImage;
+    }
 
     public Integer getId() {
         return id;
@@ -69,11 +79,11 @@ public class Lookmaster implements Serializable {
         this.buserid = buserid;
     }
 
-    public Date getMtime() {
+    public String getMtime() {
         return mtime;
     }
 
-    public void setMtime(Date mtime) {
+    public void setMtime(String mtime) {
         this.mtime = mtime;
     }
 

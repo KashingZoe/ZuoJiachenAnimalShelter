@@ -17,12 +17,14 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="utf-8">
-    <title>基于 layui 的极简社区页面模版</title>
+    <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="fly,layui,前端社区">
     <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
+    <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
+
     <style>
         .layui-bg-black {
             background-color: #009688!important;
@@ -256,10 +258,10 @@
 
                             <div style="text-align: center;">
                                 <div>
-                                    <c:url var="url_pre" value="/beforeVisit/toMyVisit">
+                                    <c:url var="url_pre" value="/beforeAnimal/animalInfo">
                                         <c:param name="pageCur" value="${pageCur - 1 }"/>
                                     </c:url>
-                                    <c:url var="url_next" value="/beforeVisit/toMyVisit">
+                                    <c:url var="url_next" value="/beforeAnimal/animalInfo">
                                         <c:param name="pageCur" value="${pageCur + 1 }"/>
                                     </c:url>
                                     <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>

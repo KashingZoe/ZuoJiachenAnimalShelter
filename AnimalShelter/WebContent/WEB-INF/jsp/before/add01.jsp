@@ -2,16 +2,16 @@
   Created by IntelliJ IDEA.
   User: 左家臣
   Date: 2020/5/26
-  Time: 13:24
+  Time: 18:23
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,27 +41,6 @@
         .fly-column ul li.layui-this:after{
             bottom: 0px;
             height: 2px;
-            width: 60px;
-        }
-        .mylabel{
-
-            float: left;
-            display: block;
-            padding: 9px 15px;
-            width: 90px;
-            font-weight: 400;
-            line-height: 20px;
-            text-align: center;
-
-        }
-        .mytb{
-            margin-left: 120px;
-            min-height: 36px;
-        }
-        .mymid{
-            margin-left: 10px;
-            font-weight: 100;
-            color: #000000 !important;
         }
     </style>
     <script>
@@ -92,7 +71,7 @@
 
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
 
-                                <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
+                                <!-- <img src="../res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
                                 <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
 
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
@@ -133,7 +112,7 @@
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
 
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="res/images/mycat.png">
+                                <img src="../res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
                                 <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -169,29 +148,33 @@
                         </li>
 
                     </c:if>
+
                 </ul>
             </div>
+
 
         </div>
     </div>
 </div>
 
-<!-- 导航栏 -->
+
+
+<!--导航栏-->
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
-            <li class="layui-nav-item"><a href="add01.html">发布</a>
+            <li class="layui-nav-item layui-this"><a href="/beforeAnimal/toAddAnimal">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="add01.html">送养发布</a></dd>
-                    <dd><a href="add02.html">寻主发布</a></dd>
-                    <dd><a href="add03.html">寻宠发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddAnimal">送养发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddMaster">寻主发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddPet">寻宠发布</a></dd>
                 </dl>
 
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
-            <li class="layui-nav-item layui-this"><a href="/beforeNews/newsInfo">科普区</a></li>
-            <li class="layui-nav-item"><a href="review.html">留言板</a></li>
+            <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
+            <li class="layui-nav-item"><a href="/beforeFeedback/toAddFeedback">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
             <li><a href="jie/index.html">动态</a></li> -->
             <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
@@ -211,132 +194,103 @@
     </div>
 </div>
 
-<div class="layui-container">
-    <div class="layui-row layui-col-space15">
-        <div class="layui-col-md8 content detail">
-            <div class="fly-panel detail-box">
-                <div class="fly-panel-title fly-filter" style="padding-left: 0px;color: #b4a992;">
-                    <a>科普区/详细信息</a>
 
-                </div>
-                <div class="detail-about">
+<div class="layui-container fly-marginTop">
+    <div class="fly-panel" pad20 style="padding-top: 5px;">
+        <!--<div class="fly-none">没有权限</div>-->
+        <div class="layui-form layui-form-pane">
+            <div class="layui-tab layui-tab-brief" lay-filter="user">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">送养发布<!-- 编辑帖子 --></li>
+                </ul>
+                <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+                    <div class="layui-tab-item layui-show">
+                        <form:form class="layui-form" action="beforeAnimal/addAnimal" method="post" modelAttribute="animal" name="regForm" enctype="multipart/form-data">
+                            <div class="layui-row layui-col-space15 layui-form-item">
+                                <div class="layui-col-md3">
+                                    <label class="layui-form-label">宠物种类</label>
+                                    <div class="layui-input-block">
+                                        <form:select path="kindid" lay-verify="required" name="class" lay-filter="column">
+                                           
+                                            <form:options items="${kind}" itemLabel="kindname" itemValue="id"></form:options>
 
-                    <img src="res/images/dogcat.jpg" width="585px" height="350px" alt="新闻">
-                </div>
-                <h1 style="text-align: center;margin-top: 10px;">${newsList.ntitle}</h1>
+                                        </form:select>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md9">
+                                    <label for="L_title" class="layui-form-label">标题</label>
+                                    <div class="layui-input-block">
+                                        <form:input type="text" id="L_title" path="ltitle" name="ltitle" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                        <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="layui-form-item layui-form-text">
+                                <div class="layui-input-block">
+                                    <form:textarea id="L_content" path="linfo" name="linfo" lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></form:textarea>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label  class="layui-form-label">性别</label>
+                                <div class="layui-input-inline">
+                                    <form:radiobutton path="lsex" value="男" title="男" checked="checked"/>
+                                    <form:radiobutton path="lsex" value="女" title="女" />
+                                        <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                </div>
 
-                <div class="detail-body photos" style="margin-top: 0px;">
-                    <p style="margin-bottom: 0px;">内容：</p>
-                    <pre style="margin-top: 0px;font-size: large;">
-            <p>${newsList.ncontent}</p>
-          </pre>
+                            </div>
+                            <div class="layui-form-item">
+                                <label for="lyear" class="layui-form-label">年龄</label>
+                                <div class="layui-input-inline">
+                                    <form:input type="text" id="lyear" path="lyear" name="lyear" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                </div>
 
-                    <!-- <pre> -->
-
-
-                    <!-- </pre> -->
-
-                    <!-- 下载<hr>
-                    <p>
-                      官网：<a href="http://www.layui.com/template/fly/" target="_blank">http://www.layui.com/template/fly/</a><br>
-                      码云：<a href="https://gitee.com/sentsin/fly/" target="_blank">https://gitee.com/sentsin/fly/</a><br>
-                      GitHub：<a href="https://github.com/layui/fly" target="_blank">https://github.com/layui/fly</a>
-                    </p>
-                    封面<hr>
-                    <p>
-                      <img src="res/images/fly.jpg" alt="Fly社区">
-                    </p> -->
-
-                </div>
-            </div>
-
-            <!-- <div class="fly-panel detail-box" id="flyReply">
-
-              <ul class="jieda" id="jieda">
-
-              </ul>
-
-              <div class="layui-form ">
-                <button class="layui-btn">领养宠物</button>
-              </div>
-            </div> -->
-        </div>
-        <div class="layui-col-md4">
-            <dl class="fly-panel fly-list-one">
-                <dt class="fly-panel-title">本周热议</dt>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-
-                <!-- 无数据时 -->
-                <!--
-                <div class="fly-none">没有相关数据</div>
-                -->
-            </dl>
-
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    这里可作为广告区域
-                </div>
-                <div class="fly-panel-main">
-                    <a href="http://layim.layui.com/?from=fly" target="_blank" class="fly-zanzhu" time-limit="2017.09.25-2099.01.01" style="background-color: #5FB878;">LayIM 3.0 - layui 旗舰之作</a>
+                            </div>
+                            <div class="layui-form-item">
+                                <label  class="layui-form-label">是否绝育</label>
+                                <div class="layui-input-inline">
+                                    <form:radiobutton path="lbirth" value="是" title="是" checked="checked"/>
+                                    <form:radiobutton path="lbirth" value="否" title="否" />
+                                        <%--<input type="text" id="lbirth" path="lbirth" name="lbirth" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label  class="layui-form-label">是否接种疫苗</label>
+                                <div class="layui-input-inline">
+                                    <form:radiobutton path="lval" value="是" title="是" checked="checked"/>
+                                    <form:radiobutton path="lval" value="否" title="否" />
+                                        <%--<input type="text" id="lval" path="lval" name="lval" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label  class="layui-form-label">是否驱虫</label>
+                                <div class="layui-input-inline">
+                                    <form:radiobutton path="lbug" value="是" title="是" checked="checked"/>
+                                    <form:radiobutton path="lbug" value="否" title="否" />
+                                        <%--<input type="text" id="lbug" path="lbug" name="lbug" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label for="lpicture" class="layui-form-label">上传图片</label>
+                                <div class="layui-input-inline">
+                                    <input type="file" id="lpicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn" type="submit" lay-filter="*" lay-submit>立即发布</button>
+                            </div>
+                            <p>${msg}</p>
+                        </form:form>
+                    </div>
                 </div>
             </div>
-
-            <div class="fly-panel" style="padding: 20px 0; text-align: center;">
-                <img src="res/images/weixin.jpg" style="max-width: 100%;" alt="layui">
-                <p style="position: relative; color: #666;">微信扫码关注 layui 公众号</p>
-            </div>
-
         </div>
     </div>
 </div>
 
 <div class="fly-footer">
-    <p><a href="http://fly.layui.com/" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a></p>
-    <p>
-        <a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>
-        <a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>
-        <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
-    </p>
+    <p><a href="javascript:;" target="_blank">动物之家</a> 2020 &copy; <a href="javascript:;" target="_blank">zuojiachen 出品</a></p>
 </div>
 
 <script src="res/layui/layui.js"></script>
@@ -346,17 +300,7 @@
         ,base: 'res/mods/'
     }).extend({
         fly: 'index'
-    }).use(['fly', 'face'], function(){
-        var $ = layui.$
-            ,fly = layui.fly;
-        //如果你是采用模版自带的编辑器，你需要开启以下语句来解析。
-        /*
-        $('.detail-body').each(function(){
-          var othis = $(this), html = othis.html();
-          othis.html(fly.content(html));
-        });
-        */
-    });
+    }).use('fly');
 </script>
 
 </body>

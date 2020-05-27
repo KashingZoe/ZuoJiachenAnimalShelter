@@ -16,7 +16,7 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="utf-8">
-    <title>基于 layui 的极简社区页面模版</title>
+    <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="fly,layui,前端社区">
     <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
@@ -153,42 +153,32 @@
                             <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
                         </li>
 
-
-
-
-
                     </c:if>
-
-
-
-
 
                 </ul>
             </div>
-
-
-
-
 
         </div>
     </div>
 </div>
 
+
+<!--导航栏-->
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item layui-this"><a href="/before">首页</a></li>
-            <li class="layui-nav-item"><a href="add01.html">发布</a>
+            <li class="layui-nav-item"><a href="/beforeAnimal/toAddAnimal">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="add01.html">送养发布</a></dd>
-                    <dd><a href="add02.html">寻主发布</a></dd>
-                    <dd><a href="add03.html">寻宠发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddAnimal">送养发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddMaster">寻主发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddPet">寻宠发布</a></dd>
                 </dl>
 
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
             <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
-            <li class="layui-nav-item"><a href="review.html">留言板</a></li>
+            <li class="layui-nav-item"><a href="/beforeFeedback/toAddFeedback">留言板</a></li>
             <!-- <li><a href="jie/index.html">公告</a></li>
             <li><a href="jie/index.html">动态</a></li> -->
             <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
@@ -623,7 +613,7 @@
 </div>
 
 <div class="fly-footer">
-    <p><a href="#" target="_blank">动物之家</a> 2020 &copy; <a href="#" target="_blank">zuojiachen 出品</a></p>
+    <p><a href="javascript:;" target="_blank">动物之家</a> 2020 &copy; <a href="javascript:;" target="_blank">zuojiachen 出品</a></p>
     <%--<p>--%>
         <%--<a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>--%>
         <%--<a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>--%>

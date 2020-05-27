@@ -1,6 +1,7 @@
 package entity;
 
-import java.util.Date;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.Serializable;
 
 /**
@@ -24,12 +25,21 @@ public class Lookpet implements Serializable {
     
     private Integer buserid;
     
-    private Date ptime;
+    private String ptime;
     
     private String ppicture;
     
     private String pinfo;
 
+    private MultipartFile logoImage;
+
+    public MultipartFile getLogoImage() {
+        return logoImage;
+    }
+
+    public void setLogoImage(MultipartFile logoImage) {
+        this.logoImage = logoImage;
+    }
 
     public Integer getId() {
         return id;
@@ -79,11 +89,11 @@ public class Lookpet implements Serializable {
         this.buserid = buserid;
     }
 
-    public Date getPtime() {
+    public String getPtime() {
         return ptime;
     }
 
-    public void setPtime(Date ptime) {
+    public void setPtime(String ptime) {
         this.ptime = ptime;
     }
 

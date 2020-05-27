@@ -1,6 +1,8 @@
 package service.before;
 
+import dao.AdminKindDao;
 import dao.BeforeUserDao;
+import entity.Animalkind;
 import entity.Buser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +17,11 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private BeforeUserDao beforeUserDao;
-    public String register() {
-        return null;
+    @Autowired
+    private AdminKindDao adminKindDao;
 
-    }
+
+
     //注册
     public String register(Buser buser, Model model, HttpSession session, String code) {
 //        if(!code.equalsIgnoreCase(session.getAttribute("code").toString())) {
@@ -41,10 +44,12 @@ public class UserServiceImpl implements UserService {
 //        }
         Buser ruser = null;
         List<Buser> list=beforeUserDao.login(buser);
+        List<Animalkind> kind = adminKindDao.kindInfo();
         if(list.size()>0) {
             ruser=list.get(0);
         }
         if(ruser !=null) {
+            session.setAttribute("kind", kind);
             session.setAttribute("bruser", ruser);
             System.out.println(ruser);
             return"forward:/before";

@@ -3,13 +3,18 @@ package service.before;
 import dao.BeforeAnimalDao;
 import dao.BeforeNewsDao;
 import entity.Animal;
+import entity.Lookmaster;
+import entity.Lookpet;
 import entity.News;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import util.MyUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,36 +71,109 @@ public class BeforeAnimalServiceImpl implements BeforeAnimalService {
         return "before/animaldetail";
     }
 
-//    @Override
-//    public String addAnimal(Animal animal, HttpServletRequest request, Model model) {
-//        String newFileName = "";
-//        String fileName = animal.getLogoImage().getOriginalFilename();
-//
-//        if(fileName.length() > 0){
-//            String realpath = request.getServletContext().getRealPath("/logos");
-//            System.out.println(realpath);
-//            String fileType = fileName.substring(fileName.lastIndexOf('.'));
-//            newFileName = MyUtil.getStringID() + fileType;
-//            animal.setLpicture(newFileName);
-//
-//            File targetFile = new File(realpath, newFileName);
-//            if(!targetFile.exists()){
-//                targetFile.mkdirs();
-//            }
-//            try {
-//                animal.getLogoImage().transferTo(targetFile);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        int n= adminAnimalDao.animalInsert(animal);
-//        if(n>0) {
-//            return "admin/useraddok";
-//        }else {
-//            model.addAttribute("msg", "fail to insert");
-//            return "forward:/adminAnimal/toAddAnimal";
-//        }
-//    }
+    @Override
+    public String addAnimal(Animal animal, HttpServletRequest request, Model model, HttpSession session) {
+        String newFileName = "";
+        String fileName = animal.getLogoImage().getOriginalFilename();
+
+        if(fileName.length() > 0){
+            String realpath = request.getServletContext().getRealPath("/logos");
+            //System.out.println(realpath);
+            String fileType = fileName.substring(fileName.lastIndexOf('.'));
+            newFileName = MyUtil.getStringID() + fileType;
+            animal.setLpicture(newFileName);
+
+            File targetFile = new File(realpath, newFileName);
+            if(!targetFile.exists()){
+                targetFile.mkdirs();
+            }
+            try {
+                animal.getLogoImage().transferTo(targetFile);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        animal.setBuserid(MyUtil.getUserId(session));
+        int n= beforeAnimalDao.animalInsert(animal);
+        if(n>0) {
+            model.addAttribute("msg", "发布成功");
+            return "before/add01ok";
+        }else {
+            model.addAttribute("msg", "发布失败,请重新发布");
+            return "forward:/beforeAnimal/toAddAnimal";
+        }
+    }
+
+
+
+
+    @Override
+    public String addMaster(Lookmaster lookmaster, HttpServletRequest request, Model model, HttpSession session) {
+        String newFileName = "";
+        String fileName = lookmaster.getLogoImage().getOriginalFilename();
+
+        if(fileName.length() > 0){
+            String realpath = request.getServletContext().getRealPath("/logos");
+            //System.out.println(realpath);
+            String fileType = fileName.substring(fileName.lastIndexOf('.'));
+            newFileName = MyUtil.getStringID() + fileType;
+            lookmaster.setMpicture(newFileName);
+
+            File targetFile = new File(realpath, newFileName);
+            if(!targetFile.exists()){
+                targetFile.mkdirs();
+            }
+            try {
+                lookmaster.getLogoImage().transferTo(targetFile);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        lookmaster.setBuserid(MyUtil.getUserId(session));
+        int n= beforeAnimalDao.masterInsert(lookmaster);
+        if(n>0) {
+            model.addAttribute("msg", "发布成功");
+            return "before/add01ok";
+        }else {
+            model.addAttribute("msg", "发布失败,请重新发布");
+            return "forward:/beforeAnimal/toAddMaster";
+        }
+    }
+
+    @Override
+    public String addPet(Lookpet lookpet, HttpServletRequest request, Model model, HttpSession session) {
+        String newFileName = "";
+        String fileName = lookpet.getLogoImage().getOriginalFilename();
+
+        if(fileName.length() > 0){
+            String realpath = request.getServletContext().getRealPath("/logos");
+            //System.out.println(realpath);
+            String fileType = fileName.substring(fileName.lastIndexOf('.'));
+            newFileName = MyUtil.getStringID() + fileType;
+            lookpet.setPpicture(newFileName);
+
+            File targetFile = new File(realpath, newFileName);
+            if(!targetFile.exists()){
+                targetFile.mkdirs();
+            }
+            try {
+                lookpet.getLogoImage().transferTo(targetFile);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        lookpet.setBuserid(MyUtil.getUserId(session));
+        int n= beforeAnimalDao.petInsert(lookpet);
+        if(n>0) {
+            model.addAttribute("msg", "发布成功");
+            return "before/add01ok";
+        }else {
+            model.addAttribute("msg", "发布失败,请重新发布");
+            return "forward:/beforeAnimal/toAddPet";
+        }
+    }
+
+
 //
 //    @Override
 //    public String toEditAnimal(Model model, Integer id) {

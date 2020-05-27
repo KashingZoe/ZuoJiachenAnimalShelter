@@ -1,6 +1,8 @@
 package dao;
 
 import entity.Animal;
+import entity.Lookmaster;
+import entity.Lookpet;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +19,9 @@ public interface BeforeAnimalDao {
     public List<Animal> animalInfo();
     public List<Animal> animalInfoPage(Map<String, Object> map);
     public Animal selectAAnimal(Integer id);
-//    int animalInsert(Animal animal);
+    int animalInsert(Animal animal);
+    int masterInsert(Lookmaster lookmaster);
+    int petInsert(Lookpet lookpet);
 //    public Animal toEditAnimal(Integer id);
 //    public int editAnimal(Animal animal);
 //    public int deleteAAnimal(Integer id);

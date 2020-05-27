@@ -2,6 +2,8 @@ package controller.before;
 
 import entity.Animal;
 import entity.Getanimal;
+import entity.Lookmaster;
+import entity.Lookpet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import service.before.BeforeAnimalService;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -28,18 +31,45 @@ public class BeforeAnimalController {
     public String selectAAnimal(@ModelAttribute Getanimal getanimal, HttpSession session,Model model, Integer id){
         return  beforeAnimalService.selectAAnimal(model,session,id);
     }
-//    //打来animaladd.jsp
-//    @RequestMapping("/toAddAnimal")
-//    public String toAddAnimal(@ModelAttribute Animal animal){
-//        return "admin/animaladd";
-//    }
+    //打来add01
+    @RequestMapping("/toAddAnimal")
+    public String toAddAnimal(@ModelAttribute Animal animal){
+        return "before/add01";
+    }
+
+    //添加用户
+    @RequestMapping("/addAnimal")
+    public String addAnimal(@ModelAttribute Animal animal, HttpServletRequest request, Model model,HttpSession session){
+        return beforeAnimalService.addAnimal(animal,request,model,session);
+    }
+
+
+    //打来add02
+    @RequestMapping("/toAddMaster")
+    public String toAddMaster(@ModelAttribute Lookmaster lookmaster){
+        return "before/add02";
+    }
+
+    //添加寻主
+    @RequestMapping("/addAMaster")
+    public String addMaster(@ModelAttribute Lookmaster lookmaster, HttpServletRequest request, Model model,HttpSession session){
+        return beforeAnimalService.addMaster(lookmaster,request,model,session);
+    }
+
+    //打来add03
+    @RequestMapping("/toAddPet")
+    public String toAddPet(@ModelAttribute Lookpet lookpet){
+        return "before/add03";
+    }
+
+    //添加寻宠
+    @RequestMapping("/addAPet")
+    public String addPet(@ModelAttribute Lookpet lookpet, HttpServletRequest request, Model model,HttpSession session){
+        return beforeAnimalService.addPet(lookpet,request,model,session);
+    }
+
+
 //
-//    //添加用户
-//    @RequestMapping("/addAnimal")
-//    public String addAnimal(@ModelAttribute Animal animal, HttpServletRequest request, Model model){
-//        return adminAnimalService.addAnimal(animal,request,model);
-//    }
-////
 ////
 //    //打来useredit.jsp
 //    @RequestMapping("/toEditAnimal")
