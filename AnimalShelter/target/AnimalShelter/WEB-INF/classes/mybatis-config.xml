@@ -21,6 +21,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <typeAlias alias="Visit" type="entity.Visit"/>
         <typeAlias alias="Lookmaster" type="entity.Lookmaster"/>
         <typeAlias alias="Lookpet" type="entity.Lookpet"/>
+        <typeAlias alias="Adopt" type="entity.Adopt"/>
+
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
 	 <mappers>   

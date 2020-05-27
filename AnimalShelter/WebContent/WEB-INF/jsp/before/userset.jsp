@@ -18,32 +18,26 @@
 <head>
     <base href="<%=basePath%>">
     <meta charset="utf-8">
-    <title>帐号设置</title>
+    <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="fly,layui,前端社区">
     <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
-
+    <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
 </head>
 <body>
 
 <div class="fly-header layui-bg-black" style="background-color: #009688!important;">
     <div class="layui-container">
         <div class="layui-row">
-
-
-
             <div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
                 <div class="layui-container">
                     <div class="layui-row">
-                        <div class="layui-col-md6" >
-                            <a class="fly-logo" href="index.html">
+                        <div class="layui-col-md6">
+                            <a class="fly-logo" href="before">
                                 <img src="res/images/dog.png" width="50px" height="40px">
-
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
-                                <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
-                                <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
                             </a>
                         </div>
@@ -51,11 +45,8 @@
                             <strong style="float: right; margin-top: 20px;"> 用领养代替购买，拒绝残害小动物！！！</strong>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
 
             <div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
                 <!-- <ul class="layui-nav fly-nav layui-hide-xs">
@@ -71,43 +62,48 @@
                 </ul> -->
                 <ul class="layui-nav fly-nav-user">
 
-                    <!-- 未登入的状态 -->
-                    <!-- <li class="layui-nav-item">
-                      <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
-                    </li>
-                    <li class="layui-nav-item" >
-                      <a href="user/login.html" style="color: #E8E8E8;">登入</a>
-                    </li>
-                    <li class="layui-nav-item">
-                      <a href="user/reg.html" style="color: #E8E8E8;">注册</a>
-                    </li>
-                    <li class="layui-nav-item layui-hide-xs">
-                      <a href="/app/qq/" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" title="QQ登入" class="iconfont icon-qq"></a>
-                    </li>
-                    <li class="layui-nav-item layui-hide-xs">
-                      <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
-                    </li>  -->
+                    <c:if test="${bruser!=null}">
 
-                    <!-- 登入后的状态 -->
-                    <li class="layui-nav-item">
-                        <a class="fly-nav-avatar" href="javascript:;">
-                            <cite class="layui-hide-xs">贤心</cite>
-                            <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
-                            <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
-                            <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-                        </a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="userset.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                            <dd><a href="usermessage.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                            <dd><a href="userhome.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
-                            <hr style="margin: 5px 0;">
-                            <dd><a href="" style="text-align: center;">退出</a></dd>
-                        </dl>
-                    </li>
+                        <!-- 登入后的状态 -->
+                        <li class="layui-nav-item">
+                            <a class="fly-nav-avatar" href="javascript:;">
+                                <cite class="layui-hide-xs"></cite>
+                                <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
+                                <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
+                                <img src="res/images/mycat.png">
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <hr style="margin: 5px 0;">
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
+                            </dl>
+                        </li>
+                    </c:if>
 
+                    <c:if test="${bruser==null}">
+
+                        <!-- 未登入的状态 -->
+                        <li class="layui-nav-item">
+                            <a class="iconfont icon-touxiang layui-hide-xs" href="toLogin"></a>
+                        </li>
+                        <li class="layui-nav-item" >
+                            <a href="toLogin" style="color: #E8E8E8;">登入</a>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="toRegister" style="color: #E8E8E8;">注册</a>
+                        </li>
+                        <li class="layui-nav-item layui-hide-xs">
+                            <a href="/app/qq/" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" title="QQ登入" class="iconfont icon-qq"></a>
+                        </li>
+                        <li class="layui-nav-item layui-hide-xs">
+                            <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
+                        </li>
+
+                    </c:if>
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
@@ -115,25 +111,25 @@
 <div class="layui-container fly-marginTop fly-user-main">
     <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
         <li class="layui-nav-item">
-            <a href="userhome.html">
+            <a href="/before">
                 <i class="layui-icon">&#xe609;</i>
                 我的主页
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="userindex.html">
+            <a href="/user/touserindex">
                 <i class="layui-icon">&#xe612;</i>
                 用户中心
             </a>
         </li>
         <li class="layui-nav-item layui-this">
-            <a href="userset.html">
+            <a href="/user/touserset">
                 <i class="layui-icon">&#xe620;</i>
                 基本设置
             </a>
         </li>
         <li class="layui-nav-item">
-            <a href="usermessage.html">
+            <a href="/user/tousermessage">
                 <i class="layui-icon">&#xe611;</i>
                 我的消息
             </a>
@@ -276,14 +272,7 @@
 
 <script src="res/layui/layui.js"></script>
 <script>
-    layui.cache.page = 'user';
-    layui.cache.user = {
-        username: '游客'
-        ,uid: -1
-        ,avatar: 'res/images/avatar/00.jpg'
-        ,experience: 83
-        ,sex: '男'
-    };
+
     layui.config({
         version: "2.0.0"
         ,base: 'res/mods/'

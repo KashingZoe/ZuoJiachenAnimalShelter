@@ -1,9 +1,11 @@
 package dao;
 
+import entity.Adopt;
 import entity.Getanimal;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 @Repository("beforeOrderDao")//保证Dao层能由IOC容器创建
@@ -20,4 +22,9 @@ public interface BeforeOrderDao {
     //public Getanimal toEditOrder(Integer id);
     //public int editOrder(Getanimal getanimal);
    // public int deleteAOrder(Integer id);
+
+
+    public List<Adopt> selectAllOrder(Integer buserid);
+    public List<Adopt> allInfoPage(Map<String,Object> map);
+    public Adopt userIndex(Integer id);
 }

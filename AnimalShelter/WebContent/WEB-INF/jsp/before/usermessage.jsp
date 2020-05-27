@@ -79,7 +79,7 @@
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
 
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
                                 <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -124,12 +124,12 @@
 <div class="layui-container fly-marginTop fly-user-main">
     <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
         <li class="layui-nav-item">
-            <a href="/before">
+            <a href="/user/touserindex">
                 <i class="layui-icon">&#xe609;</i>
                 我的主页
             </a>
         </li>
-        <li class="layui-nav-item layui-this">
+        <li class="layui-nav-item">
             <a href="/user/touserindex">
                 <i class="layui-icon">&#xe612;</i>
                 用户中心
@@ -141,7 +141,7 @@
                 基本设置
             </a>
         </li>
-        <li class="layui-nav-item">
+        <li class="layui-nav-item layui-this">
             <a href="/user/tousermessage">
                 <i class="layui-icon">&#xe611;</i>
                 我的消息
@@ -161,43 +161,21 @@
 
 
     <div class="fly-panel fly-panel-user" pad20>
-        <!--
-        <div class="fly-msg" style="margin-top: 15px;">
-          您的邮箱尚未验证，这比较影响您的帐号安全，<a href="activate.html">立即去激活？</a>
-        </div>
-        -->
         <div class="layui-tab layui-tab-brief" lay-filter="user">
             <ul class="layui-tab-title" id="LAY_mine">
-                <li data-type="mine-jie" lay-id="index" class="layui-this">我的领养</li>
-                <li data-type="collection" data-url="/collection/find/" lay-id="collection">我的关注</li>
-
+                <li data-type="mine-jie" lay-id="index" class="layui-this">寻主发布</li>
+                <li data-type="collection" data-url="/collection/find/" lay-id="collection">寻宠发布</li>
+                <li data-type="feedback" data-url="/feedback/find/" lay-id="feedback">留言处理</li>
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
                 <div class="layui-tab-item layui-show">
                     <ul class="mine-view jie-row">
-
-                        <c:forEach items="${adoptList}" var="a">
                         <li>
-
-                            <a class="jie-title" style="width: 20%" href="user/userindex?id=${a.id}" target="_blank">${a.ltitle}</a>
-
-                            <%--<a class="mine-edit" href="javascript:;"></a>--%>
-                                <c:choose>
-                                    <c:when test="${a.status == 0}">
-                                        <label class="mine-edit">未审核</label>
-                                    </c:when>
-                                    <c:when test="${a.status == 1}">
-                                        <label class="mine-edit" style="background-color: #01AAED">审核通过</label>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <label class="mine-edit" style="background-color: red">审核失败</label>
-                                    </c:otherwise>
-                                </c:choose>
-
-
+                            <a class="jie-title" href="jie/detail.html" target="_blank">哈士奇 18个月</a>
+                            <i>2020/3/14 上午8:30:00</i>
+                            <a class="mine-edit" href="/jie/edit/8116">编辑</a>
                             <!-- <em>661阅/10答</em> -->
                         </li>
-                        </c:forEach>
                         <!-- <li>
                            <a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
                            <i>2017/3/14 上午8:30:00</i>
@@ -211,32 +189,7 @@
                            <em>661阅/10答</em>
                          </li> -->
                     </ul>
-                    <div id="LAY_page">
-                        <div style="text-align: center;">
-                            <div>
-                                <c:url var="url_pre" value="/user/touserindex">
-                                    <c:param name="pageCur" value="${pageCur - 1 }"/>
-                                </c:url>
-                                <c:url var="url_next" value="/user/touserindex">
-                                    <c:param name="pageCur" value="${pageCur + 1 }"/>
-                                </c:url>
-                                <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>
-                                <%--<span class="current">2</span>--%>
-                                <span class="current">第${pageCur}页</span>
-                                <!-- 第一页没有上一页 -->
-                                <c:if test="${pageCur != 1 }">
-                                    <a class="num" href="${url_pre}">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                </c:if>
-                                <!-- 最后一页，没有下一页 -->
-                                <c:if test="${pageCur != totalPage && totalPage != 0}">
-                                    <a href="${url_next}">下一页</a>
-                                </c:if>
-                                <a class="next" href="javascript:;">&gt;&gt;</a>
-                            </div>
-                        </div>
-
-
-                    </div>
+                    <div id="LAY_page"></div>
                 </div>
                 <div class="layui-tab-item">
                     <ul class="mine-view jie-row">
@@ -245,6 +198,14 @@
                             <i>收藏于23小时前</i>  </li>
                     </ul>
                     <div id="LAY_page1"></div>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="mine-view jie-row">
+                        <li>
+                            <a class="jie-title" href="jie/detail.html" target="_blank">啦啦</a>
+                            <i>收藏于23小时前</i>  </li>
+                    </ul>
+                    <div id="LAY_page2"></div>
                 </div>
             </div>
         </div>

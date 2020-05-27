@@ -15,6 +15,41 @@
         insert into animalshelter.getdetail(getanimalid, animalid)
         values (#{getanimalid}, #{animalid})
     </insert>
+
+
+
+
+	<!--根据订单账号查询-->
+	<select id="selectAllOrder" resultType="Adopt" parameterType="Integer">
+		select getanimal.id,getanimal.`status`,animal.ltitle,animal.linfo,animal.lpicture,buser.bname,buser.bqq,buser.bwechat,buser.btel,buser.barea,buser.badd from getanimal,getdetail,animal,buser WHERE getdetail.getanimalid = getanimal.id and getdetail.animalid = animal.id and animal.buserid = buser.id and getanimal.buserid = #{buserid} ORDER BY getanimal.orderdate desc
+	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="allInfoPage"  resultType="Adopt" parameterType="map">
+		select getanimal.id,getanimal.`status`,animal.ltitle,animal.linfo,animal.lpicture,buser.bname,buser.bqq,buser.bwechat,buser.btel,buser.barea,buser.badd from getanimal,getdetail,animal,buser WHERE getdetail.getanimalid = getanimal.id and getdetail.animalid = animal.id and animal.buserid = buser.id and getanimal.buserid = #{buserid} order by getanimal.orderdate desc limit #{startIndex}, #{perPageSize}
+	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="userIndex"  resultType="Adopt" parameterType="Integer">
+		select getanimal.id,getanimal.`status`,animal.ltitle,animal.linfo,animal.lpicture,buser.bname,buser.bqq,buser.bwechat,buser.btel,buser.barea,buser.badd from getanimal,getdetail,animal,buser WHERE getdetail.getanimalid = getanimal.id and getdetail.animalid = animal.id and animal.buserid = buser.id and getanimal.id = #{id}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!--id 方法名  resultType返回类型 -->
     <select id="orderInfo"  resultType="Getanimal">
 		select * from getanimal

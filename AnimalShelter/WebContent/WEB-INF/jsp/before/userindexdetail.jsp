@@ -25,7 +25,28 @@
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
+    <style>
+        .mylabel{
 
+            float: left;
+            display: block;
+            padding: 9px 15px;
+            width: 90px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+
+        }
+        .mytb{
+            margin-left: 120px;
+            min-height: 36px;
+        }
+        .mymid{
+            margin-left: 10px;
+            font-weight: 100;
+            color: #000000 !important;
+        }
+    </style>
 </head>
 <body>
 <div class="fly-header layui-bg-black" style="background-color: #009688!important;">
@@ -169,35 +190,90 @@
         <div class="layui-tab layui-tab-brief" lay-filter="user">
             <ul class="layui-tab-title" id="LAY_mine">
                 <li data-type="mine-jie" lay-id="index" class="layui-this">我的领养</li>
-                <li data-type="collection" data-url="/collection/find/" lay-id="collection">我的关注</li>
-
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
-                <div class="layui-tab-item layui-show">
-                    <ul class="mine-view jie-row">
 
-                        <c:forEach items="${adoptList}" var="a">
-                        <li>
 
-                            <a class="jie-title" style="width: 20%" href="user/userindex?id=${a.id}" target="_blank">${a.ltitle}</a>
+
 
                             <%--<a class="mine-edit" href="javascript:;"></a>--%>
-                                <c:choose>
-                                    <c:when test="${a.status == 0}">
-                                        <label class="mine-edit">未审核</label>
-                                    </c:when>
-                                    <c:when test="${a.status == 1}">
-                                        <label class="mine-edit" style="background-color: #01AAED">审核通过</label>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <label class="mine-edit" style="background-color: red">审核失败</label>
-                                    </c:otherwise>
-                                </c:choose>
 
+                                <c:if test="${adoptList.status == 0}">
+                                    <p>未审核</p>
+                                </c:if>
+                                <c:if test="${adoptList.status == 1}">
+
+                                    <h1 style="text-align: center;">${adoptList.ltitle}</h1>
+                                    <div class="fly-panel detail-box">
+                                        <div class="detail-about" style="text-align: center">
+                                            <img alt="" src="logos/${adoptList.lpicture}"/>
+                                        </div>
+
+                                        <div class="detail-body photos">
+
+                                            <p>
+                                                    ${adoptList.linfo}
+                                            </p>
+
+                                            <!-- <pre> -->
+                                            <div class="detail-about" style="padding-left: 0px;color: #000000;">
+                                                <form class="layui-form" action="" style="margin-left: 0px;">
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">主人姓名</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.bname}</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">QQ</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.bqq}</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">微信</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.bwechat}</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">手机</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.btel}</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">省份</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.barea}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-form-item">
+                                                        <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">详细地址</label>
+                                                        <div class="layui-input-block mytb">
+                                                            <div class="layui-form-mid layui-word-aux mymid">${adoptList.badd}</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </c:if>
+                                <c:if test="${adoptList.status == 2}">
+                                    <p>审核失败</p>
+                                </c:if>
 
                             <!-- <em>661阅/10答</em> -->
                         </li>
-                        </c:forEach>
+
                         <!-- <li>
                            <a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
                            <i>2017/3/14 上午8:30:00</i>
@@ -212,28 +288,7 @@
                          </li> -->
                     </ul>
                     <div id="LAY_page">
-                        <div style="text-align: center;">
-                            <div>
-                                <c:url var="url_pre" value="/user/touserindex">
-                                    <c:param name="pageCur" value="${pageCur - 1 }"/>
-                                </c:url>
-                                <c:url var="url_next" value="/user/touserindex">
-                                    <c:param name="pageCur" value="${pageCur + 1 }"/>
-                                </c:url>
-                                <a class="prev" href="javascript:;">&lt;&lt;</a> <a class="num" href="javascript:;">共${totalPage}页</a>
-                                <%--<span class="current">2</span>--%>
-                                <span class="current">第${pageCur}页</span>
-                                <!-- 第一页没有上一页 -->
-                                <c:if test="${pageCur != 1 }">
-                                    <a class="num" href="${url_pre}">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                </c:if>
-                                <!-- 最后一页，没有下一页 -->
-                                <c:if test="${pageCur != totalPage && totalPage != 0}">
-                                    <a href="${url_next}">下一页</a>
-                                </c:if>
-                                <a class="next" href="javascript:;">&gt;&gt;</a>
-                            </div>
-                        </div>
+
 
 
                     </div>

@@ -25,4 +25,5 @@ public interface BeforeAnimalDao {
 //    public Animal toEditAnimal(Integer id);
 //    public int editAnimal(Animal animal);
 //    public int deleteAAnimal(Integer id);
+
 }
