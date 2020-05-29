@@ -178,7 +178,7 @@
 </div>
 
 
-<div class="fly-panel fly-column">
+<div class="fly-panel fly-column" style="margin-bottom: 0px">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
@@ -238,7 +238,7 @@
 
 </div>
 
-<div class="fly-main" style="overflow: hidden;">
+<div class="fly-main" style="overflow: hidden;width: 1220px">
 
 
     <div class="layui-tab layui-tab-brief">
@@ -309,12 +309,7 @@
 </div>
 
 <div class="fly-footer">
-    <p><a href="http://fly.layui.com/" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a></p>
-    <p>
-        <a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>
-        <a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>
-        <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
-    </p>
+    <p><a href="javascript:;" target="_blank">动物之家</a> 2020 &copy; <a href="javascript:;" target="_blank">zuojiachen 出品</a></p>
 </div>
 <script src="static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 <script src="res/layui/layui.js"></script>

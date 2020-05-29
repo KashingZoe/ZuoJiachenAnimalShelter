@@ -40,6 +40,9 @@
 	</select>
 
 
+	<delete id="deleteAUserPet"  parameterType="Integer" >
+	delete from lookpet where id = #{id}
+	</delete>
 
 
 

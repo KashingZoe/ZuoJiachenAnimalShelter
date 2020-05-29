@@ -203,77 +203,87 @@
                 <ul class="layui-tab-title">
                     <li class="layui-this">寻宠发布<!-- 编辑帖子 --></li>
                 </ul>
-                <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
-                    <div class="layui-tab-item layui-show">
-                        <form:form class="layui-form" action="beforeAnimal/addAPet" method="post" modelAttribute="lookpet" name="regForm" enctype="multipart/form-data">
-                            <div class="layui-row layui-col-space15 layui-form-item">
-                                <div class="layui-col-md3">
-                                    <label class="layui-form-label">宠物种类</label>
-                                    <div class="layui-input-block">
-                                        <form:select path="kindid" lay-verify="required" name="class" lay-filter="column">
-                                           
-                                            <form:options items="${kind}" itemLabel="kindname" itemValue="id"></form:options>
 
-                                        </form:select>
+                <c:if test="${bruser!=null}">
+                    <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+                        <div class="layui-tab-item layui-show">
+                            <form:form class="layui-form" action="beforeAnimal/addAPet" method="post" modelAttribute="lookpet" name="regForm" enctype="multipart/form-data">
+                                <div class="layui-row layui-col-space15 layui-form-item">
+                                    <div class="layui-col-md3">
+                                        <label class="layui-form-label">宠物种类</label>
+                                        <div class="layui-input-block">
+                                            <form:select path="kindid" lay-verify="required" name="class" lay-filter="column">
+
+                                                <form:options items="${kind}" itemLabel="kindname" itemValue="id"></form:options>
+
+                                            </form:select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md9">
+                                        <label for="L_title" class="layui-form-label">标题</label>
+                                        <div class="layui-input-block">
+                                            <form:input type="text" id="L_title" path="ptitle" name="ptitle" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                            <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="layui-col-md9">
-                                    <label for="L_title" class="layui-form-label">标题</label>
+
+                                <div class="layui-form-item layui-form-text">
                                     <div class="layui-input-block">
-                                        <form:input type="text" id="L_title" path="ptitle" name="ptitle" lay-verify="required" autocomplete="off" class="layui-input"/>
-                                        <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
+                                        <form:textarea id="L_content" path="pinfo" name="pinfo" lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></form:textarea>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="layui-form-item">
+                                    <label  class="layui-form-label">性别</label>
+                                    <div class="layui-input-inline">
+                                        <form:radiobutton path="psex" value="男" title="男" checked="checked"/>
+                                        <form:radiobutton path="psex" value="女" title="女" />
+                                            <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label for="pyear" class="layui-form-label">年龄</label>
+                                    <div class="layui-input-inline">
+                                        <form:input type="text" id="pyear" path="pyear" name="pyear" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                    </div>
 
-                            <div class="layui-form-item layui-form-text">
-                                <div class="layui-input-block">
-                                    <form:textarea id="L_content" path="pinfo" name="pinfo" lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></form:textarea>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label  class="layui-form-label">性别</label>
-                                <div class="layui-input-inline">
-                                    <form:radiobutton path="psex" value="男" title="男" checked="checked"/>
-                                    <form:radiobutton path="psex" value="女" title="女" />
-                                        <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-                                </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label for="pyear" class="layui-form-label">年龄</label>
-                                <div class="layui-input-inline">
-                                    <form:input type="text" id="pyear" path="pyear" name="pyear" lay-verify="required" autocomplete="off" class="layui-input"/>
-                                </div>
+                                <div class="layui-form-item">
+                                    <label for="ptime" class="layui-form-label">丢失时间</label>
+                                    <div class="layui-input-inline">
+                                        <form:input type="text" id="ptime" path="ptime" name="ptime" placeholder="请选择日期和时间" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                    </div>
 
-                            </div>
-                            <div class="layui-form-item">
-                                <label for="ptime" class="layui-form-label">丢失时间</label>
-                                <div class="layui-input-inline">
-                                    <form:input type="text" id="ptime" path="ptime" name="ptime" placeholder="请选择日期和时间" lay-verify="required" autocomplete="off" class="layui-input"/>
                                 </div>
+                                <script src="res/layui/laydate.js"></script>
+                                <script>
 
-                            </div>
-                            <script src="res/layui/laydate.js"></script>
-                            <script>
-
-                                //执行一个laydate实例
-                                laydate.render({
-                                    elem: '#ptime' //指定元素
-                                    ,type: 'datetime'
-                                });
-                            </script>
-                            <div class="layui-form-item">
-                                <label for="ppicture" class="layui-form-label">上传图片</label>
-                                <div class="layui-input-inline">
-                                    <input type="file" id="ppicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
+                                    //执行一个laydate实例
+                                    laydate.render({
+                                        elem: '#ptime' //指定元素
+                                        ,type: 'datetime'
+                                    });
+                                </script>
+                                <div class="layui-form-item">
+                                    <label for="ppicture" class="layui-form-label">上传图片</label>
+                                    <div class="layui-input-inline">
+                                        <input type="file" id="ppicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <button class="layui-btn" type="submit" lay-filter="*" lay-submit>立即发布</button>
-                            </div>
-                        </form:form>
+                                <div class="layui-form-item">
+                                    <button class="layui-btn" type="submit" lay-filter="*" lay-submit>立即发布</button>
+                                </div>
+                            </form:form>
+                        </div>
                     </div>
-                </div>
+                </c:if>
+                <c:if test="${bruser==null}">
+                    <label>请先登录</label>
+                </c:if>
+
+
+
+
             </div>
         </div>
     </div>

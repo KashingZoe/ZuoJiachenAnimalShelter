@@ -229,4 +229,34 @@ public class UserServiceImpl implements UserService {
         return "before/userpetindexdetail";
     }
 
+    @Override
+    public String deleteAUserMaster(Integer id, Model model) {
+        int n = beforeMasterDao.deleteAUserMaster(id);
+        if (n > 0) {
+
+            return "forward:/user/tousermaster";
+
+        }else {
+
+            model.addAttribute("msg", "fail to delete master "+id);
+            return "forward:/user/tousermaster?id="+id;
+
+        }
+    }
+
+    @Override
+    public String deleteAUserPet(Integer id, Model model) {
+        int n = beforePetDao.deleteAUserPet(id);
+        if (n > 0) {
+
+            return "forward:/user/touserpet";
+
+        }else {
+
+            model.addAttribute("msg", "fail to delete pet "+id);
+            return "forward:/user/touserpet?id="+id;
+
+        }
+    }
+
 }

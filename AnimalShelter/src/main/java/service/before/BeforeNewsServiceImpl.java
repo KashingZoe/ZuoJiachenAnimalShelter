@@ -53,6 +53,8 @@ public class BeforeNewsServiceImpl implements BeforeNewsService {
     public String selectANews(Model model,Integer id) {
         News anews = beforeNewsDao.selectANews(id);
         model.addAttribute("newsList", anews);
+        List<News> news = beforeNewsDao.newsLimit();
+        model.addAttribute("newList",news);
         return "before/newsdetail";
     }
 

@@ -17,4 +17,7 @@ public interface UserService {
     public String userIndex(Adopt adopt, Model model, Integer id);
     public String userMasterIndex(Lookmaster lookmaster, Model model, Integer id);
     public String userPetIndex(Lookpet lookpet, Model model, Integer id);
+
+    public String deleteAUserMaster(Integer id, Model model);
+    public String deleteAUserPet(Integer id, Model model);
 }

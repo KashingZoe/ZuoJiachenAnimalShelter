@@ -74,7 +74,7 @@ public class UserController {
         return userService.userPetIndex(lookpet, model, id);
     }
 
-    
+
     //userset
     @RequestMapping("/touserset")
     public String toUserSet(@ModelAttribute Adopt adopt, Model model, HttpSession session, Integer pageCur){
@@ -87,6 +87,17 @@ public class UserController {
     public String toUserMessage(@ModelAttribute Adopt adopt, Model model, HttpSession session, Integer pageCur){
         //return userService.toUserindex(adopt, model, session,pageCur);
         return "before/usermessage";
+    }
+
+    @RequestMapping("/deleteAUserMaster")
+    public String deleteAUserMaster(Integer id, Model model){
+        return userService.deleteAUserMaster(id, model);
+    }
+
+
+    @RequestMapping("/deleteAUserPet")
+    public String deleteAUserPet(Integer id, Model model){
+        return userService.deleteAUserPet(id, model);
     }
 
 }

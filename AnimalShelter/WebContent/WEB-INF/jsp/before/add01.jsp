@@ -106,20 +106,20 @@
 
                         <!-- 登入后的状态 -->
 
+                        <!-- 登入后的状态 -->
                         <li class="layui-nav-item">
                             <a class="fly-nav-avatar" href="javascript:;">
                                 <cite class="layui-hide-xs"></cite>
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
-
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
-                                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>用户中心</a></dd>
                                 <hr style="margin: 5px 0;">
-                                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
                             </dl>
                         </li>
 
@@ -203,87 +203,96 @@
                 <ul class="layui-tab-title">
                     <li class="layui-this">送养发布<!-- 编辑帖子 --></li>
                 </ul>
-                <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
-                    <div class="layui-tab-item layui-show">
-                        <form:form class="layui-form" action="beforeAnimal/addAnimal" method="post" modelAttribute="animal" name="regForm" enctype="multipart/form-data">
-                            <div class="layui-row layui-col-space15 layui-form-item">
-                                <div class="layui-col-md3">
-                                    <label class="layui-form-label">宠物种类</label>
-                                    <div class="layui-input-block">
-                                        <form:select path="kindid" lay-verify="required" name="class" lay-filter="column">
-                                           
-                                            <form:options items="${kind}" itemLabel="kindname" itemValue="id"></form:options>
 
-                                        </form:select>
+                <c:if test="${bruser!=null}">
+                    <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+                        <div class="layui-tab-item layui-show">
+                            <form:form class="layui-form" action="beforeAnimal/addAnimal" method="post" modelAttribute="animal" name="regForm" enctype="multipart/form-data">
+                                <div class="layui-row layui-col-space15 layui-form-item">
+                                    <div class="layui-col-md3">
+                                        <label class="layui-form-label">宠物种类</label>
+                                        <div class="layui-input-block">
+                                            <form:select path="kindid" lay-verify="required" name="class" lay-filter="column">
+
+                                                <form:options items="${kind}" itemLabel="kindname" itemValue="id"></form:options>
+
+                                            </form:select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md9">
+                                        <label for="L_title" class="layui-form-label">标题</label>
+                                        <div class="layui-input-block">
+                                            <form:input type="text" id="L_title" path="ltitle" name="ltitle" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                            <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="layui-col-md9">
-                                    <label for="L_title" class="layui-form-label">标题</label>
+
+                                <div class="layui-form-item layui-form-text">
                                     <div class="layui-input-block">
-                                        <form:input type="text" id="L_title" path="ltitle" name="ltitle" lay-verify="required" autocomplete="off" class="layui-input"/>
-                                        <!-- <input type="hidden" name="id" value="{{d.edit.id}}"> -->
+                                        <form:textarea id="L_content" path="linfo" name="linfo" lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></form:textarea>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="layui-form-item">
+                                    <label  class="layui-form-label">性别</label>
+                                    <div class="layui-input-inline">
+                                        <form:radiobutton path="lsex" value="男" title="男" checked="checked"/>
+                                        <form:radiobutton path="lsex" value="女" title="女" />
+                                            <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                    </div>
 
-                            <div class="layui-form-item layui-form-text">
-                                <div class="layui-input-block">
-                                    <form:textarea id="L_content" path="linfo" name="linfo" lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></form:textarea>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label  class="layui-form-label">性别</label>
-                                <div class="layui-input-inline">
-                                    <form:radiobutton path="lsex" value="男" title="男" checked="checked"/>
-                                    <form:radiobutton path="lsex" value="女" title="女" />
-                                        <%--<input type="text" id="L_lsex" path="lsex" name="lsex" required lay-verify="required" autocomplete="off" class="layui-input">--%>
-                                </div>
+                                <div class="layui-form-item">
+                                    <label for="lyear" class="layui-form-label">年龄</label>
+                                    <div class="layui-input-inline">
+                                        <form:input type="text" id="lyear" path="lyear" name="lyear" lay-verify="required" autocomplete="off" class="layui-input"/>
+                                    </div>
 
-                            </div>
-                            <div class="layui-form-item">
-                                <label for="lyear" class="layui-form-label">年龄</label>
-                                <div class="layui-input-inline">
-                                    <form:input type="text" id="lyear" path="lyear" name="lyear" lay-verify="required" autocomplete="off" class="layui-input"/>
                                 </div>
-
-                            </div>
-                            <div class="layui-form-item">
-                                <label  class="layui-form-label">是否绝育</label>
-                                <div class="layui-input-inline">
-                                    <form:radiobutton path="lbirth" value="是" title="是" checked="checked"/>
-                                    <form:radiobutton path="lbirth" value="否" title="否" />
-                                        <%--<input type="text" id="lbirth" path="lbirth" name="lbirth" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                <div class="layui-form-item">
+                                    <label  class="layui-form-label">是否绝育</label>
+                                    <div class="layui-input-inline">
+                                        <form:radiobutton path="lbirth" value="是" title="是" checked="checked"/>
+                                        <form:radiobutton path="lbirth" value="否" title="否" />
+                                            <%--<input type="text" id="lbirth" path="lbirth" name="lbirth" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label  class="layui-form-label">是否接种疫苗</label>
-                                <div class="layui-input-inline">
-                                    <form:radiobutton path="lval" value="是" title="是" checked="checked"/>
-                                    <form:radiobutton path="lval" value="否" title="否" />
-                                        <%--<input type="text" id="lval" path="lval" name="lval" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                <div class="layui-form-item">
+                                    <label  class="layui-form-label">是否接种疫苗</label>
+                                    <div class="layui-input-inline">
+                                        <form:radiobutton path="lval" value="是" title="是" checked="checked"/>
+                                        <form:radiobutton path="lval" value="否" title="否" />
+                                            <%--<input type="text" id="lval" path="lval" name="lval" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label  class="layui-form-label">是否驱虫</label>
-                                <div class="layui-input-inline">
-                                    <form:radiobutton path="lbug" value="是" title="是" checked="checked"/>
-                                    <form:radiobutton path="lbug" value="否" title="否" />
-                                        <%--<input type="text" id="lbug" path="lbug" name="lbug" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                <div class="layui-form-item">
+                                    <label  class="layui-form-label">是否驱虫</label>
+                                    <div class="layui-input-inline">
+                                        <form:radiobutton path="lbug" value="是" title="是" checked="checked"/>
+                                        <form:radiobutton path="lbug" value="否" title="否" />
+                                            <%--<input type="text" id="lbug" path="lbug" name="lbug" required lay-verify="required" autocomplete="off" class="layui-input">--%>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <label for="lpicture" class="layui-form-label">上传图片</label>
-                                <div class="layui-input-inline">
-                                    <input type="file" id="lpicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
+                                <div class="layui-form-item">
+                                    <label for="lpicture" class="layui-form-label">上传图片</label>
+                                    <div class="layui-input-inline">
+                                        <input type="file" id="lpicture" path="logoImage" name="logoImage" required lay-verify="required" autocomplete="off" class="layui-btn" style="width: 190px">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="layui-form-item">
-                                <button class="layui-btn" type="submit" lay-filter="*" lay-submit>立即发布</button>
-                            </div>
-                            <p>${msg}</p>
-                        </form:form>
+                                <div class="layui-form-item">
+                                    <button class="layui-btn" type="submit" lay-filter="*" lay-submit>立即发布</button>
+                                </div>
+                                <p>${msg}</p>
+                            </form:form>
+                        </div>
                     </div>
-                </div>
+                </c:if>
+                <c:if test="${bruser==null}">
+                    <label>请先登录</label>
+                </c:if>
+
+
+
             </div>
         </div>
     </div>

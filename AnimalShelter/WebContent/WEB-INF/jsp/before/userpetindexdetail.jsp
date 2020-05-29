@@ -47,6 +47,13 @@
             color: #000000 !important;
         }
     </style>
+    <script type="text/javascript">
+        function checkDel(id){
+            if(window.confirm("是否删除该发布"+id+"？")){
+                window.location.href = "/user/deleteAUserPet?id="+id;
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="fly-header layui-bg-black" style="background-color: #009688!important;">
@@ -235,7 +242,7 @@
                                     </div>
                                 </div>
 
-
+                                    <a onclick="checkDel('${petList.id}')"><i class="layui-icon" style="font-size: 30px; color: #CC0000;">&#xe640;</i></a>
 
                             </form>
                         </div>

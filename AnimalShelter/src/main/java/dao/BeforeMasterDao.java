@@ -28,6 +28,9 @@ public interface BeforeMasterDao {
 
     public Lookmaster userMasterIndex(Integer id);
 
+    public int deleteAUserMaster(Integer id);
+
+
 
 
 

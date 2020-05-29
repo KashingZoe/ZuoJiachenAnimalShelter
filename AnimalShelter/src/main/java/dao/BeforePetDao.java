@@ -25,6 +25,8 @@ public interface BeforePetDao {
     public List<Lookpet> petIndexPage(Map<String, Object> map);
     public Lookpet userPetIndex(Integer id);
 
+    public int deleteAUserPet(Integer id);
+
 
     //public List<Animal> animalInfo();
     //public List<Animal> animalInfoPage(Map<String, Object> map);

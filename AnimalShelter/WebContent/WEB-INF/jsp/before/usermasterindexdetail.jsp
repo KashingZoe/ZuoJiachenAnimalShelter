@@ -50,7 +50,7 @@
     <script type="text/javascript">
         function checkDel(id){
             if(window.confirm("是否删除该发布"+id+"？")){
-                window.location.href = "/user//deleteAVisit?id="+id;
+                window.location.href = "/user/deleteAUserMaster?id="+id;
             }
         }
     </script>
@@ -234,7 +234,7 @@
                                 </div>
                             </div>
 
-                                <a onclick="checkDel('${n.id}')"><i class="layui-icon">&#xe640;</i></a>
+                                <a onclick="checkDel('${masterList.id}')"><i class="layui-icon" style="font-size: 30px; color: #CC0000;">&#xe640;</i></a>
                         </form>
 
                     </div>

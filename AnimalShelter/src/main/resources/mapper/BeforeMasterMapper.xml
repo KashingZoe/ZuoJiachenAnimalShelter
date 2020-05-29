@@ -55,7 +55,9 @@
 		select * from lookmaster where  buserid = #{buserid} order by id desc limit #{startIndex}, #{perPageSize}
 	</select>
 
-
+	<delete id="deleteAUserMaster"  parameterType="Integer" >
+	delete from lookmaster where id = #{id}
+	</delete>
 
 
 
@@ -130,7 +132,5 @@
 		<!--where id = #{id}-->
 	<!--</update>-->
 
-    <!--<delete id="deleteAAnimal"  parameterType="Integer" >-->
-		<!--delete from animal where id = #{id}-->
-	<!--</delete>-->
+
 </mapper>

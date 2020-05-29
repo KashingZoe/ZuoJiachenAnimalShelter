@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">--%>
+    <%--<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>--%>
+    <%--<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
     <style>
         .header{border-bottom: 1px solid #404553; border-right: 1px solid #404553;}
         .layui-bg-black {
@@ -155,7 +155,7 @@
 
 
 <!--导航栏-->
-<div class="fly-panel fly-column">
+<div class="fly-panel fly-column" style="margin-bottom: 0px">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
@@ -197,12 +197,18 @@
 
     <div class="fly-case-btn">
         <p style="font-size: xx-large; margin-bottom: 10px;color: #FFFFFF;">宠秀回访</p>
+        <c:if test="${bruser!=null}">
+            <button class="layui-btn layui-btn-big fly-case-active" onclick="WeAdminEdit('编辑','/beforeVisit/toAddVisit',600,400)">
+                上传宠秀
+            </button>
+            <a href="/beforeVisit/toMyVisit" class="layui-btn layui-btn-primary layui-btn-big" style="text-decoration: none;">我的宠秀</a>
+        </c:if>
+        <c:if test="${bruser==null}">
+            <a href="javascript:;" class="layui-btn layui-btn-big fly-case-active">请先登录</a>
+        </c:if>
 
-        <button class="layui-btn layui-btn-big fly-case-active" onclick="WeAdminEdit('编辑','/beforeVisit/toAddVisit',600,400)">
-            上传宠秀
-        </button>
 
-        <a href="/beforeVisit/toMyVisit" class="layui-btn layui-btn-primary layui-btn-big" style="text-decoration: none;">我的宠秀</a>
+
         <div class="layui-form-mid layui-word-aux">${msg}</div>
 
     </div>
@@ -214,7 +220,7 @@
 
 </div>
 
-<div class="fly-main" style="overflow: hidden;">
+<div class="fly-main" style="overflow: hidden;width: 1220px">
 
 
     <div class="layui-tab layui-tab-brief">
@@ -286,12 +292,7 @@
 </div>
 
 <div class="fly-footer">
-    <p><a href="http://fly.layui.com/" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a></p>
-    <p>
-        <a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>
-        <a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>
-        <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
-    </p>
+    <p><a href="javascript:;" target="_blank">动物之家</a> 2020 &copy; <a href="javascript:;" target="_blank">zuojiachen 出品</a></p>
 </div>
 <script src="static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 <script src="res/layui/layui.js"></script>

@@ -94,7 +94,7 @@
             </th>
             <th>ID</th>
             <th>标题</th>
-            <th>内容</th>
+            <th width="900px">内容</th>
             <th>时间</th>
             <th>操作</th>
         </tr>
@@ -109,7 +109,7 @@
             </td>
             <td>${n.id}</td>
             <td>${n.ntitle}</td>
-            <td>${n.ncontent}</td>
+            <td width="900px">${n.ncontent}</td>
             <td>${n.ntime}</td>
 
             <!-- <td class="td-status">
