@@ -179,7 +179,7 @@
 
 
                     <ul class="fly-panel-title fly-filter layui-tab-title">
-                        <li class="layui-this">
+                        <li>
                             领养
                         </li>
                         <span class="fly-mid"></span>
@@ -187,7 +187,7 @@
                             寻主
                         </li>
                         <span class="fly-mid"></span>
-                        <li>
+                        <li class="layui-this">
                             寻宠
                         </li>
                         <span class="fly-mid"></span>
@@ -210,12 +210,12 @@
                             <ul class="fly-list">
                                 <c:forEach items="${animalList}" var="a">
                                     <li>
-                                      <a href="#" class="fly-avatar">
-                                      <img src="res/images/mycat.png" alt="贤心">
+                                    <a href="#" class="fly-avatar">
+                                    <img src="res/images/mycat.png" alt="贤心">
                                     </a>
                                     <h2>
-                                        <a class="layui-badge">动态</a>
-                                       <a href="beforeAnimal/selectAAnimal?id=${a.id}">${a.ltitle}</a>
+                                    <a class="layui-badge">动态</a>
+                                    <a href="beforeAnimal/selectAAnimal?id=${a.id}">${a.ltitle}</a>
                                     </h2>
                                     <div class="fly-list-info">
                                     <a href="user/home.html" link>
@@ -303,8 +303,7 @@
                                         <a href="${url_next}">下一页</a>
                                     </c:if>
                                     <a class="next" href="javascript:;">&gt;&gt;</a>
-                                </div>
-                            </div>
+                                </div>                            </div>
                         </div><!-- layui-tab-item -->
 
                         <div class="layui-tab-item">

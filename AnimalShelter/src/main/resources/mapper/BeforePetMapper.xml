@@ -2,18 +2,60 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.BeforeAnimalDao">
-    <!--id 方法名  resultType返回类型 SELECT * FROM animal order by id desc LIMIT 10-->
-    <select id="animalLimit"  resultType="Animal">
-        SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1)) limit 10
+<mapper namespace="dao.BeforePetDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="petLimit"  resultType="Lookpet">
+		SELECT * FROM lookpet order by id desc LIMIT 10
 	</select>
-	<select id="animalInfo"  resultType="Animal">
-		SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1))
+
+	<!--根据id查询-->
+	<select id="selectAPet" resultType="Petdetail" parameterType="Integer">
+		SELECT lookpet.psex,lookpet.pyear,lookpet.ptitle,lookpet.ptime,lookpet.ppicture,lookpet.pinfo,animalkind.kindname,buser.bname,buser.bqq,buser.bwechat,buser.btel from lookpet,animalkind,buser WHERE lookpet.buserid = buser.id AND lookpet.kindid = animalkind.id AND lookpet.id = #{id}
 	</select>
+
+	<select id="petInfo"  resultType="Lookpet">
+		SELECT * FROM lookpet
+	</select>
+
+
 	<!--id 方法名  resultType返回类型 -->
-	<select id="animalInfoPage"  resultType="Animal" parameterType="map">
-		SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1)) order by id desc limit #{startIndex}, #{perPageSize}
+	<select id="petFive"  resultType="Lookpet" parameterType="Integer">
+		select * from lookpet where buserid = #{buserid} order by id desc limit 5
 	</select>
+
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="petAll"  resultType="Lookpet" parameterType="Integer">
+		select * from lookpet where buserid = #{buserid}
+	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="petIndexPage"  resultType="Lookpet" parameterType="map">
+		select * from lookpet where buserid = #{buserid} order by id desc limit #{startIndex}, #{perPageSize}
+	</select>
+
+	<!--根据id查询-->
+	<select id="userPetIndex" resultType="Lookpet" parameterType="Integer">
+		select * from lookpet where id = #{id}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<!--新增领养信息-->
 	<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">

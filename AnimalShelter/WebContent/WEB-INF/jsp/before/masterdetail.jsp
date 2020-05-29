@@ -36,7 +36,6 @@
 
         }
         .layui-nav .layui-nav-item a{
-            text-decoration: none;
             color: #009688;
         }
         .layui-nav .layui-nav-item a:hover{
@@ -45,10 +44,6 @@
         .fly-column ul li.layui-this:after{
             bottom: 0px;
             height: 2px;
-        }
-        .layui-nav-child dd {
-
-            margin: 10px auto;
         }
         .mylabel{
 
@@ -202,7 +197,7 @@
                     <a>宠物展示</a>
 
                 </div>
-                <h1 style="text-align: center;">${animalList.ltitle}</h1>
+                <h1 style="text-align: center;">${masterList.mtitle}</h1>
 
                 <div class="detail-about">
                     <!-- <a class="fly-avatar" href="../user/home.html">
@@ -220,11 +215,11 @@
                       <span style="padding-right: 10px; color: #FF7200">悬赏：60飞吻</span>
                       <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
                     </div> -->
-                    <img alt="" width="585px" height="350px" src="logos/${animalList.lpicture}"/>
+                    <img alt="" width="585px" height="350px" src="logos/${masterList.mpicture}"/>
                 </div>
                 <div class="detail-body photos">
                     <p>
-                        ${animalList.linfo}
+                        ${masterList.minfo}
                     </p>
                     <%--<p>更新日志：</p>--%>
                     <!-- <pre> -->
@@ -233,51 +228,58 @@
                             <div class="layui-form-item">
                                 <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">种类</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.kindname}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.kindname}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
                                 <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">性别</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lsex}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.msex}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">年龄</label>
+                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">拾到时间</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lyear}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.mtime}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否绝育</label>
+                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">姓名</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lbirth}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.bname}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否接种疫苗</label>
+                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">QQ</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lval}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.bqq}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">是否杀虫</label>
+                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">微信</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.lbug}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.bwechat}</div>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">发布时间</label>
+                                <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">电话</label>
                                 <div class="layui-input-block mytb">
-                                    <div class="layui-form-mid layui-word-aux mymid">${animalList.ltime}</div>
+                                    <div class="layui-form-mid layui-word-aux mymid">${masterList.btel}</div>
                                 </div>
                             </div>
+
+                            <%--<div class="layui-form-item">--%>
+                                <%--<label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">发布时间</label>--%>
+                                <%--<div class="layui-input-block mytb">--%>
+                                    <%--<div class="layui-form-mid layui-word-aux mymid">${animalList.ltime}</div>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
 
                         </form>
 
@@ -296,53 +298,7 @@
                       <img src="../../res/images/fly.jpg" alt="Fly社区">
                     </p> -->
 
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" align="center">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion"
-                                       href="#collapseThree" class="layui-btn layui-btn-radius">
-                                        想要领养
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <form:form class="layui-form" action="beforeOrder/addOrder" method="post" modelAttribute="getanimal" name="regForm">
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否有房屋</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="ghome" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="ghome" value="否" title="否" />
 
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否有孩子</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="gchildren" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="gchildren" value="否" title="否" />
-
-                                            </div>
-                                        </div>
-                                        <div class="layui-form-item">
-                                            <label class="layui-form-label layui-btn-warm layui-btn-radius" style="width: 120px;">是否结婚</label>
-                                            <div class="layui-input-block" style="margin-left: 130px;">
-                                                <form:radiobutton path="gmarried" value="是" title="是" checked="checked"/>
-                                                <form:radiobutton path="gmarried" value="否" title="否" />
-
-                                            </div>
-                                        </div>
-                                        <div class="layui-form " align="center">
-                                           <%--onclick="WeAdminEdit('编辑','#?id=${animalList.id}',600, 400)"--%>
-                                            <button class="layui-btn layui-btn-lg layui-btn-radius" type="submit">领养宠物</button>
-                                               <%--onclick="submit('${animalList.id}')"--%>
-                                        </div>
-                                    </form:form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

@@ -26,6 +26,18 @@ public class BeforeAnimalController {
     public String animalInfo(@ModelAttribute Animal animal, Model model, Integer pageCur) {
         return beforeAnimalService.animalInfo(model,pageCur);
     }
+
+    //查找所有的信息
+    @RequestMapping("/masterInfo")
+    public String masterInfo(@ModelAttribute Lookmaster lookmaster, Model model, Integer pageCur) {
+        return beforeAnimalService.masterInfo(model,pageCur);
+    }
+
+    //查找所有的信息
+    @RequestMapping("/petInfo")
+    public String petInfo(@ModelAttribute Lookpet lookpet, Model model, Integer pageCur) {
+        return beforeAnimalService.petInfo(model,pageCur);
+    }
     //查询一条记录
     @RequestMapping("/selectAAnimal")
     public String selectAAnimal(@ModelAttribute Getanimal getanimal, HttpSession session,Model model, Integer id){
@@ -68,7 +80,17 @@ public class BeforeAnimalController {
         return beforeAnimalService.addPet(lookpet,request,model,session);
     }
 
+    //查询一条记录
+    @RequestMapping("/selectAMaster")
+    public String selectAMaster(@ModelAttribute Lookmaster lookmaster, HttpSession session,Model model, Integer id){
+        return  beforeAnimalService.selectAMaster(model,session,id);
+    }
 
+    //查询一条记录
+    @RequestMapping("/selectAPet")
+    public String selectAPet(@ModelAttribute Lookpet lookpet, HttpSession session,Model model, Integer id){
+        return  beforeAnimalService.selectAPet(model,session,id);
+    }
 //
 ////
 //    //打来useredit.jsp

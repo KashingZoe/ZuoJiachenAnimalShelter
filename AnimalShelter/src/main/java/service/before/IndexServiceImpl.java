@@ -2,10 +2,10 @@ package service.before;
 
 
 import dao.BeforeAnimalDao;
+import dao.BeforeMasterDao;
 import dao.BeforeNewsDao;
-import entity.Animal;
-import entity.Buser;
-import entity.News;
+import dao.BeforePetDao;
+import entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +22,10 @@ public class IndexServiceImpl implements IndexService {
     private  BeforeAnimalDao beforeAnimalDao;
     @Autowired
     private BeforeNewsDao beforeNewsDao;
+    @Autowired
+    private BeforeMasterDao beforeMasterDao;
+    @Autowired
+    private BeforePetDao beforePetDao;
 //    @Autowired
 //    private BuserDao buserDao;
     //打开主页
@@ -30,6 +34,10 @@ public class IndexServiceImpl implements IndexService {
         model.addAttribute("animalList", animal);
         List<News> news = beforeNewsDao.newsLimit();
         model.addAttribute("newList",news);
+        List<Lookmaster> lookmasters = beforeMasterDao.masterLimit();
+        model.addAttribute("masterList",lookmasters);
+        List<Lookpet> lookpets = beforePetDao.petLimit();
+        model.addAttribute("petList",lookpets);
         return "before/index";
     }
 

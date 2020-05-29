@@ -22,6 +22,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <typeAlias alias="Lookmaster" type="entity.Lookmaster"/>
         <typeAlias alias="Lookpet" type="entity.Lookpet"/>
         <typeAlias alias="Adopt" type="entity.Adopt"/>
+        <typeAlias alias="Masterdetail" type="entity.Masterdetail"/>
+        <typeAlias alias="Petdetail" type="entity.Petdetail"/>
 
         <!--<typeAlias alias="Order" type="com.po.Order"/>-->
      </typeAliases>
@@ -42,6 +44,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <mapper resource="mapper/BeforeOrderMapper.xml"/>
          <mapper resource="mapper/BeforeVisitMapper.xml"/>
          <mapper resource="mapper/BeforeFeedbackMapper.xml"/>
+         <mapper resource="mapper/BeforeMasterMapper.xml"/>
+         <mapper resource="mapper/BeforePetMapper.xml"/>
         <!--<mapper resource="com/mybatis/admin/AdminNoticeMapper.xml"/>-->
         <!--<mapper resource="com/mybatis/admin/AdminUserMapper.xml"/>-->
        	<!--<mapper resource="com/mybatis/admin/AdminOrderMapper.xml"/>-->

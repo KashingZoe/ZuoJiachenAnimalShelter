@@ -1,11 +1,10 @@
 package service.before;
 
 import dao.BeforeAnimalDao;
+import dao.BeforeMasterDao;
 import dao.BeforeNewsDao;
-import entity.Animal;
-import entity.Lookmaster;
-import entity.Lookpet;
-import entity.News;
+import dao.BeforePetDao;
+import entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +29,12 @@ public class BeforeAnimalServiceImpl implements BeforeAnimalService {
     @Autowired
     private BeforeNewsDao beforeNewsDao;
 
+    @Autowired
+    private BeforeMasterDao beforeMasterDao;
+
+    @Autowired
+    private BeforePetDao beforePetDao;
+
 
     @Override
     public String animalInfo(Model model, Integer pageCur) {
@@ -41,24 +46,96 @@ public class BeforeAnimalServiceImpl implements BeforeAnimalService {
         if (totalcount == 0) {
             totalPage = 0;
         } else {
-            totalPage = (int) Math.ceil((double) totalcount / 8);//函数返回大于或等于一个给定数字的最小整数。每五条记录为一页，计算总页数。
+            totalPage = (int) Math.ceil((double) totalcount / 10);//函数返回大于或等于一个给定数字的最小整数。每五条记录为一页，计算总页数。
         }
         if (pageCur == null) {//开始时，pageCur为空默认为1，
             pageCur = 1;
         }
-        if ((pageCur - 1) * 8 > totalcount) {  //最后一页时，点下一页，防止发生错误
+        if ((pageCur - 1) * 10 > totalcount) {  //最后一页时，点下一页，防止发生错误
             pageCur = pageCur - 1;
         }
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("startIndex", (pageCur - 1) * 8);
-        map.put("perPageSize", 8);
+        map.put("startIndex", (pageCur - 1) * 10);
+        map.put("perPageSize", 10);
         allanimal = beforeAnimalDao.animalInfoPage(map);
         model.addAttribute("animalList", allanimal);
         model.addAttribute("totalPage", totalPage);
         model.addAttribute("pageCur", pageCur);
         List<News> news = beforeNewsDao.newsLimit();
         model.addAttribute("newList",news);
+        List<Lookmaster> lookmasters = beforeMasterDao.masterLimit();
+        model.addAttribute("masterList",lookmasters);
+        List<Lookpet> lookpets = beforePetDao.petLimit();
+        model.addAttribute("petList",lookpets);
         return "before/indexmore";
+    }
+
+    @Override
+    public String masterInfo(Model model, Integer pageCur) {
+        List<Lookmaster> allmaster = beforeMasterDao.masterInfo();
+        //System.out.println(allanimal);
+        int totalcount = allmaster.size();//查询记录数
+        model.addAttribute("totalRecord", totalcount);
+        int totalPage = 0;
+        if (totalcount == 0) {
+            totalPage = 0;
+        } else {
+            totalPage = (int) Math.ceil((double) totalcount / 10);//函数返回大于或等于一个给定数字的最小整数。每五条记录为一页，计算总页数。
+        }
+        if (pageCur == null) {//开始时，pageCur为空默认为1，
+            pageCur = 1;
+        }
+        if ((pageCur - 1) * 10 > totalcount) {  //最后一页时，点下一页，防止发生错误
+            pageCur = pageCur - 1;
+        }
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("startIndex", (pageCur - 1) * 10);
+        map.put("perPageSize", 10);
+        allmaster = beforeMasterDao.masterInfoPage(map);
+        model.addAttribute("masterList", allmaster);
+        model.addAttribute("totalPage", totalPage);
+        model.addAttribute("pageCur", pageCur);
+        List<News> news = beforeNewsDao.newsLimit();
+        model.addAttribute("newList",news);
+        List<Animal> animals = beforeAnimalDao.animalLimit();
+        model.addAttribute("animalList",animals);
+        List<Lookpet> lookpets = beforePetDao.petLimit();
+        model.addAttribute("petList",lookpets);
+        return "before/mastermore";
+    }
+
+    @Override
+    public String petInfo(Model model, Integer pageCur) {
+        List<Lookpet> allpet = beforePetDao.petInfo();
+        //System.out.println(allanimal);
+        int totalcount = allpet.size();//查询记录数
+        model.addAttribute("totalRecord", totalcount);
+        int totalPage = 0;
+        if (totalcount == 0) {
+            totalPage = 0;
+        } else {
+            totalPage = (int) Math.ceil((double) totalcount / 10);//函数返回大于或等于一个给定数字的最小整数。每五条记录为一页，计算总页数。
+        }
+        if (pageCur == null) {//开始时，pageCur为空默认为1，
+            pageCur = 1;
+        }
+        if ((pageCur - 1) * 10 > totalcount) {  //最后一页时，点下一页，防止发生错误
+            pageCur = pageCur - 1;
+        }
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("startIndex", (pageCur - 1) * 10);
+        map.put("perPageSize", 10);
+        allpet = beforePetDao.petInfoPage(map);
+        model.addAttribute("petList", allpet);
+        model.addAttribute("totalPage", totalPage);
+        model.addAttribute("pageCur", pageCur);
+        List<News> news = beforeNewsDao.newsLimit();
+        model.addAttribute("newList",news);
+        List<Animal> animals = beforeAnimalDao.animalLimit();
+        model.addAttribute("animalList",animals);
+        List<Lookmaster> lookmasters = beforeMasterDao.masterLimit();
+        model.addAttribute("masterList",lookmasters);
+        return "before/petmore";
     }
 
     @Override
@@ -171,6 +248,26 @@ public class BeforeAnimalServiceImpl implements BeforeAnimalService {
             model.addAttribute("msg", "发布失败,请重新发布");
             return "forward:/beforeAnimal/toAddPet";
         }
+    }
+
+    @Override
+    public String selectAMaster(Model model, HttpSession session, Integer id) {
+        Masterdetail lookmaster = beforeMasterDao.selectAMaster(id);
+
+
+        model.addAttribute("masterList", lookmaster);
+
+        return "before/masterdetail";
+    }
+
+    @Override
+    public String selectAPet(Model model, HttpSession session, Integer id) {
+        Petdetail lookpet = beforePetDao.selectAPet(id);
+
+
+        model.addAttribute("petList", lookpet);
+
+        return "before/petdetail";
     }
 
 

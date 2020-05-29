@@ -23,8 +23,10 @@ public interface BeforeOrderDao {
     //public int editOrder(Getanimal getanimal);
    // public int deleteAOrder(Integer id);
 
-
+    //userindex
     public List<Adopt> selectAllOrder(Integer buserid);
+
+    public List<Adopt> selectFiveOrder(Integer buserid);
     public List<Adopt> allInfoPage(Map<String,Object> map);
     public Adopt userIndex(Integer id);
 }

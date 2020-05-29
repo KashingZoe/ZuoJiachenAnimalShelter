@@ -36,6 +36,12 @@
 
 
 
+	<!--根据订单账号查询-->
+	<select id="selectFiveOrder" resultType="Adopt" parameterType="Integer">
+		select getanimal.id,getanimal.`status`,animal.ltitle,animal.linfo,animal.lpicture,buser.bname,buser.bqq,buser.bwechat,buser.btel,buser.barea,buser.badd from getanimal,getdetail,animal,buser WHERE getdetail.getanimalid = getanimal.id and getdetail.animalid = animal.id and animal.buserid = buser.id and getanimal.buserid = #{buserid} ORDER BY getanimal.orderdate desc limit 5
+	</select>
+
+
 
 
 

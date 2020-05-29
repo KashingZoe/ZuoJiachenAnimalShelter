@@ -25,7 +25,28 @@
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
+    <style>
+        .mylabel{
 
+            float: left;
+            display: block;
+            padding: 9px 15px;
+            width: 90px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+
+        }
+        .mytb{
+            margin-left: 120px;
+            min-height: 36px;
+        }
+        .mymid{
+            margin-left: 10px;
+            font-weight: 100;
+            color: #000000 !important;
+        }
+    </style>
 </head>
 <body>
 <div class="fly-header layui-bg-black" style="background-color: #009688!important;">
@@ -79,7 +100,7 @@
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
 
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="res/images/mycat.png">
+                                <img src="../res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
                                 <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
@@ -124,12 +145,12 @@
 <div class="layui-container fly-marginTop fly-user-main">
     <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
         <li class="layui-nav-item">
-            <a href="/user/touserindex">
+            <a href="/before">
                 <i class="layui-icon">&#xe609;</i>
                 我的主页
             </a>
         </li>
-        <li class="layui-nav-item">
+        <li class="layui-nav-item layui-this">
             <a href="/user/touserindex">
                 <i class="layui-icon">&#xe612;</i>
                 用户中心
@@ -141,7 +162,7 @@
                 基本设置
             </a>
         </li>
-        <li class="layui-nav-item layui-this">
+        <li class="layui-nav-item">
             <a href="/user/tousermessage">
                 <i class="layui-icon">&#xe611;</i>
                 我的消息
@@ -161,52 +182,87 @@
 
 
     <div class="fly-panel fly-panel-user" pad20>
+        <!--
+        <div class="fly-msg" style="margin-top: 15px;">
+          您的邮箱尚未验证，这比较影响您的帐号安全，<a href="activate.html">立即去激活？</a>
+        </div>
+        -->
         <div class="layui-tab layui-tab-brief" lay-filter="user">
             <ul class="layui-tab-title" id="LAY_mine">
-                <%--<li data-type="mine-jie" lay-id="index" class="layui-this">寻主发布</li>--%>
-                <%--<li data-type="collection" data-url="/collection/find/" lay-id="collection">寻宠发布</li>--%>
-                <li class="layui-this" data-type="feedback" data-url="/feedback/find/" lay-id="feedback">留言处理</li>
+                <li data-type="mine-jie" lay-id="index" class="layui-this">寻宠发布</li>
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
-                <div class="layui-tab-item layui-show">
+
+                <h1 style="text-align: center;">${petList.ptitle}</h1>
+                <div class="fly-panel detail-box">
+                    <div class="detail-about" style="text-align: center">
+                        <img alt="" width="60%" height="40%" src="logos/${petList.ppicture}"/>
+                    </div>
+
+                    <div class="detail-body photos">
+
+                        <p>
+                                ${petList.pinfo}
+                        </p>
+
+                        <!-- <pre> -->
+                        <div class="detail-about" style="padding-left: 0px;color: #000000;">
+                            <form class="layui-form" action="" style="margin-left: 0px;">
+                                <%--<div class="layui-form-item">--%>
+                                    <%--<label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">种类</label>--%>
+                                    <%--<div class="layui-input-block mytb">--%>
+                                        <%--<div class="layui-form-mid layui-word-aux mymid">${petList.kindname}</div>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">性别</label>
+                                    <div class="layui-input-block mytb">
+                                        <div class="layui-form-mid layui-word-aux mymid">${petList.psex}</div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">年龄</label>
+                                    <div class="layui-input-block mytb">
+                                        <div class="layui-form-mid layui-word-aux mymid">${petList.pyear}</div>
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label mylabel layui-btn-warm layui-btn-radius">丢失时间</label>
+                                    <div class="layui-input-block mytb">
+                                        <div class="layui-form-mid layui-word-aux mymid">${petList.ptime}</div>
+                                    </div>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                            <!-- <em>661阅/10答</em> -->
+
+
+
+                    <div id="LAY_page">
+
+
+
+                    </div>
+                </div>
+                <div class="layui-tab-item">
                     <ul class="mine-view jie-row">
                         <li>
-                            <a class="jie-title" href="jie/detail.html" target="_blank">哈士奇 18个月</a>
-                            <i>2020/3/14 上午8:30:00</i>
-                            <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                            <!-- <em>661阅/10答</em> -->
-                        </li>
-                        <!-- <li>
-                           <a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                           <i>2017/3/14 上午8:30:00</i>
-                           <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                           <em>661阅/10答</em>
-                         </li>
-                         <li>
-                           <a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
-                           <i>2017/3/14 上午8:30:00</i>
-                           <a class="mine-edit" href="/jie/edit/8116">编辑</a>
-                           <em>661阅/10答</em>
-                         </li> -->
+                            <a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>
+                            <i>收藏于23小时前</i>  </li>
                     </ul>
-                    <div id="LAY_page"></div>
+                    <div id="LAY_page1"></div>
                 </div>
-                <%--<div class="layui-tab-item">--%>
-                    <%--<ul class="mine-view jie-row">--%>
-                        <%--<li>--%>
-                            <%--<a class="jie-title" href="jie/detail.html" target="_blank">基于 layui 的极简社区页面模版</a>--%>
-                            <%--<i>收藏于23小时前</i>  </li>--%>
-                    <%--</ul>--%>
-                    <%--<div id="LAY_page1"></div>--%>
-                <%--</div>--%>
-                <%--<div class="layui-tab-item">--%>
-                    <%--<ul class="mine-view jie-row">--%>
-                        <%--<li>--%>
-                            <%--<a class="jie-title" href="jie/detail.html" target="_blank">啦啦</a>--%>
-                            <%--<i>收藏于23小时前</i>  </li>--%>
-                    <%--</ul>--%>
-                    <%--<div id="LAY_page2"></div>--%>
-                <%--</div>--%>
             </div>
         </div>
     </div>

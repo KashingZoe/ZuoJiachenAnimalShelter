@@ -168,8 +168,8 @@
         -->
         <div class="layui-tab layui-tab-brief" lay-filter="user">
             <ul class="layui-tab-title" id="LAY_mine">
-                <li data-type="mine-jie" lay-id="index" class="layui-this">我的领养</li>
-                <li data-type="master" data-url="/master/find/" lay-id="collection">寻主发布</li>
+                <li data-type="mine-jie" lay-id="index">我的领养</li>
+                <li  class="layui-this" data-type="master" data-url="/master/find/" lay-id="collection">寻主发布</li>
                 <li data-type="pet" data-url="/pet/find/" lay-id="collection">寻宠发布</li>
 
             </ul>
@@ -248,7 +248,7 @@
                                 <%--</a>--%>
                                 <h2>
                                     <a class="layui-badge">动态</a>
-                                    <a href="/user/usermasterindex?id=${m.id}">${m.mtitle}</a>
+                                    <a href="/beforeAnimal/selectAMaster?id=${m.id}">${m.mtitle}</a>
                                 </h2>
                                 <div class="fly-list-info">
                                     <%--<a href="user/home.html" link>--%>
@@ -301,7 +301,7 @@
                                 <%--</a>--%>
                                 <h2>
                                     <a class="layui-badge">动态</a>
-                                    <a href="/user/userpetindex?id=${p.id}">${p.ptitle}</a>
+                                    <a href="beforeAnimal/selectAPet?id=${p.id}">${p.ptitle}</a>
                                 </h2>
                                 <div class="fly-list-info">
                                     <%--<a href="user/home.html" link>--%>
@@ -335,7 +335,7 @@
                                 <!-- 最后一页，没有下一页 -->
                                 <c:if test="${pageCur != totalPage && totalPage != 0}">
                                     <a href="${url_next}">下一页</a>
-                                </c:if>
+                                </c:if>r
                                 <a class="next" href="javascript:;">&gt;&gt;</a>
                             </div>
                         </div>

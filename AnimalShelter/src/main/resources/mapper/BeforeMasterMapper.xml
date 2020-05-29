@@ -2,18 +2,65 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.BeforeAnimalDao">
-    <!--id 方法名  resultType返回类型 SELECT * FROM animal order by id desc LIMIT 10-->
-    <select id="animalLimit"  resultType="Animal">
-        SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1)) limit 10
+<mapper namespace="dao.BeforeMasterDao">
+    <!--id 方法名  resultType返回类型 -->
+    <select id="masterLimit"  resultType="Lookmaster">
+		SELECT * FROM lookmaster order by id desc LIMIT 10
 	</select>
-	<select id="animalInfo"  resultType="Animal">
-		SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1))
+
+	<!--根据id查询-->
+	<select id="selectAMaster" resultType="Masterdetail" parameterType="Integer">
+		SELECT lookmaster.msex,lookmaster.mtitle,lookmaster.mtime,lookmaster.mpicture,lookmaster.minfo,animalkind.kindname,buser.bname,buser.bqq,buser.bwechat,buser.btel from lookmaster,animalkind,buser WHERE lookmaster.buserid = buser.id AND lookmaster.kindid = animalkind.id AND lookmaster.id = #{id}
+	</select>
+
+	<!--根据id查询-->
+	<select id="userMasterIndex" resultType="Lookmaster" parameterType="Integer">
+		select * from lookmaster where id = #{id}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="masterInfo"  resultType="Lookmaster">
+		SELECT * FROM lookmaster
 	</select>
 	<!--id 方法名  resultType返回类型 -->
-	<select id="animalInfoPage"  resultType="Animal" parameterType="map">
-		SELECT * from animal where animal.id not in (SELECT animal.id from animal,getanimal,getdetail WHERE getdetail.animalid = animal.id and getdetail.getanimalid = getanimal.id and getanimal.`status` in (0,1)) order by id desc limit #{startIndex}, #{perPageSize}
+	<select id="masterInfoPage"  resultType="Lookmaster" parameterType="map">
+		select * from lookmaster order by id desc limit #{startIndex}, #{perPageSize}
 	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="masterFive"  resultType="Lookmaster" parameterType="Integer">
+		select * from lookmaster where buserid = #{buserid} order by id desc limit 5
+	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="masterAll"  resultType="Lookmaster" parameterType="Integer">
+		select * from lookmaster where buserid = #{buserid}
+	</select>
+
+	<!--id 方法名  resultType返回类型 -->
+	<select id="masterIndexPage"  resultType="Lookmaster" parameterType="map">
+		select * from lookmaster where  buserid = #{buserid} order by id desc limit #{startIndex}, #{perPageSize}
+	</select>
+
+
+
+
+
+
+
 
 	<!--新增领养信息-->
 	<insert id="animalInsert" keyProperty="id" useGeneratedKeys="true" parameterType="Animal">
@@ -34,10 +81,7 @@
     </insert>
 
 
-	<!--根据用户账号查询-->
-    <select id="selectAAnimal" resultType="Animal" parameterType="Integer">
-		select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}
-	</select>
+
 	<!--select * from animal where id = #{id}-->
 	<!--select * from animal,animalkind WHERE animal.kindid = animalkind.id and animal.id = #{id}-->
 	<!--&lt;!&ndash;根据用户id查询&ndash;&gt;-->

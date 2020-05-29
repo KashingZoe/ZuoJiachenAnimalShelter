@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
     <style>
+
         .layui-bg-black {
             background-color: #009688!important;
         }

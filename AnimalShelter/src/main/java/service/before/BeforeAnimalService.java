@@ -11,12 +11,17 @@ import javax.servlet.http.HttpSession;
 public interface BeforeAnimalService {
 
       public String animalInfo(Model model, Integer pageCur);
-      public String selectAAnimal(Model model, HttpSession session, Integer pageCur);
+      public String masterInfo(Model model, Integer pageCur);
+      public String petInfo(Model model, Integer pageCur);
+      public String selectAAnimal(Model model, HttpSession session, Integer id);
       public String addAnimal(Animal animal, HttpServletRequest request, Model model,HttpSession session);
 
       public String addMaster(Lookmaster lookmaster, HttpServletRequest request, Model model, HttpSession session);
 
       public String addPet(Lookpet lookpet, HttpServletRequest request, Model model, HttpSession session);
+
+      public String selectAMaster(Model model, HttpSession session, Integer id);
+      public String selectAPet(Model model, HttpSession session, Integer id);
 //    public String toEditAnimal(Model model, Integer id);
 //    public String editAnimal(Animal animal, Model model);
 //    public String toDeleteAnimal(Model model, Integer pageCur);

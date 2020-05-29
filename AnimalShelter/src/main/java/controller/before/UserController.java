@@ -2,6 +2,8 @@ package controller.before;
 
 import entity.Adopt;
 import entity.Buser;
+import entity.Lookmaster;
+import entity.Lookpet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,12 +44,37 @@ public class UserController {
         return userService.toUserindex(adopt, model, session,pageCur);
     }
 
+    //user
+    @RequestMapping("/tousermaster")
+    public String toUsermaster(@ModelAttribute Lookmaster lookmaster, Model model, HttpSession session, Integer pageCur02){
+        return userService.toUsermaster(lookmaster, model, session,pageCur02);
+    }
+
+    //userindex
+    @RequestMapping("/touserpet")
+    public String toUserpet(@ModelAttribute Lookpet lookpet, Model model, HttpSession session, Integer pageCur03){
+        return userService.toUserpet(lookpet, model, session,pageCur03);
+    }
+
     //userindexdetail
     @RequestMapping("/userindex")
     public String userIndex(@ModelAttribute Adopt adopt, Model model, Integer id){
         return userService.userIndex(adopt, model, id);
     }
 
+    //usermasterindexdetail
+    @RequestMapping("/usermasterindex")
+    public String userMasterIndex(@ModelAttribute Lookmaster lookmaster, Model model, Integer id){
+        return userService.userMasterIndex(lookmaster, model, id);
+    }
+
+    //userpetindexdetail
+    @RequestMapping("/userpetindex")
+    public String userPetIndex(@ModelAttribute Lookpet lookpet, Model model, Integer id){
+        return userService.userPetIndex(lookpet, model, id);
+    }
+
+    
     //userset
     @RequestMapping("/touserset")
     public String toUserSet(@ModelAttribute Adopt adopt, Model model, HttpSession session, Integer pageCur){
