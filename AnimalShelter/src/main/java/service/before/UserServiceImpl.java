@@ -65,6 +65,7 @@ public class UserServiceImpl implements UserService {
         if(ruser !=null) {
             session.setAttribute("kind", kind);
             session.setAttribute("bruser", ruser);
+            session.setMaxInactiveInterval(-1);//让session不过期
             System.out.println(ruser);
             return"forward:/before";
         }else {

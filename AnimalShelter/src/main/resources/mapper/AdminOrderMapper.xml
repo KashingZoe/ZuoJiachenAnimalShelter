@@ -9,7 +9,7 @@
 	</select>
 	<!--id 方法名  resultType返回类型 -->
 	<select id="orderInfoPage"  resultType="Getanimal" parameterType="map">
-		select * from getanimal order by id limit #{startIndex}, #{perPageSize}
+		select * from getanimal order by orderdate desc limit #{startIndex}, #{perPageSize}
 	</select>
 
 	<!--根据订单账号查询-->

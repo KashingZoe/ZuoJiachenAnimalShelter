@@ -20,8 +20,8 @@
     <meta charset="utf-8">
     <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />

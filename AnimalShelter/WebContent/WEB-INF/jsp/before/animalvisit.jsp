@@ -26,6 +26,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>动物之家</title>
+    <link rel="stylesheet" href="static/css/weadmin.css" />
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
@@ -48,10 +49,7 @@
         .layui-nav .layui-nav-item a:hover{
             color: #2E2D3C!important;
         }
-        .layui-nav-child dd {
 
-            margin: 10px auto;
-        }
         .fly-column ul li.layui-this:after{
             bottom: 0px;
             height: 2px;
@@ -180,10 +178,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -204,7 +202,7 @@
             <a href="/beforeVisit/toMyVisit" class="layui-btn layui-btn-primary layui-btn-big" style="text-decoration: none;">我的宠秀</a>
         </c:if>
         <c:if test="${bruser==null}">
-            <a href="javascript:;" class="layui-btn layui-btn-big fly-case-active">请先登录</a>
+            <a href="/toLogin" class="layui-btn layui-btn-big fly-case-active">请先登录</a>
         </c:if>
 
 
@@ -266,7 +264,7 @@
 
     <!-- <blockquote class="layui-elem-quote layui-quote-nm">暂无数据</blockquote> -->
 
-    <div style="text-align: center;">
+    <div class="page" style="text-align: center;">
         <div>
             <c:url var="url_pre" value="/beforeVisit/toVisit">
                 <c:param name="pageCur" value="${pageCur - 1 }"/>

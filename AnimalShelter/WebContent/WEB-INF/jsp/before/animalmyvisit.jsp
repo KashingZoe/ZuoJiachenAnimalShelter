@@ -26,12 +26,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>动物之家</title>
+    <link rel="stylesheet" href="static/css/weadmin.css" />
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
         .header{border-bottom: 1px solid #404553; border-right: 1px solid #404553;}
         .layui-bg-black {
@@ -128,20 +127,20 @@
 
                         <!-- 登入后的状态 -->
 
+
                         <li class="layui-nav-item">
                             <a class="fly-nav-avatar" href="javascript:;">
                                 <cite class="layui-hide-xs"></cite>
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
-
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
                                 <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
-                                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>用户中心</a></dd>
                                 <hr style="margin: 5px 0;">
-                                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
                             </dl>
                         </li>
 
@@ -178,24 +177,21 @@
 </div>
 
 
-<div class="fly-panel fly-column" style="margin-bottom: 0px">
+<!--导航栏-->
+<div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
-            <li class="layui-nav-item"><a href="add01.html">发布</a>
+            <li class="layui-nav-item"><a href="/beforeAnimal/toAddAnimal">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="add01.html">送养发布</a></dd>
-                    <dd><a href="add02.html">寻主发布</a></dd>
-                    <dd><a href="add03.html">寻宠发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddAnimal">送养发布</a></dd>
+                    <dd><a href="/beforeMaster/toAddMaster">寻主发布</a></dd>
+                    <dd><a href="/beforePet/toAddPet">寻宠发布</a></dd>
                 </dl>
-
             </li>
             <li class="layui-nav-item layui-this"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
             <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
-            <li class="layui-nav-item"><a href="review.html">留言板</a></li>
-            <!-- <li><a href="jie/index.html">公告</a></li>
-            <li><a href="jie/index.html">动态</a></li> -->
-            <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
+            <li class="layui-nav-item"><a href="/beforeFeedback/toAddFeedback">留言板</a></li>
 
             <!-- 用户登入后显示 -->
             <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
@@ -204,10 +200,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -252,7 +248,7 @@
 
         <c:forEach var="n" items="${visitList}">
             <li data-id="123" style="width: 260px">
-                <a class="fly-case-img" href="#" target="_blank" class="aimg">
+                <a class="fly-case-img" href="#" target="_blank" class="aimg" style="text-align: center;">
 
                     <!-- 从数据库取出的文件名 -->
                     <c:if test="${n.vpicture != ''}">
@@ -283,7 +279,7 @@
 
     <!-- <blockquote class="layui-elem-quote layui-quote-nm">暂无数据</blockquote> -->
 
-    <div style="text-align: center;">
+    <div class="page" style="text-align: center;">
         <div>
             <c:url var="url_pre" value="/beforeVisit/toMyVisit">
                 <c:param name="pageCur" value="${pageCur - 1 }"/>

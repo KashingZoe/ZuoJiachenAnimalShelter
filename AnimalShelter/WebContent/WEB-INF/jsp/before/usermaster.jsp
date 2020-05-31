@@ -20,12 +20,48 @@
     <meta charset="utf-8">
     <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
-
+    <style>
+        .page {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .page a {
+            display: inline-block;
+            background: #fff 0 0 no-repeat;
+            color: #888;
+            padding: 10px;
+            min-width: 15px;
+            border: 1px solid #E2E2E2;
+        }
+        .page span {
+            display: inline-block;
+            padding: 10px;
+            min-width: 15px;
+            border: 1px solid #E2E2E2;
+        }
+        .page span.current {
+            display: inline-block;
+            background: #009688 0 0 no-repeat;
+            color: #fff;
+            padding: 10px;
+            min-width: 15px;
+            border: 1px solid #009688;
+        }
+        .page .pagination li {
+            display: inline-block;
+            margin-right: 5px;
+            text-align: center;
+        }
+        .page .pagination li.active span {
+            background: #009688 0 0 no-repeat;
+            color: #fff;
+            border: 1px solid #009688;
+        }
+    </style>
 </head>
 <body>
 <div class="fly-header layui-bg-black" style="background-color: #009688!important;">
@@ -212,7 +248,7 @@
                            <em>661阅/10答</em>
                          </li> -->
                     </ul>
-                    <div id="LAY_page">
+                    <div class="page" id="LAY_page">
                         <div style="text-align: center;">
                             <div>
                                 <c:url var="url_pre" value="/user/touserindex">
@@ -263,7 +299,7 @@
                             </li>
                         </c:forEach>
                     </ul>
-                    <div id="LAY_page1">
+                    <div class="page" id="LAY_page1">
                         <div style="text-align: center;">
                             <div>
                                 <c:url var="url_pre" value="/user/tousermaster">
@@ -316,7 +352,7 @@
                             </li>
                         </c:forEach>
                     </ul>
-                    <div id="LAY_page2">
+                    <div class="page" id="LAY_page2">
                         <div style="text-align: center;">
                             <div>
                                 <c:url var="url_pre" value="/user/touserpet">

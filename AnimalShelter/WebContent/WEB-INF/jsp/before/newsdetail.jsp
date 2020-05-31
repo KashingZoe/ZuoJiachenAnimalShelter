@@ -19,8 +19,7 @@
     <meta charset="utf-8">
     <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
@@ -76,39 +75,25 @@
 </head>
 <body>
 
-<div class="fly-header layui-bg-black">
+<div class="fly-header layui-bg-black" style="background-color: #009688!important;">
     <div class="layui-container">
         <div class="layui-row">
-
-
-
             <div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
                 <div class="layui-container">
                     <div class="layui-row">
                         <div class="layui-col-md6">
                             <a class="fly-logo" href="before">
-
                                 <img src="res/images/dog.png" width="50px" height="40px">
-
-
                                 <p style="color: #E6162D;font-size: x-large;float: right;margin-top: 5px;">动物之家</p>
-
-                                <!-- <img src="res/images/mylogo.png" alt="layui" width="50px" height="50px" style="float: left;"> -->
-                                <!-- <div style="color: #E6162D;font-size: x-large;float: left;"><strong style="float: left;">AnimalShelter</strong></div> -->
-
                                 <img src="res/images/cat.png" width="50px" height="40px" style="float: right;">
-
                             </a>
                         </div>
                         <div class="layui-col-md6">
                             <strong style="float: right; margin-top: 20px;"> 用领养代替购买，拒绝残害小动物！！！</strong>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
 
             <div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
                 <!-- <ul class="layui-nav fly-nav layui-hide-xs">
@@ -127,29 +112,23 @@
                     <c:if test="${bruser!=null}">
 
                         <!-- 登入后的状态 -->
-
                         <li class="layui-nav-item">
                             <a class="fly-nav-avatar" href="javascript:;">
                                 <cite class="layui-hide-xs"></cite>
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
-
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
                                 <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
-                                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>用户中心</a></dd>
                                 <hr style="margin: 5px 0;">
-                                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
                             </dl>
                         </li>
-
-
-                        <%--欢迎 ${bruser.bemail }--%>
-
-
                     </c:if>
+                    javascript:;
                     <c:if test="${bruser==null}">
 
                         <!-- 未登入的状态 -->
@@ -172,30 +151,25 @@
                     </c:if>
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
 
-<!-- 导航栏 -->
+<!--导航栏-->
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item"><a href="/before">首页</a></li>
-            <li class="layui-nav-item"><a href="add01.html">发布</a>
+            <li class="layui-nav-item"><a href="/beforeAnimal/toAddAnimal">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="add01.html">送养发布</a></dd>
-                    <dd><a href="add02.html">寻主发布</a></dd>
-                    <dd><a href="add03.html">寻宠发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddAnimal">送养发布</a></dd>
+                    <dd><a href="/beforeMaster/toAddMaster">寻主发布</a></dd>
+                    <dd><a href="/beforePet/toAddPet">寻宠发布</a></dd>
                 </dl>
-
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
             <li class="layui-nav-item layui-this"><a href="/beforeNews/newsInfo">科普区</a></li>
-            <li class="layui-nav-item"><a href="review.html">留言板</a></li>
-            <!-- <li><a href="jie/index.html">公告</a></li>
-            <li><a href="jie/index.html">动态</a></li> -->
-            <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
+            <li class="layui-nav-item"><a href="/beforeFeedback/toAddFeedback">留言板</a></li>
 
             <!-- 用户登入后显示 -->
             <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
@@ -204,10 +178,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -233,21 +207,7 @@
             <p>${newsList.ncontent}</p>
           </pre>
 
-                    <!-- <pre> -->
 
-
-                    <!-- </pre> -->
-
-                    <!-- 下载<hr>
-                    <p>
-                      官网：<a href="http://www.layui.com/template/fly/" target="_blank">http://www.layui.com/template/fly/</a><br>
-                      码云：<a href="https://gitee.com/sentsin/fly/" target="_blank">https://gitee.com/sentsin/fly/</a><br>
-                      GitHub：<a href="https://github.com/layui/fly" target="_blank">https://github.com/layui/fly</a>
-                    </p>
-                    封面<hr>
-                    <p>
-                      <img src="res/images/fly.jpg" alt="Fly社区">
-                    </p> -->
 
                 </div>
             </div>
@@ -286,12 +246,7 @@
 </div>
 
 <div class="fly-footer">
-    <p><a href="http://fly.layui.com/" target="_blank">Fly社区</a> 2017 &copy; <a href="http://www.layui.com/" target="_blank">layui.com 出品</a></p>
-    <p>
-        <a href="http://fly.layui.com/jie/3147/" target="_blank">付费计划</a>
-        <a href="http://www.layui.com/template/fly/" target="_blank">获取Fly社区模版</a>
-        <a href="http://fly.layui.com/jie/2461/" target="_blank">微信公众号</a>
-    </p>
+    <p><a href="javascript:;" target="_blank">动物之家</a> 2020 &copy; <a href="javascript:;" target="_blank">zuojiachen 出品</a></p>
 </div>
 
 <script src="res/layui/layui.js"></script>

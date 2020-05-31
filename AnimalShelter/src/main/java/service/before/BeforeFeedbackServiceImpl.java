@@ -66,7 +66,7 @@ public class BeforeFeedbackServiceImpl implements BeforeFeedbackService {
         int n= beforeFeedbackDao.feedbackInsert(feedback);
         if(n>0) {
             model.addAttribute("msg", "发布成功");
-            return "before/add01ok";
+            return "before/feedbackok";
         }else {
             model.addAttribute("msg", "发布失败,请重新发布!");
             return "forward:/beforeFeedback/toAddFeedback";

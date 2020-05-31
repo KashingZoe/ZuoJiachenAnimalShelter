@@ -18,8 +18,8 @@
     <meta charset="utf-8">
     <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
     <link rel="shortcut icon" href="static/images/paw.png" type="image/png" />
@@ -109,21 +109,19 @@
                     <c:if test="${bruser!=null}">
 
                         <!-- 登入后的状态 -->
-
                         <li class="layui-nav-item">
                             <a class="fly-nav-avatar" href="javascript:;">
                                 <cite class="layui-hide-xs"></cite>
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
-
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
-                                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>用户中心</a></dd>
                                 <hr style="margin: 5px 0;">
-                                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
                             </dl>
                         </li>
 
@@ -160,24 +158,21 @@
     </div>
 </div>
 
+<!--导航栏-->
 <div class="fly-panel fly-column">
     <div class="layui-container">
         <ul class="layui-clear layui-nav">
             <li class="layui-hide-xs layui-nav-item layui-this"><a href="/before">首页</a></li>
-            <li class="layui-nav-item"><a href="add01.html">发布</a>
+            <li class="layui-nav-item"><a href="/beforeAnimal/toAddAnimal">发布</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a href="add01.html">送养发布</a></dd>
-                    <dd><a href="add02.html">寻主发布</a></dd>
-                    <dd><a href="add03.html">寻宠发布</a></dd>
+                    <dd><a href="/beforeAnimal/toAddAnimal">送养发布</a></dd>
+                    <dd><a href="/beforeMaster/toAddMaster">寻主发布</a></dd>
+                    <dd><a href="/beforePet/toAddPet">寻宠发布</a></dd>
                 </dl>
-
             </li>
             <li class="layui-nav-item"><a href="/beforeVisit/toVisit">宠秀回访</a></li>
             <li class="layui-nav-item"><a href="/beforeNews/newsInfo">科普区</a></li>
-            <li class="layui-nav-item"><a href="review.html">留言板</a></li>
-            <!-- <li><a href="jie/index.html">公告</a></li>
-            <li><a href="jie/index.html">动态</a></li> -->
-            <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> -->
+            <li class="layui-nav-item"><a href="/beforeFeedback/toAddFeedback">留言板</a></li>
 
             <!-- 用户登入后显示 -->
             <!-- <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
@@ -186,10 +181,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">搜索新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -246,67 +241,18 @@
             </div> -->
         </div>
         <div class="layui-col-md4">
-            <dl class="fly-panel fly-list-one">
-                <dt class="fly-panel-title">本周热议</dt>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-                <dd>
-                    <a href="">基于 layui 的极简社区页面模版</a>
-                    <span><i class="iconfont icon-pinglun1"></i> 16</span>
-                </dd>
-
-                <!-- 无数据时 -->
-                <!--
-                <div class="fly-none">没有相关数据</div>
-                -->
-            </dl>
-
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    这里可作为广告区域
-                </div>
-                <div class="fly-panel-main">
-                    <a href="http://layim.layui.com/?from=fly" target="_blank" class="fly-zanzhu" time-limit="2017.09.25-2099.01.01" style="background-color: #5FB878;">LayIM 3.0 - layui 旗舰之作</a>
-                </div>
-            </div>
-
             <div class="fly-panel" style="padding: 20px 0; text-align: center;">
                 <img src="res/images/weixin.jpg" style="max-width: 100%;" alt="layui">
-                <p style="position: relative; color: #666;">微信扫码关注 layui 公众号</p>
+                <p style="position: relative; color: #666;">微信扫码关注 动物之家 公众号</p>
+                <p style="position: relative; color: #666;">了解更多信息</p>
+            </div>
+            <div class="fly-panel fly-link">
+                <h3 class="fly-panel-title">友情链接</h3>
+                <dl class="fly-panel-main">
+                    <dd><a href="https://www.chongshe.cn/" target="_blank">我的宠舍-权威宠物科普知识平台</a><dd>
+
+                    <dd><a href="mailto:xianxin@layui-inc.com?subject=%E7%94%B3%E8%AF%B7Fly%E7%A4%BE%E5%8C%BA%E5%8F%8B%E9%93%BE" class="fly-link">申请友链</a><dd>
+                </dl>
             </div>
 
         </div>

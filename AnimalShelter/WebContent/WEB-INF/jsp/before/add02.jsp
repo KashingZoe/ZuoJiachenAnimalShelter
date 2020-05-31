@@ -19,8 +19,8 @@
     <meta charset="utf-8">
     <title>动物之家</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
-    <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="res/layui/css/layui.css">
     <link rel="stylesheet" href="res/css/global.css">
 
@@ -106,24 +106,21 @@
                     <c:if test="${bruser!=null}">
 
                         <!-- 登入后的状态 -->
-
                         <li class="layui-nav-item">
                             <a class="fly-nav-avatar" href="javascript:;">
                                 <cite class="layui-hide-xs"></cite>
                                 <i class="iconfont icon-renzheng layui-hide-xs" title="">欢迎</i>
-
                                 <i class="layui-badge fly-badge-vip layui-hide-xs">${bruser.bname}</i>
-                                <img src="../res/images/mycat.png">
+                                <img src="res/images/mycat.png">
                             </a>
                             <dl class="layui-nav-child">
-                                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                                <dd><a href="user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
-                                <dd><a href="user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+                                <dd><a href="user/touserset"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                                <dd><a href="/user/tousermessage"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+                                <dd><a href="/user/touserindex"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>用户中心</a></dd>
                                 <hr style="margin: 5px 0;">
-                                <dd><a href="/user/logout/" style="text-align: center;">退出</a></dd>
+                                <dd><a href="/user/exit" style="text-align: center;">退出</a></dd>
                             </dl>
                         </li>
-
 
                         <%--欢迎 ${bruser.bemail }--%>
 
@@ -186,10 +183,10 @@
 
         <div class="fly-column-right layui-hide-xs">
             <span class="fly-search"><i class="layui-icon"></i></span>
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
         <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-            <a href="jie/add.html" class="layui-btn">发表新帖</a>
+            <a href="javascript:;" class="layui-btn">发表新帖</a>
         </div>
     </div>
 </div>
@@ -272,7 +269,7 @@
                     </div>
                 </c:if>
                 <c:if test="${bruser==null}">
-                    <label>请先登录</label>
+                    <a href="toLogin">请先登录</a>
                 </c:if>
 
 
